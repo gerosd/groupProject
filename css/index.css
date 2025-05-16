@@ -11,10 +11,9 @@ header {
     background-image: url('../images/index/hero.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 1150px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
@@ -39,6 +38,7 @@ header {
 }
 
 .hero h1 {
+    margin-top: 250px;
     font-size: 128px;
     color: white;
 }
@@ -66,7 +66,7 @@ header {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 50px;
+    bottom: 150px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
@@ -87,33 +87,44 @@ header {
 
 /* About Section */
 .about {
-    background-color: var(--background);
-    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+    height: 1100px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.about-header {
+    position: absolute;
+    transform: translateY(-99%);
 }
 
 .about-container {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    gap: 50px;
-    align-items: center;
+    justify-content: space-between;
+    margin-top: 165px;
+    width: 1445px;
 }
 
 .about-text {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: 810px;
+    text-align: justify;
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 96px;
     margin-bottom: 20px;
-    color: var(--primary);
+    color: #ffffff;
 }
 
 .about-text p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    line-height: 1.8;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .about-image {
@@ -129,80 +140,198 @@ header {
     object-fit: cover;
 }
 
-/* Advantages Section */
-.advantages {
-    background-color: var(--card-bg);
-    padding: 80px 0;
-    background-image: url('../images/icons/branch2.svg');
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 250px;
+/* Slider Styles */
+.slider-container {
+    width: 550px;
+    position: relative;
+    margin-left: 40px;
 }
 
+.main-slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--lighter);
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider-wrapper img.active {
+    opacity: 1;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    color: var(--primary);
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.thumbnail-slider {
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.thumbnail-wrapper {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.thumbnail-wrapper img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-wrapper img:hover {
+    opacity: 0.8;
+}
+
+.thumbnail-wrapper img.active {
+    opacity: 1;
+    border: 2px solid var(--lighter);
+}
+
+/* Advantages Section */
 .advantages h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
+    font-size: 96px;
     color: var(--primary);
+    padding-block: 65px;
 }
 
 .advantages-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
+    margin-inline: auto;
+    gap: 40px;
 }
 
 .advantage-item {
-    width: 326px;
-    height: 326px;
+    width: 325px;
+    height: 325px;
     position: relative;
-    transition: transform 0.3s ease;
+    z-index: 100;
 }
 
 .advantage-content {
-    background-color: var(--background);
-    border-radius: 15px;
-    padding: 30px 20px;
+    background: var(--lighter);
+    border-radius: 30px;
+    padding: 40px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 10;
     position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .advantage-content img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
 }
 
 .advantage-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--primary);
+    color: #ffffff;
+    font-size: 24px;
+    position: absolute;
+    bottom: -40px;
 }
 
-.advantage-content p {
-    font-size: 0.9rem;
-    color: var(--text-light);
+.back-tail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    transform: translateY(15%);
+    transition: 0.2s ease;
+}
+
+.advantage-back {
+    background: var(--primary);
+    border-radius: 30px;
+    padding: 30px;
+    height: 100%;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.advantage-back p {
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 105px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .advantage-tail {
     position: absolute;
-    bottom: -42px;
+    bottom: -70px;
     left: 50%;
     transform: translateX(-50%);
     width: 45px;
     height: 95px;
-    z-index: 0;
+    z-index: 15;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    animation: 2s upDown infinite;
+}
+
+@keyframes upDown {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
 }
 
 .advantage-tail .tail {
@@ -210,26 +339,12 @@ header {
     height: auto;
 }
 
-.advantage-item.expanded .advantage-tail {
-    transform: translateX(-50%) rotate(180deg);
+.advantage-item.active .back-tail {
+    transform: translateY(75%);
 }
 
-.advantage-expanded {
-    position: relative;
-    z-index: 0;
-    margin-top: -10px;
-    padding: 0 20px;
-    background-color: var(--background);
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.advantage-expanded p {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    line-height: 1.6;
+.advantage-item.active .advantage-back p {
+    opacity: 1;
 }
 
 /* Cottages Section */
@@ -243,13 +358,14 @@ header {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto 40px;
+    margin-top: 280px;
+    margin-inline: auto;
     padding: 0 20px;
 }
 
 .cottages h2 {
-    font-size: 2.5rem;
-    color: var(--primary);
+    font-size: 96px;
+    color: var(--text);
 }
 
 .cottages-info {

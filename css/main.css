@@ -3,7 +3,7 @@
     --light: #759A7E;
     --lighter: #80A98C;
     --background: #ffffff;
-    --text: #333333;
+    --text: #3A4D37;
     --text-light: #666666;
     --border: #DDDDDD;
     --card-bg: #F5F5F5;
@@ -16,7 +16,7 @@
     --light: #8BA1B7;
     --lighter: #8BA1B7;
     --background: #272C36;
-    --text: #EEEEEE;
+    --text: #FFFFFF;
     --text-light: #CCCCCC;
     --border: #444444;
     --card-bg: #333340;
@@ -71,10 +71,6 @@ button {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-section {
-    padding: 60px 0;
 }
 
 header {
