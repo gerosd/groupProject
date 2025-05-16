@@ -156,9 +156,9 @@ header {
 }
 
 .advantage-item {
-    width: 200px;
+    width: 326px;
+    height: 326px;
     position: relative;
-    margin-bottom: 50px;
     transition: transform 0.3s ease;
 }
 
@@ -198,20 +198,16 @@ header {
     bottom: -42px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
-    height: 50px;
+    width: 45px;
+    height: 95px;
     z-index: 0;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.advantage-tail .branch {
+.advantage-tail .tail {
     width: 100%;
     height: auto;
-}
-
-.advantage-tail:hover {
-    transform: translateX(-50%) scale(1.1);
 }
 
 .advantage-item.expanded .advantage-tail {

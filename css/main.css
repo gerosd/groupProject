@@ -156,7 +156,6 @@ header {
     transform: translateX(120%);
     right: 20px;
     width: 185px;
-    height: 275px;
     z-index: 1000;
     background: var(--lighter);
     transition: 0.2s ease;
@@ -169,7 +168,6 @@ header {
 .language {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     font-size: 34px;
     font-weight: bold;
     cursor: pointer;
@@ -180,7 +178,7 @@ header {
     transform: scale(1.05);
 }
 
-.language p {
+.language pre {
     color: white;
 }
 
