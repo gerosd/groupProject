@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Арбория</title>
+    <link rel="icon" type="image/svg" href="images/icons/logo.svg">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body data-theme="light">
+    <header>
+        <nav class="header-nav">
+            <ul class="nav-menu">
+                <li><a href="#about">О клубе</a></li>
+                <li><a href="#">Коттеджи</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="events.html">Мероприятия</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="logo">
+                <img src="images/icons/logo.svg" alt="Арбория" />
+            </div>
+            <div class="header-icons">
+                <img src="images/icons/langChange.svg" alt="header-icon" id="changeLanguage">
+                <img src="images/icons/themeChange.svg" alt="header-icon" id="themeToggle">
+                <img src="images/icons/toggleMenu.svg" alt="header-icon" id="toggleMenu">
+            </div>
+        </nav>
+        <div class="languages-container">
+            <div class="language" onClick="translatePage('ru')">
+                <p>RUS</p>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('en')">
+                <p>ENG</p>
+                <div class="lang-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Арбория</h1>
+                <p>Наслаждайтесь бесконечным разнообразием отдыха</p>
+                <button class="book-btn">Забронировать</button>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about">
+                    <img src="images/icons/arrow-bottom.svg" alt="bottom-arrow">
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>О клубе</h2>
+                    <p>У нас вы найдете все, что необходимо для незабываемого отдыха в любой компании - 
+                        с друзьями, с детьми или вдвоем. Великолепная экосфера, кавказская, европейская, авторская кухня, 
+                        первоклассный сервис, прекрасный ландшафтный дизайн - все составляющие нашего Арбория отдыха позволяют 
+                        реализовать любые ваши самые смелые мечты о великолепном отдыхе!</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/index/about.jpg" alt="Арбория клуб">
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <h2>Наши преимущества</h2>
+            <div class="advantages-container">
+                <div class="advantage-item">
+                    <div class="advantage-content">
+                        <img src="images/icons/indexPeople.svg" alt="Природное качество">
+                        <h3>Природное качество</h3>
+                        <p>Мы создали первый экоклуб, сохранив первозданную природу леса и озер.</p>
+                    </div>
+                    <div class="advantage-tail">
+                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    </div>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-content">
+                        <img src="images/icons/langChange.svg" alt="Концепция комплекса">
+                        <h3>Концепция комплекса</h3>
+                        <p>Мы создали многофункциональный загородный комплекс.</p>
+                    </div>
+                    <div class="advantage-tail">
+                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    </div>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-content">
+                        <img src="images/icons/cottageBath.svg" alt="Подробнее виды">
+                        <h3>Подробнее виды</h3>
+                        <p>Различные типы размещения: просторные домики для компаний и коттеджи для семей.</p>
+                    </div>
+                    <div class="advantage-tail">
+                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    </div>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-content">
+                        <img src="images/icons/cottageBed.svg" alt="Разнообразный отдых">
+                        <h3>Разнообразный отдых</h3>
+                        <p>От семейного отдыха до проведения конференций, свадеб и других мероприятий.</p>
+                    </div>
+                    <div class="advantage-tail">
+                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    </div>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-content">
+                        <img src="images/icons/cottagePeople.svg" alt="Инфраструктура">
+                        <h3>Инфраструктура</h3>
+                        <p>Ресторан, баня, спа-центр, детские площадки и другие удобства для комфортного отдыха.</p>
+                    </div>
+                    <div class="advantage-tail">
+                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cottages">
+            <div class="cottages-header">
+                <h2>Коттеджи</h2>
+                <div class="cottages-info">
+                    <p>Заселение происходится с 14:00,</p>
+                    <p>расчетный час - 12:00</p>
+                </div>
+                <a href="#" class="view-all">Смотреть большие коттеджи</a>
+            </div>
+            
+            <div class="cottages-container">
+                <div class="cottage-card">
+                    <div class="cottage-image">
+                        <img src="images/cottages/cottage1.jpg" alt="Коттедж Стандарт">
+                        <div class="cottage-capacity">
+                            <img src="images/icons/cottagePeople.svg" alt="люди">
+                            <span>4 чел.</span>
+                        </div>
+                    </div>
+                    <div class="cottage-info">
+                        <h3>Коттедж "Стандарт"</h3>
+                        <p class="cottage-price">от 4 000 ₽/сут</p>
+                        <button class="book-cottage-btn">Забронировать</button>
+                    </div>
+                </div>
+
+                <div class="cottage-card">
+                    <div class="cottage-image">
+                        <img src="images/cottages/cottage2.jpg" alt="Коттедж Люкс">
+                        <div class="cottage-capacity">
+                            <img src="images/icons/cottagePeople.svg" alt="люди">
+                            <span>6 чел.</span>
+                        </div>
+                    </div>
+                    <div class="cottage-info">
+                        <h3>Коттедж "Люкс"</h3>
+                        <p class="cottage-price">от 6 000 ₽/сут</p>
+                        <button class="book-cottage-btn">Забронировать</button>
+                    </div>
+                </div>
+
+                <div class="cottage-card">
+                    <div class="cottage-image">
+                        <img src="images/cottages/cottage3.jpg" alt="Коттедж VIP">
+                        <div class="cottage-capacity">
+                            <img src="images/icons/cottagePeople.svg" alt="люди">
+                            <span>8 чел.</span>
+                        </div>
+                    </div>
+                    <div class="cottage-info">
+                        <h3>Коттедж "VIP"</h3>
+                        <p class="cottage-price">от 10 000 ₽/сут</p>
+                        <button class="book-cottage-btn">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Карта</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDIsNTQuOCdzIDE0N8KwMywzNi41J2k!5e0!3m2!1sru!2sru!4v1610000000000!5m2!1sru!2sru" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/icons/logo.svg" alt="Арбория">
+            </div>
+            <div class="footer-content">
+                <div class="footer-menu">
+                    <h4>О клубе</h4>
+                    <ul>
+                        <li><a href="#">Расположение</a></li>
+                        <li><a href="#">Преимущества</a></li>
+                        <li><a href="#">Спецпредложения</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <h4>Коттеджи</h4>
+                    <ul>
+                        <li><a href="#">Стандарт</a></li>
+                        <li><a href="#">Люкс</a></li>
+                        <li><a href="#">VIP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#">Проживание</a></li>
+                        <li><a href="#">Питание</a></li>
+                        <li><a href="#">Развлечения</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <h4>Мероприятия</h4>
+                    <ul>
+                        <li><a href="#">Свадьбы</a></li>
+                        <li><a href="#">Корпоративы</a></li>
+                        <li><a href="#">Праздники</a></li>
+                    </ul>
+                </div>
+                <div class="footer-menu">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+79001234567">+7 900 123-45-67</a></li>
+                        <li><a href="mailto:info@arboria.ru">info@arboria.ru</a></li>
+                        <li class="social-links">
+                            <a href="#"><img src="images/icons/soc/Frame.svg" alt="VK"></a>
+                            <a href="#"><img src="images/icons/soc/Frame-1.svg" alt="Telegram"></a>
+                            <a href="#"><img src="images/icons/soc/Frame-2.svg" alt="WhatsApp"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Arboria. Все права защищены.</p>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/toggleLanguages.js"></script>
+<script src="js/translatePage.js" defer></script>
+<script src="js/changeTheme.js" type="module"></script>
+<script src="js/index/advantages.js"></script>
+</html>

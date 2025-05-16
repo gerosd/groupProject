@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@translate-tools/core": "^2.0.1"
+  }
+}
