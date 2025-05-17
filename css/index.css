@@ -385,15 +385,16 @@ header {
 /* Cottages Section */
 .cottages {
     margin-top: 280px;
+    margin-inline: auto;
     padding: 80px 0;
     background-color: var(--background);
+    max-width: 1800px;
 }
 
 .cottages-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
     margin-inline: auto;
     padding: 0 20px;
 }
@@ -418,7 +419,7 @@ header {
     font-weight: 700;
     opacity: 0.75;
     width: 275px;
-    transition: color 0.3s ease;
+    transition: 0.3s ease;
     position: relative;
 }
 
@@ -426,12 +427,12 @@ header {
     width: 50px;
     height: 20px;
     position: absolute;
-    bottom: 0;
-    right: 70px;
+    bottom: 5px;
+    right: 75px;
 }
 
 .view-all:hover {
-    color: var(--light);
+    transform: scale(1.1);
 }
 
 .cottages-container {
