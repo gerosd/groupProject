@@ -1,4 +1,4 @@
-import { changePhoto } from "./index/changePhoto.js";
+import { changePhoto } from "../index/changePhoto.js";
 
 const themeToggle = document.querySelector('#themeToggle');
 
