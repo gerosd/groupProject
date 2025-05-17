@@ -1,0 +1,105 @@
+@import 'main.css';
+
+header {
+    background-color: var(--primary);
+    padding: 10px 0 10px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+}
+
+.title {
+    margin-top: 50px;
+    width: 100%;
+    height: 139px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 96px;
+    font-weight: 600;
+}
+
+.title-branch {
+    width: 100%;
+    height: 100%;
+}
+
+.title-branch svg {
+    width: 100%;
+    height: 100%;
+}
+
+.title-branch svg path {
+    stroke: var(--lighter);
+}
+
+.big-path {
+    fill: var(--lighter);
+}
+
+.contacts-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1650px;
+    margin-bottom: 150px;
+}
+
+.contacts-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    width: 50%;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-container h3 {
+    font-size: 64px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.left-container p {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.share-soc {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.share-soc a {
+    width: 64px;
+    height: 64px;
+}
+
+.share-soc img {
+    width: 100%;
+    height: 100%;
+}
+
+.contacts-right {
+    width: 50%;
+    height: 580px;
+}
+
+.contacts-right iframe {
+    width: 100%;
+    height: 100%;
+    border: 8px solid var(--primary);
+    border-radius: 25px;
+    box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.25);
+}
