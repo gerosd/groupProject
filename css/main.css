@@ -300,11 +300,17 @@ footer {
     opacity: 0.5;
     width: 100%;
     font-size: 20px;
+    cursor: pointer;
+    transition: .2s ease;
 }
 
 .footer-menu-item a {
     font-size: 20px;
     font-weight: 400;
+}
+
+.footer-menu-item li:hover {
+    transform: scale(1.05);
 }
 
 .social {
@@ -330,6 +336,21 @@ footer {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    transition: .2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+}
+
+.social-icons img {
+    width: 100%;
+    height: 100%;
 }
 
 .right-social {
