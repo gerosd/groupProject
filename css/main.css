@@ -403,15 +403,15 @@ footer {
 
 .footer-branch-left {
     position: absolute;
-    bottom: -150px;
+    bottom: -120px;
     left: 22%;
-    width: 136px;
-    height: 405px;
+    width: 220px;
+    height: 464px;
     transform: rotate(-112deg);
     z-index: 3;
 }
 
-.footer-branch svg, .footer-branch-left img {
+.footer-branch svg, .footer-branch-left svg {
     width: 100%;
     height: 100%;
     display: block;
