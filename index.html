@@ -12,7 +12,7 @@
         <nav class="header-nav">
             <ul class="nav-menu">
                 <li><a href="#about">О клубе</a></li>
-                <li><a href="#">Коттеджи</a></li>
+                <li><a href="cottages.html">Коттеджи</a></li>
                 <li><a href="services.html">Услуги</a></li>
                 <li><a href="events.html">Мероприятия</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
@@ -27,20 +27,29 @@
             </div>
         </nav>
         <div class="languages-container">
-            <div class="language" onClick="translatePage('ru')">
-                <p>RUS</p>
+            <div class="language" onClick="location.reload()">
+                <pre>RUS</pre>
                 <div class="lang-line"></div>
             </div>
             <div class="language" onClick="translatePage('en')">
-                <p>ENG</p>
+                <pre>ENG</pre>
                 <div class="lang-line"></div>
             </div>
             <div class="language" onClick="translatePage('de')">
-                <p>DEU</p>
+                <pre>DEU</pre>
                 <div class="lang-line"></div>
             </div>
-            <div class="language" onClick="translatePage('')">
-
+            <div class="language" onClick="translatePage('zh-CN')">
+                <pre>CHI</pre>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('fr')">
+                <pre>FRA</pre>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('es')">
+                <pre>ESP</pre>
+                <div class="lang-line"></div>
             </div>
         </div>
     </header>
@@ -60,16 +69,35 @@
         </section>
 
         <section id="about" class="about">
+            <svg width="1920" height="96" viewBox="0 0 1920 96" fill="none" xmlns="http://www.w3.org/2000/svg" class="about-header">
+                <path d="M960 5C1366.34 5 1769.79 55.7011 1920.83 81.0693L1920 91H0L-0.828125 81.0693C150.213 55.7011 553.663 5 960 5Z" fill="#3A4D37" stroke="#3A4D37" stroke-width="10"/>
+            </svg>
             <div class="about-container">
                 <div class="about-text">
                     <h2>О клубе</h2>
-                    <p>У нас вы найдете все, что необходимо для незабываемого отдыха в любой компании - 
-                        с друзьями, с детьми или вдвоем. Великолепная экосфера, кавказская, европейская, авторская кухня, 
-                        первоклассный сервис, прекрасный ландшафтный дизайн - все составляющие нашего Арбория отдыха позволяют 
-                        реализовать любые ваши самые смелые мечты о великолепном отдыхе!</p>
+                    <p>У нас вы найдете всё, что необходимо для насыщенного отдыха в любой компании с друзьями, с детьми или вдвоем.
+                        Великолепная атмосфера, кавказская, европейская, авторская кухня, первоклассный сервис, прекрасный ландшафтный дизайн,
+                        много различных вариантов отдыха позволяют реализовать любые самые смелые мечты о великолепном отдыхе! </p>
                 </div>
-                <div class="about-image">
-                    <img src="images/index/about.jpg" alt="Арбория клуб">
+                <div class="slider-container">
+                    <div class="main-slider">
+                        <button class="slider-btn prev-btn">&lt;</button>
+                        <div class="slider-wrapper">
+                            <img src="images/index/about.jpg" alt="Арбория клуб" class="active">
+                            <img src="images/index/about2.jpg" alt="Арбория клуб">
+                            <img src="images/index/about3.jpg" alt="Арбория клуб">
+                            <img src="images/index/about4.jpg" alt="Арбория клуб">
+                        </div>
+                        <button class="slider-btn next-btn">&gt;</button>
+                    </div>
+                    <div class="thumbnail-slider">
+                        <div class="thumbnail-wrapper">
+                            <img src="images/index/about-mini.jpg" alt="Thumbnail 1" class="active">
+                            <img src="images/index/about-mini2.jpg" alt="Thumbnail 2">
+                            <img src="images/index/about-mini3.jpg" alt="Thumbnail 3">
+                            <img src="images/index/about-mini4.jpg" alt="Thumbnail 4">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,55 +108,75 @@
                 <div class="advantage-item">
                     <div class="advantage-content">
                         <img src="images/icons/indexPeople.svg" alt="Природное качество">
-                        <h3>Природное качество</h3>
-                        <p>Мы создали первый экоклуб, сохранив первозданную природу леса и озер.</p>
+                        <h3>Премиум качество</h3>
                     </div>
-                    <div class="advantage-tail">
-                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
-                    </div>
-                </div>
-
-                <div class="advantage-item">
-                    <div class="advantage-content">
-                        <img src="images/icons/langChange.svg" alt="Концепция комплекса">
-                        <h3>Концепция комплекса</h3>
-                        <p>Мы создали многофункциональный загородный комплекс.</p>
-                    </div>
-                    <div class="advantage-tail">
-                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    <div class="back-tail">
+                        <div class="advantage-back">
+                            <p>Мы предлагаем элитные и VIP-коттеджи с балконами, беседками и джакузи. VIP-коттеджи включают бесплатное медицинское обследование и массажи.</p>
+                        </div>
+                        <div class="advantage-tail">
+                            <img src="images/index/tail.svg" alt="tail" class="tail">
+                        </div>
                     </div>
                 </div>
 
                 <div class="advantage-item">
                     <div class="advantage-content">
-                        <img src="images/icons/cottageBath.svg" alt="Подробнее виды">
-                        <h3>Подробнее виды</h3>
-                        <p>Различные типы размещения: просторные домики для компаний и коттеджи для семей.</p>
+                        <img src="images/icons/indexPeople.svg" alt="Природное качество">
+                        <h3>Концертная площадка</h3>
                     </div>
-                    <div class="advantage-tail">
-                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
-                    </div>
-                </div>
-
-                <div class="advantage-item">
-                    <div class="advantage-content">
-                        <img src="images/icons/cottageBed.svg" alt="Разнообразный отдых">
-                        <h3>Разнообразный отдых</h3>
-                        <p>От семейного отдыха до проведения конференций, свадеб и других мероприятий.</p>
-                    </div>
-                    <div class="advantage-tail">
-                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    <div class="back-tail">
+                        <div class="advantage-back">
+                            <p>Это идеальное место для проведения музыкальных мероприятий на природе, где каждый концерт становится настоящим праздником.</p>
+                        </div>
+                        <div class="advantage-tail">
+                            <img src="images/index/tail.svg" alt="tail" class="tail">
+                        </div>
                     </div>
                 </div>
 
                 <div class="advantage-item">
                     <div class="advantage-content">
-                        <img src="images/icons/cottagePeople.svg" alt="Инфраструктура">
-                        <h3>Инфраструктура</h3>
-                        <p>Ресторан, баня, спа-центр, детские площадки и другие удобства для комфортного отдыха.</p>
+                        <img src="images/icons/indexPeople.svg" alt="Природное качество">
+                        <h3>Потрясающие виды</h3>
                     </div>
-                    <div class="advantage-tail">
-                        <img src="images/icons/branch1.svg" alt="branch" class="branch">
+                    <div class="back-tail">
+                        <div class="advantage-back">
+                            <p>Вас ждут великолепные виды, которые создают атмосферу уединения и гармонии с природой.</p>
+                        </div>
+                        <div class="advantage-tail">
+                            <img src="images/index/tail.svg" alt="tail" class="tail">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-content">
+                        <img src="images/icons/indexPeople.svg" alt="Природное качество">
+                        <h3>Разнообразный спорт</h3>
+                    </div>
+                    <div class="back-tail">
+                        <div class="advantage-back">
+                            <p>На загородной базе отдыха предлагается широкий выбор спортивных активностей для любителей активного образа жизни.</p>
+                        </div>
+                        <div class="advantage-tail">
+                            <img src="images/index/tail.svg" alt="tail" class="tail">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage-item">
+                    <div class="advantage-content">
+                        <img src="images/icons/indexPeople.svg" alt="Природное качество">
+                        <h3>Мастер-классы</h3>
+                    </div>
+                    <div class="back-tail">
+                        <div class="advantage-back">
+                            <p>Мы проводим увлекательные мастер-классы, которые позволят вам развить новые навыки и провести время с пользой.</p>
+                        </div>
+                        <div class="advantage-tail">
+                            <img src="images/index/tail.svg" alt="tail" class="tail">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,4 +311,5 @@
 <script src="js/translatePage.js" defer></script>
 <script src="js/changeTheme.js" type="module"></script>
 <script src="js/index/advantages.js"></script>
+<script src="js/index/slider.js"></script>
 </html>

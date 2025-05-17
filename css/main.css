@@ -3,7 +3,7 @@
     --light: #759A7E;
     --lighter: #80A98C;
     --background: #ffffff;
-    --text: #333333;
+    --text: #3A4D37;
     --text-light: #666666;
     --border: #DDDDDD;
     --card-bg: #F5F5F5;
@@ -16,7 +16,7 @@
     --light: #8BA1B7;
     --lighter: #8BA1B7;
     --background: #272C36;
-    --text: #EEEEEE;
+    --text: #FFFFFF;
     --text-light: #CCCCCC;
     --border: #444444;
     --card-bg: #333340;
@@ -71,10 +71,6 @@ button {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-section {
-    padding: 60px 0;
 }
 
 header {
@@ -156,7 +152,6 @@ header {
     transform: translateX(120%);
     right: 20px;
     width: 185px;
-    height: 275px;
     z-index: 1000;
     background: var(--lighter);
     transition: 0.2s ease;
@@ -169,7 +164,6 @@ header {
 .language {
     display: flex;
     flex-direction: column;
-    gap: 5px;
     font-size: 34px;
     font-weight: bold;
     cursor: pointer;
@@ -180,7 +174,7 @@ header {
     transform: scale(1.05);
 }
 
-.language p {
+.language pre {
     color: white;
 }
 
