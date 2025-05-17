@@ -144,8 +144,13 @@
                      <div class="price-filter">
                         <span>Цена:</span>
                         <div class="for-input">
-                            <span class="price-filter-from">от 4.000</span> <span class="price-filter-to">до 40.000</span>
-                            <input type="range" min="0" max="1000000" value="0" step="10000">
+                            <span class="price-filter-from" id="priceFrom">от 4.000</span> <span class="price-filter-to" id="priceTo">до 40.000</span>
+                            <div class="slider-container" id="sliderContainer">
+                                <!-- Левый ползунок (от) -->
+                                <input type="range" id="rangeFrom" min="4000" max="40000" value="4000" step="1000" class="slider from-slider">
+                                <!-- Правый ползунок (до) -->
+                                <input type="range" id="rangeTo" min="4000" max="40000" value="40000" step="1000" class="slider to-slider">
+                            </div>
                         </div>
                     </div>
                 </div>

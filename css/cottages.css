@@ -87,6 +87,7 @@ header {
     padding: 12px 15px;
     cursor: pointer;
     position: relative;
+    max-height: 53px;
 }
 
 .dropdown-selected::after {
@@ -117,6 +118,7 @@ header {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     z-index: 10;
     padding: 10px 0;
+    z-index: 11;
 }
 
 .dropdown-list label {
@@ -153,6 +155,8 @@ header {
     background-color: var(--lighter);
     border-radius: 15px;
     padding: 0 15px 0 15px;
+    color: white;
+
 }
 
 .price-filter-from, .price-filter-to {
@@ -162,5 +166,137 @@ header {
 
 .price-filter input {
     width: 100%;
+    margin-top: -15px;
+}
+
+/* Стили для двустороннего ползунка */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    --left-percent: 0%;
+    --right-percent: 0%;
+}
+
+/* Базовая полоса (серая) */
+.slider-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #dddddd;
+    border-radius: 4px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Активная полоса (синяя) */
+.slider-container::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 4px;
+    z-index: 2;
+    left: var(--left-percent);
+    right: var(--right-percent);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Стиль для input[type="range"] */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    pointer-events: none; /* Убираем события по умолчанию */
+}
+
+/* Ползунок "От" */
+.from-slider {
+    z-index: 15;
+}
+
+/* Ползунок "До" */
+.to-slider {
+    z-index: 16; /* Выше, чем у левого ползунка */
+}
+
+/* Отключаем стандартный трек ползунка */
+.slider::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0px;
+    background: transparent;
+    border: none;
+}
+
+.slider::-moz-range-track {
+    width: 100%;
+    height: 0px;
+    background: transparent;
+    border: none;
+}
+
+/* Стиль для бегунка ползунка */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    margin-top: 4px; /* Смещаем бегунок вниз для выравнивания с полосой */
+    cursor: grab;
+    pointer-events: auto; /* Включаем события только для бегунка */
+}
+
+.slider::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+    cursor: grab;
+    pointer-events: auto; /* Включаем события только для бегунка */
+}
+
+/* Стили при активном состоянии */
+.slider:active::-webkit-slider-thumb {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+.slider:active::-moz-range-thumb {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+/* Стили особо для правого ползунка */
+.to-slider::-webkit-slider-thumb {
+    z-index: 20; /* Выше, чем у левого бегунка */
+}
+
+.to-slider::-moz-range-thumb {
+    z-index: 20; /* Выше, чем у левого бегунка */
 }
 

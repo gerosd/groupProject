@@ -208,8 +208,8 @@ header {
 /*Footer*/
 footer {
     position: relative;
-    background: var(--primary);
     overflow: hidden;
+    background: var(--primary);
 }
 
 .footer-container {
@@ -228,7 +228,6 @@ footer {
     @media (max-width: 1409px) {
         column-gap: 0;
     }
-    
 }
 
 .for-center-footer {
@@ -315,6 +314,7 @@ footer {
 
 .footer-menu-item li:hover {
     transform: scale(1.05);
+    opacity: 1;
 }
 
 .social {
