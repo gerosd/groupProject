@@ -105,6 +105,8 @@ header {
     justify-content: space-between;
     margin-top: 165px;
     width: 1445px;
+    z-index: 10;
+    position: relative;
 }
 
 .about-text {
@@ -140,20 +142,36 @@ header {
     object-fit: cover;
 }
 
+.about-branch-bottom img {
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+    z-index: 0;
+}
+
+.about-branch-top img {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 0;
+    transform: rotate(180deg);
+}
+
 /* Slider Styles */
 .slider-container {
-    width: 550px;
+    width: 575px;
     position: relative;
     margin-left: 40px;
 }
 
 .main-slider {
     width: 100%;
-    height: 400px;
+    height: 575px;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
     background: var(--lighter);
+    box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.25);
 }
 
 .slider-wrapper {
@@ -178,47 +196,57 @@ header {
 .slider-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
-    border: none;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
     font-size: 20px;
-    color: var(--primary);
-    transition: background-color 0.3s ease;
+    transition: 0.1s;
+    background: none;
 }
 
-.slider-btn:hover {
-    background: rgba(255, 255, 255, 0.8);
+.slider-btn img {
+    width: 100%;
+    height: 100%;
 }
 
 .prev-btn {
-    left: 10px;
+    left: 25px;
+    transform: rotate(90deg) translateX(-50%);
+}
+
+.prev-btn:active {
+    left: 15px;
 }
 
 .next-btn {
-    right: 10px;
+    right: 25px;
+    transform: rotate(-90deg) translateX(50%);
+}
+
+.next-btn:active {
+    right: 15px;
 }
 
 .thumbnail-slider {
     margin-top: 20px;
     width: 100%;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 5px;
+    position: relative;
 }
 
 .thumbnail-wrapper {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
     padding: 5px;
 }
 
 .thumbnail-wrapper img {
-    width: 100px;
-    height: 60px;
+    width: 85px;
+    height: 85px;
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
