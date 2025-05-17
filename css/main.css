@@ -4,7 +4,7 @@
     --lighter: #80A98C;
     --background: #ffffff;
     --text: #3A4D37;
-    --text-light: #666666;
+    --text-light: #3A4D37;
     --border: #DDDDDD;
     --card-bg: #F5F5F5;
     --footer-text: #E0E0E0;
@@ -17,7 +17,7 @@
     --lighter: #8BA1B7;
     --background: #272C36;
     --text: #FFFFFF;
-    --text-light: #CCCCCC;
+    --text-light: #8BA1B7;
     --border: #444444;
     --card-bg: #333340;
     --footer-text: #CCCCCC;
@@ -73,6 +73,14 @@ button {
 
 .svg-theme-color-fill-darker {
     fill: var(--primary);
+}
+
+.svg-arrow-theme-fill {
+    fill: var(--text-light);
+}
+
+.svg-theme-color-stroke-darker {
+    stroke: var(--primary);
 }
 
 .container {
@@ -195,16 +203,15 @@ header {
 /*Footer*/
 footer {
     position: relative;
+    background: var(--primary);
 }
 
-
 .footer-container {
-    background-image: url('../images/background-footer.png');
     width: 100%;
     margin-top: 100px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -335,11 +342,20 @@ footer {
 }
 
 .email-input-button {
-    width: 30px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     background: none;
     border: none;
-    padding-bottom: 10px;
+    transition: 0.2s ease;
+}
+
+.email-input-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.email-input-button:hover {
+    transform: scale(1.05);
 }
 
 .email-input::placeholder {

@@ -13,4 +13,5 @@ themeToggle.addEventListener('click', () => {
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     document.body.setAttribute('data-theme', savedTheme);
+    changePhoto(savedTheme);
 }
