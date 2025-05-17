@@ -35,14 +35,21 @@ header {
 }
 
 .filter {
-    border: 1px solid var(--lighter);
-    width: 43%;
+    /* width: 43%; */
+    width: min-content;
+    column-gap: calc(15vw - 150px);
     height: 105px;
     margin-top: 100px;
     margin-left: 3.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 1000px) {
+        width: 98%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        column-gap: 5px;
+    }
 }
 
 .filter-item {
@@ -58,19 +65,6 @@ header {
     font-weight: 600;
 }
 
-/* .filter-item select {
-    width: 217px;
-    height: 53px;
-    border-radius: 15px;
-    background-color: var(--lighter);
-    border: none;
-    padding-left: 15px;
-    color: white;
-    font-size: 24px;
-    font-weight: 600;
-    
-    
-} */
 
 .custom-dropdown {
     position: relative; 
@@ -300,3 +294,163 @@ header {
     z-index: 20; /* Выше, чем у левого бегунка */
 }
 
+.amount {
+    width: 217px;
+    height: 53px;
+    border-radius: 15px;
+    background-color: var(--lighter);
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+.amount::placeholder {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.cottages {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cottages-line {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 30px;
+}
+
+.cottages-line-item {
+    width: 50%;
+    height: 4px;
+    background-color: var(--text);
+}
+
+.cottages-line span {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-inline: 20px;
+}
+
+.cottages-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap ;
+    position: relative;
+    @media (max-width: 1480px) {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+.container-branch {
+    position: absolute;
+    width: 406px;
+    height: 967px;
+    z-index: 3;
+}
+
+.first-branch {
+    top: 50%;
+    right: -280px;
+    transform: translateY(-50%) rotate(-17deg);
+    @media (max-width: 1480px) {
+        right: -130px;
+        transform: translateY(-50%) rotate(-20deg);
+    }
+}
+
+.second-branch {
+    top: 40%;
+    left: -280px;
+    transform: translateY(-50%) rotate(17deg) scaleX(-1);
+    @media (max-width: 1480px) {
+        left: -130px;
+        transform: translateY(-50%) rotate(20deg) scaleX(-1);
+    }
+}
+
+.third-branch {
+    top: 65%;
+    right: -280px;
+    transform: translateY(-50%) rotate(-12deg);
+    @media (max-width: 1480px) {
+        right: -130px;
+        transform: translateY(-50%) rotate(-15deg);
+    }
+}
+
+.container-branch svg {
+    width: 100%;
+    height: 100%;
+}
+
+.container-branch svg path {
+    stroke: var(--light);
+}
+
+.cottages-item {
+    width: 550px;
+    height: 654px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    z-index: 10;
+}
+
+.cottages-item-img {
+    width: 100%;
+    height: 485px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid var(--lighter);
+}
+
+.cottages-item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.cottages-item-title {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.cottages-price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--lighter);
+}
+
+.cottages-price span {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.to-cottage {
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+footer {
+    margin-top: 100px;
+}
