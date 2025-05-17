@@ -9,6 +9,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 main h1 {
@@ -84,4 +85,14 @@ section input::placeholder {
 
 .confirm-button:hover {
     background-color: var(--lighter);
+}
+
+.branch-top {
+    position: absolute;
+    top: 110px;
+    left: -120px;
+    z-index: 20;
+    width: 900px;
+    height: 400px;
+    transform: rotate(30deg);
 }
