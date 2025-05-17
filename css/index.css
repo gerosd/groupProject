@@ -142,14 +142,14 @@ header {
     object-fit: cover;
 }
 
-.about-branch-bottom img {
+.about-branch-bottom svg {
     position: absolute;
     right: 0;
     bottom: -25px;
     z-index: 0;
 }
 
-.about-branch-top img {
+.about-branch-top svg {
     position: absolute;
     left: 0;
     top: -100px;
