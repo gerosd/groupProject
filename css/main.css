@@ -67,6 +67,14 @@ button {
     transition: all 0.3s ease;
 }
 
+.svg-theme-color-stroke {
+    stroke: var(--lighter);
+}
+
+.svg-theme-color-fill {
+    fill: var(--lighter);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
