@@ -40,6 +40,10 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
     background: var(--background);
     font-family: 'Jost', sans-serif;
     color: var(--text);
@@ -132,6 +136,7 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .logo img {
