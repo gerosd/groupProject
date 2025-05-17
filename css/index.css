@@ -290,6 +290,12 @@ header {
     height: 325px;
     position: relative;
     z-index: 100;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(2%);
 }
 
 .advantage-content {
