@@ -1,5 +1,12 @@
 @import "main.css";
 
+.about-branch-bottom svg,
+.about-branch-top svg {
+    width: 100%;
+    height: auto;
+    max-width: 1435px;
+}
+
 header {
     position: absolute;
     top: 10px;
@@ -377,16 +384,17 @@ header {
 
 /* Cottages Section */
 .cottages {
+    margin-top: 280px;
+    margin-inline: auto;
     padding: 80px 0;
     background-color: var(--background);
+    max-width: 1800px;
 }
 
 .cottages-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin-top: 280px;
     margin-inline: auto;
     padding: 0 20px;
 }
@@ -394,29 +402,37 @@ header {
 .cottages h2 {
     font-size: 96px;
     color: var(--text);
+    text-align: center;
+    padding-bottom: 35px;
 }
 
 .cottages-info {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    text-align: right;
+    font-size: 32px;
+    color: var(--primary);
+    opacity: 0.75;
+    width: 520px;
+    font-weight: 700;
 }
 
 .view-all {
     color: var(--primary);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
+    font-weight: 700;
+    opacity: 0.75;
+    width: 275px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.view-all svg {
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    right: 75px;
 }
 
 .view-all:hover {
-    color: var(--light);
-}
-
-.view-all::after {
-    content: '→';
-    margin-left: 5px;
+    transform: scale(1.1);
 }
 
 .cottages-container {

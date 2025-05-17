@@ -56,10 +56,6 @@ a {
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: var(--light);
-}
-
 button {
     cursor: pointer;
     border: none;
@@ -73,6 +69,10 @@ button {
 
 .svg-theme-color-fill {
     fill: var(--lighter);
+}
+
+.svg-theme-color-fill-darker {
+    fill: var(--primary);
 }
 
 .container {
@@ -105,7 +105,7 @@ header {
     padding: 0;
 }
 
-.nav-menu a {
+.nav-menu > li, a {
     color: #fff;
     font-weight: 500;
     font-size: 24px;
