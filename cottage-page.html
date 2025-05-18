@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стандартный коттедж</title>
+    <link rel="icon" type="image/svg" href="images/icons/logo.svg">
+    <link rel="stylesheet" href="css/one-cottage.css">
+</head>
+<body data-theme="light">
+    <header>
+        <nav class="header-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html#about">О клубе</a></li>
+                <li><a href="cottages.html">Коттеджи</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="events.html">Мероприятия</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="logo" onClick="window.location = 'index.html'">
+                <img src="images/icons/logo.svg" alt="Арбория" />
+            </div>
+            <div class="header-icons">
+                <img src="images/icons/langChange.svg" alt="header-icon" id="changeLanguage">
+                <img src="images/icons/themeChange.svg" alt="header-icon" id="themeToggle">
+                <img src="images/icons/toggleMenu.svg" alt="header-icon" id="toggleMenu">
+            </div>
+        </nav>
+        <div class="languages-container">
+            <div class="language" onClick="location.reload()">
+                <pre>RUS</pre>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('en')">
+                <pre>ENG</pre>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('de')">
+                <pre>DEU</pre>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('zh-CN')">
+                <pre>CHI</pre>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('fr')">
+                <pre>FRA</pre>
+                <div class="lang-line"></div>
+            </div>
+            <div class="language" onClick="translatePage('es')">
+                <pre>ESP</pre>
+                <div class="lang-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="cottage-left">
+            <div class="form">
+                <h2 class="form-h2">Одноместный коттедж "Стандарт"</h2>
+                <div class="price">
+                    <p>4.000р/сут</p>
+                </div>
+                <div class="amount-info">
+                    <div class="amount-item">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="6" r="4"/>
+                            <path d="M20 17.5C20 19.9853 20 22 12 22C4 22 4 19.9853 4 17.5C4 15.0147 7.58172 13 12 13C16.4183 13 20 15.0147 20 17.5Z"/>
+                        </svg>
+                        <span>1 чел.</span>
+                    </div>
+
+                    <div class="amount-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path d="M5 10C3.347656 10 2 11.347656 2 13L2 26.8125C3.296875 25.6875 4.9375 24.777344 7 24.0625L7 20C7 17.339844 11.542969 17 15.5 17C19.457031 17 24 17.339844 24 20L24 22C24.335938 21.996094 24.65625 22 25 22C25.34375 22 25.664063 21.996094 26 22L26 20C26 17.339844 30.542969 17 34.5 17C38.457031 17 43 17.339844 43 20L43 24.03125C45.058594 24.742188 46.691406 25.671875 48 26.8125L48 13C48 11.347656 46.652344 10 45 10 Z M 25 24C5.90625 24 -0.015625 27.53125 0 37L50 37C50.015625 27.46875 44.09375 24 25 24 Z M 0 39L0 50L7 50L7 46C7 44.5625 7.5625 44 9 44L41 44C42.4375 44 43 44.5625 43 46L43 50L50 50L50 39Z"/>
+                        </svg>
+                        <span>1 спальня</span>
+                    </div>
+
+                    <div class="amount-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                            <path d="M3.5 4.13516C3.5 3.23209 4.23209 2.5 5.13516 2.5C5.80379 2.5 6.40505 2.90708 6.65338 3.52788L6.79665 3.88607C6.20214 4.31929 5.71643 4.92335 5.41723 5.66014C4.99692 6.69515 5.01959 7.80665 5.3978 8.76651C5.47221 8.95535 5.61997 9.10596 5.80735 9.18396C5.99473 9.26197 6.20572 9.26069 6.39215 9.18044L12.3529 6.61436C12.725 6.45417 12.9026 6.02744 12.7541 5.65053C12.3758 4.69029 11.637 3.87189 10.6217 3.43813C9.81033 3.09152 8.94952 3.04489 8.15623 3.24613L8.04609 2.97079C7.56997 1.7805 6.41715 1 5.13516 1C3.40366 1 2 2.40366 2 4.13516V11H1.75C1.33579 11 1 11.3358 1 11.75C1 12.1642 1.33579 12.5 1.75 12.5H2V12.75C2 12.7538 2.00003 12.7576 2.00008 12.7614C1.99999 12.7799 2 12.7985 2.00001 12.8168L2.00001 12.8546C2 13.2298 2 13.4498 2.01557 13.6952C2.15751 15.9316 3.36604 17.9968 5.11758 19.3472C5.10383 19.3688 5.09106 19.3913 5.07934 19.4148L4.07934 21.4148C3.8941 21.7852 4.04427 22.2357 4.41475 22.421C4.78524 22.6062 5.23574 22.4561 5.42098 22.0856L6.3887 20.1501C7.19042 20.5559 8.0623 20.823 8.96911 20.9148C9.21355 20.9396 9.36275 20.9452 9.61687 20.9548L9.62369 20.955C10.3639 20.9828 11.0885 21 11.75 21C12.4115 21 13.1361 20.9828 13.8763 20.955L13.883 20.9548C14.1372 20.9452 14.2865 20.9396 14.5309 20.9148C15.4378 20.823 16.3098 20.5559 17.1116 20.15L18.0793 22.0856C18.2646 22.4561 18.7151 22.6062 19.0856 22.421C19.4561 22.2357 19.6062 21.7852 19.421 21.4148L18.421 19.4148C18.4092 19.3913 18.3964 19.3687 18.3827 19.347C20.1341 17.9966 21.3425 15.9315 21.4845 13.6952C21.5 13.4498 21.5 13.2299 21.5 12.8546L21.5 12.8168C21.5 12.7567 21.5001 12.6942 21.4963 12.6365C21.4933 12.5905 21.4886 12.545 21.4821 12.5H21.75C22.1642 12.5 22.5 12.1642 22.5 11.75C22.5 11.3358 22.1642 11 21.75 11H3.5V4.13516Z"/>
+                        </svg>
+                        <span>1 санузел</span>
+                    </div>
+                </div>
+
+                <div class="cottage-info">
+                    <p class="cottage-desc">Уютный одноместный коттедж с посещением бани и трёхразовым питанием (завтрак, обед, ужин)
+                        Проживание с домашними животными разрешено.
+                        Отличное место для отдыха и уединения.</p>
+                    <ul class="cottage-advantages">
+                        <li>Телевизор</li>
+                        <li>WiFi</li>
+                        <li>Кондиционер</li>
+                        <li>Фен</li>
+                    </ul>
+                </div>
+                <button class="booking">Забронировать</button>
+                <svg class="branch" viewBox="0 0 442 294" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M301.58 123.39C302.583 136.949 284.909 167.734 286.441 185.289C285.018 180.788 284.369 176.754 284.981 173.774C287.755 160.275 275.344 152.764 276.216 142.582C277.089 132.401 295.618 121.619 297.631 114.99C299.242 109.687 305.08 101.735 309.324 100.112C306.447 104.475 300.46 108.242 301.58 123.39Z" class="svg-theme-color-fill-darker"/>
+                    <path d="M286.441 185.289C284.909 167.734 302.583 136.949 301.58 123.39C300.46 108.242 306.447 104.475 309.324 100.112C305.08 101.735 299.242 109.687 297.631 114.99C295.618 121.619 277.089 132.401 276.216 142.582C275.344 152.764 287.755 160.275 284.981 173.774C282.762 184.574 297.114 209.226 304.827 219.762" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                    <path d="M323.29 144.628C319.85 148.663 314.69 159.555 311.325 163C299.312 184.962 303.547 205.026 311.008 218.821C320.778 204.739 330.673 173.252 317.171 164.298C323.705 159.536 324.226 149.856 323.29 144.628Z" class="svg-theme-color-fill-darker"/>
+                    <path d="M310.999 218.834C320.772 204.759 330.678 173.255 317.171 164.298C323.705 159.536 324.226 149.856 323.29 144.628C319.85 148.663 314.69 159.555 311.325 163C294.088 194.512 310.302 222.115 321.499 232.901" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                    <path d="M180.375 160.22L180.93 160.004L181.002 159.975L181.076 159.956C183.71 159.23 186.715 157.415 189.595 155.295C192.428 153.208 195.002 150.932 196.834 149.342C199.09 147.171 202.685 146.025 206.805 145.533C210.993 145.033 215.98 145.178 221.263 145.811C231.5 147.036 243.065 150.122 252.494 154.153L253.399 154.546C257.275 156.254 260.792 158.134 263.677 160.129C266.546 162.113 268.879 164.271 270.287 166.561L267.733 168.132C266.631 166.342 264.673 164.467 261.97 162.597C259.416 160.831 256.272 159.125 252.74 157.539C245.414 160.251 236.469 163.59 227.475 164.786C218.602 165.966 209.486 165.087 201.717 159.332C201.49 159.536 201.234 159.768 200.969 160.013L200.953 160.028C197.315 163.302 192.067 163.972 188.015 163.927C185.949 163.904 184.097 163.693 182.764 163.489C182.096 163.386 181.554 163.284 181.176 163.208C180.987 163.17 180.838 163.138 180.735 163.115C180.683 163.103 180.643 163.094 180.614 163.088C180.601 163.085 180.589 163.082 180.581 163.08C180.577 163.079 180.573 163.077 180.571 163.076L180.568 163.076L180.566 163.076L180.919 161.618L180.565 163.075L175.926 161.95L180.375 160.22ZM114.852 165.643C115.636 159.604 119.16 154.403 124.341 149.99C129.518 145.578 136.415 141.894 144.103 138.876C159.356 132.888 177.925 129.443 192.946 128.196C192.947 128.195 192.95 128.193 192.952 128.191L192.955 128.196C193.075 128.186 193.195 128.175 193.314 128.165L194.718 128.057C201.681 127.55 207.826 127.529 212.418 127.969L212.227 129.961C207.561 129.513 201.152 129.553 193.824 130.132C191.317 132.497 186.916 135.568 181.522 138.776C175.909 142.114 169.157 145.642 162.207 148.737C155.261 151.83 148.091 154.502 141.645 156.116C135.528 157.647 129.917 158.263 125.751 157.261L116.551 166.478L114.473 168.56L114.852 165.643Z" class="svg-theme-color-fill-darker"/>
+                    <path d="M204.495 77.7379C207.041 79.6243 225.04 94.235 218.464 123.934C220.011 125.845 221.505 127.573 222.885 129.076C208.022 118.879 192.072 108.444 177.405 99.7556C154.36 86.1032 134.495 76.7876 126.977 79.4177C110.085 85.3273 119.257 70.5226 123.791 67.6363C121.573 72.7053 114.709 81.4649 127.034 75.4366C142.44 67.9012 154.965 56.6055 177.405 99.7556C192.072 108.444 208.022 118.879 222.885 129.076C221.505 127.573 220.011 125.845 218.464 123.934C206.136 108.7 190.481 81.8558 202.635 65.195C202.336 68.5834 201.931 75.7646 204.495 77.7379Z" class="svg-theme-color-fill-darker"/>
+                    <path d="M218.464 123.934C225.04 94.235 207.041 79.6243 204.495 77.7379C201.931 75.7646 202.336 68.5834 202.635 65.195C188.956 83.9462 210.503 115.596 222.885 129.076M237.847 139.555C227.699 131.974 237.083 138.817 222.885 129.076M177.405 99.7556C154.36 86.1032 134.495 76.7876 126.977 79.4177C110.085 85.3273 119.257 70.5226 123.791 67.6363C121.573 72.7053 114.709 81.4649 127.034 75.4366C142.44 67.9012 154.965 56.6055 177.405 99.7556ZM177.405 99.7556C192.072 108.444 208.022 118.879 222.885 129.076" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                    <path d="M21.7292 146.319C17.2377 147.116 5 152.852 5 152.852C15.0001 138.66 86.076 120.179 104.276 123.553C103.278 124.304 100.659 126.051 99.1228 128.868C88.8713 147.661 65.2492 145.62 47.3693 146.938C34.3821 147.895 23.4075 146.021 21.7292 146.319Z" class="svg-theme-color-fill-darker"/>
+                    <path d="M104.276 123.553C149.771 115.998 247.343 116.451 275.124 178.437C302.905 240.422 368.753 257.81 398.204 258.755M104.276 123.553C86.076 120.179 15.0001 138.66 5 152.852C5 152.852 17.2377 147.116 21.7292 146.319C23.4075 146.021 34.3821 147.895 47.3693 146.938C65.2492 145.62 88.8713 147.661 99.1228 128.868C100.659 126.051 103.278 124.304 104.276 123.553Z" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                    <path d="M318.146 230.58C297.721 215.55 266.575 199.04 241.709 214.489" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                    <path d="M268.649 166.809C257.168 149.866 249.827 123.745 266.696 106.047" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                    <path d="M301.993 217.062C276.762 195.108 219.198 161.433 189.285 203.977" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                    <path d="M163.641 120.709C141.022 119.821 96.0062 126.093 97.303 160.009" class="svg-theme-color-stroke-darker" stroke-width="3"/>
+                </svg>
+            </div>
+
+            <div class="reviews">
+                <div class="reviews-amount">
+                    <img src="images/icons/Star.svg" alt="star">
+                    <p>4,82</p>
+                    <ul>
+                        <li>5 отзывов</li>
+                    </ul>
+                </div>
+                <div class="reviews-scroll">
+                    <div class="review-item">
+                        <div class="review-item-header">
+                            <img src="images/reviews/anna.jpg" alt="user">
+                            <div class="item-header-info">
+                                <p class="header-name">Анна</p>
+                                <p class="header-date">Май 2025</p>
+                            </div>
+                        </div>
+                        <p class="review-text">Мне очень понравилось это место. Я отлично провела время и хорошо отдохнула. Спасибо организаторам!</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-item-header">
+                            <img src="images/reviews/anna.jpg" alt="user">
+                            <div class="item-header-info">
+                                <p class="header-name">Анна</p>
+                                <p class="header-date">Май 2025</p>
+                            </div>
+                        </div>
+                        <p class="review-text">Мне очень понравилось это место. Я отлично провела время и хорошо отдохнула. Спасибо организаторам!</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-item-header">
+                            <img src="images/reviews/anna.jpg" alt="user">
+                            <div class="item-header-info">
+                                <p class="header-name">Анна</p>
+                                <p class="header-date">Май 2025</p>
+                            </div>
+                        </div>
+                        <p class="review-text">Мне очень понравилось это место. Я отлично провела время и хорошо отдохнула. Спасибо организаторам!</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item-header">
+                            <img src="images/reviews/anna.jpg" alt="user">
+                            <div class="item-header-info">
+                                <p class="header-name">Анна</p>
+                                <p class="header-date">Май 2025</p>
+                            </div>
+                        </div>
+                        <p class="review-text">Мне очень понравилось это место. Я отлично провела время и хорошо отдохнула. Спасибо организаторам!</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item-header">
+                            <img src="images/reviews/anna.jpg" alt="user">
+                            <div class="item-header-info">
+                                <p class="header-name">Анна</p>
+                                <p class="header-date">Май 2025</p>
+                            </div>
+                        </div>
+                        <p class="review-text">Мне очень понравилось это место. Я отлично провела время и хорошо отдохнула. Спасибо организаторам!</p>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+            </div>
+
+        </div>
+        <div class="cottage-right">
+            <img class="mega" src="images/cottages/standard/1mesto.jpg" alt="cottage-photo">
+            <img class="mini" src="images/cottages/standard/1mesto.jpg" alt="cottage-photo">
+            <img class="mini2" src="images/cottages/standard/1mesto.jpg" alt="cottage-photo">
+            <img class="mega2" src="images/cottages/standard/1mesto.jpg" alt="cottage-photo">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-footer">
+                <div class="footer-logo">
+                    <img src="images/icons/logo.svg" alt="Арбория">
+                </div>
+                <div class="footer-number">
+                    Обращайтесь по номеру: <br>
+                    +7 900 195 67 02
+                </div>
+            </div>
+
+            <div class="for-center-footer">
+                <div class="center-footer">
+                    <div class="footer-menu">
+                        <div class="footer-menu-item">
+                            <h3>О клубе</h3>
+                            <ul>
+                                <li><a href="index.html#advantages">Преимущества</a></li>
+                                <li><a href="index.html#map">Карта</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Коттеджи</h3>
+                            <ul>
+                                <li><a href="cottages.html#standard">Стандарт</a></li>
+                                <li><a href="cottages.html#vip">VIP</a></li>
+                                <li><a href="cottages.html#elit>">Элит</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Услуги</h3>
+                            <ul>
+                                <li>Спортивные игры</li>
+                                <li>Активный отдых на природе</li>
+                                <li>Развлечения в помещении</li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Мероприятия</h3>
+                            <ul>
+                                <li>Мастер-классы</li>
+                                <li>Концерты и шоу</li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Контакты</h3>
+                            <ul>
+                                <li>Адрес</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social">
+                    <div class="left-social">
+                        <div class="social-icons">
+                            <a href="">
+                                <img src="images/icons/soc/vk.svg" alt="VK">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/telegram.svg" alt="Telegram">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/whatsapp.svg" alt="WhatsApp">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/gmail.svg" alt="Gmail">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/2gis.svg" alt="2gis">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="emails">
+                        <input class="email-input" type="email" placeholder="Введите ваш Email для рассылки">
+                        <button class="email-input-button">
+                            <img src="images/icons/footerBack.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-line"></div>
+            <div class="footer-bottom">
+                <p>© 2025 Arboria. Все права защищены.</p>
+            </div>
+        </div>
+        <div class="footer-branch">
+            <svg viewBox="0 0 598 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_364_5)">
+                    <path d="M486.896 95.2724L487.286 96.7207L487.286 96.7207L486.896 95.2724ZM207.058 103.337L207.171 101.841L207.058 103.337ZM43.55 68.5273C42.8085 68.1579 42.5067 67.2574 42.8761 66.5158C43.2455 65.7743 44.146 65.4726 44.8875 65.842L43.55 68.5273ZM569.754 122.804L568.836 123.99C560.965 117.894 547.385 109.193 532.312 102.965C517.191 96.7158 500.84 93.0696 487.286 96.7207L486.896 95.2724L486.506 93.824C501.032 89.911 518.15 93.866 533.458 100.192C548.814 106.538 562.624 115.385 570.673 121.618L569.754 122.804ZM486.896 95.2724L487.286 96.7207C469.425 101.532 444.615 100.8 420.63 95.7319C396.647 90.6643 373.214 81.2043 358.18 68.3237L359.156 67.1847L360.132 66.0456C374.636 78.4718 397.523 87.7833 421.25 92.7967C444.976 97.8098 469.268 98.4677 486.506 93.824L486.896 95.2724ZM359.156 67.1847L358.18 68.3237C354.646 65.2955 351.413 63.7697 348.278 63.2855C345.138 62.8006 341.942 63.3364 338.44 64.6904C334.921 66.0512 331.164 68.2091 326.922 70.8961C324.805 72.2365 322.589 73.6946 320.231 75.2394C317.877 76.7816 315.389 78.4059 312.747 80.0653C291.532 93.3935 260.575 108.896 206.945 104.833L207.058 103.337L207.171 101.841C259.99 105.843 290.314 90.616 311.151 77.525C313.767 75.8821 316.234 74.2714 318.587 72.73C320.935 71.1913 323.175 69.7175 325.316 68.3616C329.589 65.6561 333.551 63.3645 337.358 61.8922C341.184 60.4131 344.925 59.7322 348.735 60.3206C352.55 60.9097 356.283 62.7472 360.132 66.0456L359.156 67.1847ZM207.058 103.337L206.945 104.833C121.633 98.3695 62.5537 77.993 43.55 68.5273L44.2188 67.1846L44.8875 65.842C63.4769 75.1014 122.164 95.4011 207.171 101.841L207.058 103.337Z" class="svg-theme-color-fill"/>
+                    <path d="M348.652 61.7385C348.972 58.0306 338.18 51.1709 292.455 53.3956C246.729 55.6204 228.649 43.9404 225.324 37.8223" class="svg-theme-color-stroke" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M449.347 98.165C440.967 115.861 424.527 128.177 410.987 132.927C399.095 137.099 391.998 137.655 384.902 145.998" class="svg-theme-color-stroke" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M248.57 102.237C252.386 118.677 242.962 126.232 237.773 127.954C237.099 120.41 238.17 104.726 247.853 102.347" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M106.496 89.0493C103.174 105.541 94.4677 106.134 90.5296 104.369C92.7454 97.4743 98.9409 84.6867 105.997 88.6963" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M415.369 92.8379C403.524 90.3997 403.1 74.7987 404.369 67.303C409.321 69.8166 418.505 78.2471 415.623 91.8598" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M242.413 102.365C234.583 101.828 232.357 109.116 232.223 112.827C235.684 112.347 242.575 109.683 242.452 102.861" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M384.613 146.181C377.985 159.443 368.23 151.442 364.181 145.784C367.869 141.056 377.51 135.194 384.613 146.181Z" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M348.607 57.8447C350.057 48.3933 344.512 45.0075 341.558 44.4961C341.491 48.7411 342.726 57.3537 348.204 57.8447" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M349.269 60.626C346.674 43.6921 356.596 37.626 361.882 36.7097C362.002 44.3153 359.792 59.7463 349.99 60.626" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M449.947 98.4438C446.284 115.378 460.292 121.444 467.754 122.36C467.923 114.755 464.803 99.3235 450.964 98.4438" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M259.273 51.1704C262.784 32.6613 249.36 26.0309 242.209 25.0294C242.046 33.3424 245.036 50.2089 258.298 51.1704" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M44.7231 67.2401C30.4916 61.4241 28.2976 49.2862 28.9796 43.9443C35.0917 47.5249 46.836 57.0633 44.916 66.5723" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M335.226 63.1284C335.801 60.3474 328.59 53.6175 291.303 53.395" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M437.264 96.4971C445.502 97.6095 436.615 111.737 423.07 127.088" class="svg-theme-color-stroke" stroke-width="3"/>
+                </g>
+                <defs>
+                    <filter id="filter0_d_364_5" x="0.32246" y="0.109081" width="597.55" height="186.232" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="13.6"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_364_5"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_364_5" result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="footer-branch-left">
+            <svg viewBox="0 0 220 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_367_22)">
+                    <path d="M100.502 154.707C116.428 162.251 151.438 156.391 163.802 162.049C177.613 168.369 183.228 164.066 188.32 162.887C185.322 166.301 175.835 169.009 170.303 168.674C163.388 168.254 146.833 181.875 136.984 179.151C127.135 176.427 124.411 162.177 110.79 160.082C99.8932 158.405 81.7744 136.373 74.5797 125.477" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M77.5973 120.013C94.1931 115.748 127.175 117.421 130.873 133.2C137.611 128.731 146.868 131.61 151.443 134.307C146.464 136.128 134.457 137.176 130.057 139.132C94.5165 144.329 74.2784 119.525 68.0616 105.275" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M127.522 243.79C121.305 267.19 87.5236 327.898 59.4494 321.437L71.8128 315.779C73.0701 299.224 109.506 266.475 121.101 261.307" class="svg-theme-color-stroke" stroke-width="2"/>
+                    <path d="M116.684 196.061C106.298 208.169 90.9026 225.311 97.1644 243.909C97.1644 243.909 96.2505 244.41 95.141 244.972C87.5075 248.973 85.9842 261.873 85.9842 261.873L86.3799 261.428C89.9087 256.529 98.133 252.194 102.358 249.883L102.358 249.884C115.737 243.486 121.521 190.405 111.261 177.292" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M134.375 239.783C164.506 243.951 171.943 265.908 172.825 268.951C173.783 272.041 180.657 274.16 183.937 275.059C161.599 281.36 139.422 250.148 131.092 233.849M126.473 216.176C130.05 228.328 126.899 217.149 131.092 233.849M142.758 286.689C147.54 313.044 149.363 334.909 144.282 341.042C132.864 354.823 149.935 351.375 154.219 348.128C148.695 348.444 138.094 351.832 148.034 342.374C160.458 330.552 175.406 322.739 142.758 286.689ZM142.758 286.689C139.715 269.916 135.481 251.332 131.092 233.849" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M95.0053 346.971C117.916 306.946 151.438 215.311 102.989 167.701C54.5406 120.091 61.1486 52.3072 70.5086 24.3668M95.0053 346.971C91.8365 365.207 49.7829 425.414 32.9986 429.852C32.9986 429.852 42.633 420.374 44.9431 416.44C45.8062 414.97 47.8678 404.029 53.2833 392.186C60.7391 375.882 67.0439 353.025 88.2297 349.953C91.4052 349.492 93.9538 347.645 95.0053 346.971Z" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M69.0701 109.226C76.0552 133.604 80.6982 168.548 57.5635 186.485" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M111.639 177.817C123.529 194.475 145.463 210.445 167.925 200.788" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M76.1245 129.073C87.9293 160.366 99.4734 226.049 49.1807 239.292" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M118.326 292.304C111.288 313.819 89.7473 353.84 58.4012 340.825" class="svg-theme-color-stroke" stroke-width="3"/>
+                </g>
+                <defs>
+                    <filter id="filter0_d_367_22" x="0.716564" y="0.690136" width="219.006" height="463.257" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="13.6"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_367_22"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_367_22" result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
+
+        </div>
+    </footer>
+</body>
+<script src="js/cottages/fillPage.js" defer></script>
+<!--Скрипты ниже на всех страницах-->
+<script src="js/footer/emailInput.js"></script>
+<script src="js/header/toggleLanguages.js"></script>
+<script src="js/header/translatePage.js" defer></script>
+<script src="js/header/changeTheme.js" type="module"></script>
+</html>
