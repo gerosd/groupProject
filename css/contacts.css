@@ -31,10 +31,17 @@ main {
 .title-branch svg {
     width: 100%;
     height: 100%;
+    transition: filter 0.2s ease;
 }
 
 .title-branch svg path {
     stroke: var(--lighter);
+}
+
+[data-theme="dark"] .title-branch svg {
+    filter: 
+        drop-shadow(0 0 2px rgba(176, 223, 255, 0.8))
+        drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
 }
 
 .big-path {
@@ -84,6 +91,11 @@ main {
 .share-soc a {
     width: 64px;
     height: 64px;
+    transition: 0.2s ease;
+}
+
+.share-soc a:hover {
+    transform: translateY(-5px);
 }
 
 .share-soc img {
