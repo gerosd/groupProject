@@ -87,6 +87,12 @@ button {
     stroke: var(--primary);
 }
 
+[data-theme="dark"] svg {
+    filter:
+            drop-shadow(0 0 2px rgba(176, 223, 255, 0.8))
+            drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -407,7 +413,7 @@ footer {
 .footer-line {
     width: 100%;
     height: 1px;
-    background: #80A98C;
+    background: var(--lighter);
     margin-top: 20px;
 }
 

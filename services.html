@@ -2,9 +2,287 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <link rel="icon" type="image/svg" href="images/icons/logo.svg">
+    <link rel="stylesheet" href="css/services.css">
 </head>
-<body>
+<body data-theme="light">
+    <header>
+    <nav class="header-nav">
+        <ul class="nav-menu">
+            <li><a href="#about">О клубе</a></li>
+            <li><a href="cottages.html">Коттеджи</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="events.html">Мероприятия</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <div class="logo" onClick="window.location = 'index.html'">
+            <img src="images/icons/logo.svg" alt="Арбория" />
+        </div>
+        <div class="header-icons">
+            <img src="images/icons/langChange.svg" alt="header-icon" id="changeLanguage">
+            <img src="images/icons/themeChange.svg" alt="header-icon" id="themeToggle">
+            <img src="images/icons/toggleMenu.svg" alt="header-icon" id="toggleMenu">
+        </div>
+    </nav>
+    <div class="languages-container">
+        <div class="language" onClick="location.reload()">
+            <pre>RUS</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('en')">
+            <pre>ENG</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('de')">
+            <pre>DEU</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('zh-CN')">
+            <pre>CHI</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('fr')">
+            <pre>FRA</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('es')">
+            <pre>ESP</pre>
+            <div class="lang-line"></div>
+        </div>
+    </div>
+</header>
 
+    <main>
+        <div class="title">
+            <div class="title-branch title-branch-left">
+                <svg viewBox="0 0 747 180" fill="none"  xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_232_43)">
+                        <path d="M608.237 96.14L608.832 99.0804L608.237 96.14ZM237.534 104.16L237.705 101.165L237.534 104.16ZM20.7695 71.0175C19.2175 70.4372 18.4299 68.7087 19.0102 67.1568C19.5905 65.6049 21.319 64.8173 22.8709 65.3976L20.7695 71.0175ZM718 123.519L716.492 126.113C706.124 120.085 688.19 111.456 668.27 105.276C648.284 99.0758 626.694 95.4682 608.832 99.0804L608.237 96.14L607.643 93.1995C626.978 89.2894 649.725 93.241 670.048 99.5456C690.439 105.871 708.787 114.693 719.508 120.926L718 123.519ZM608.237 96.14L608.832 99.0804C585.106 103.878 552.195 103.144 520.395 98.1004C488.623 93.0606 457.469 83.6409 437.397 70.7307L439.02 68.2076L440.643 65.6844C459.699 77.9411 489.906 87.1891 521.335 92.1745C552.739 97.1557 584.872 97.8045 607.643 93.1995L608.237 96.14ZM439.02 68.2076L437.397 70.7307C432.836 67.7972 428.654 66.3096 424.566 65.8358C420.464 65.3602 416.283 65.8856 411.697 67.2168C402.294 69.946 392 75.7531 377.764 82.4673C349.559 95.7698 308.471 111.2 237.364 107.155L237.534 104.16L237.705 101.165C307.612 105.141 347.703 90.0111 375.205 77.0405C388.822 70.6182 400.013 64.3604 410.024 61.4547C415.145 59.9685 420.152 59.2839 425.257 59.8757C430.377 60.4692 435.422 62.3262 440.643 65.6844L439.02 68.2076ZM237.534 104.16L237.364 107.155C124.33 100.727 46.0171 80.4584 20.7695 71.0175L21.8202 68.2076L22.8709 65.3976C47.423 74.5783 125.116 94.7615 237.705 101.165L237.534 104.16Z" class="big-path"/>
+                        <path d="M428.094 63.5062C428.518 59.8188 414.222 52.997 353.649 55.2094C293.076 57.4219 269.125 45.8065 264.721 39.7222" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M561.486 99.7349C550.385 117.333 527.826 126.903 510.67 134.305C494.155 141.43 486.533 140.259 469.509 145.302" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M295.516 103.784C300.571 120.133 288.088 127.646 281.214 129.359C280.32 121.856 281.74 106.26 294.566 103.894" stroke-width="6"/>
+                        <path d="M107.31 90.6691C102.91 107.069 91.376 107.659 86.1592 105.904C89.0945 99.0475 97.3017 86.3307 106.648 90.3181" stroke-width="6"/>
+                        <path d="M516.476 94.4373C500.784 92.0125 500.223 76.4978 501.903 69.0436C508.463 71.5433 520.629 79.9272 516.812 93.4646" stroke-width="6"/>
+                        <path d="M287.36 103.911C276.987 103.378 274.039 110.625 273.861 114.315C278.446 113.838 287.575 111.188 287.411 104.405" stroke-width="6"/>
+                        <path d="M472.513 143.203C465.212 150.076 457.857 141.078 455.092 135.719C458.828 133.736 467.794 133.066 472.513 143.203Z" stroke-width="6"/>
+                        <path d="M428.034 59.6343C429.955 50.2351 422.609 46.8681 418.697 46.3595C418.608 50.581 420.244 59.146 427.5 59.6343" stroke-width="6"/>
+                        <path d="M428.911 62.3999C425.474 45.5597 438.618 39.5271 445.62 38.6159C445.779 46.1794 442.851 61.5251 429.866 62.3999" stroke-width="6"/>
+                        <path d="M562.281 100.011C557.429 116.851 575.985 122.884 585.87 123.795C586.095 116.232 581.961 100.886 563.629 100.011" stroke-width="6"/>
+                        <path d="M309.694 52.9966C314.344 34.5899 296.561 27.9961 287.088 27.0001C286.873 35.2672 290.834 52.0404 308.402 52.9966" stroke-width="6"/>
+                        <path d="M25.4778 68.9777C6.62519 63.1938 3.71887 51.123 4.62228 45.8106C12.7191 49.3714 28.2768 58.8571 25.7333 68.3136" stroke-width="6"/>
+                        <path d="M410.309 64.888C411.071 62.1225 401.518 55.4297 352.124 55.2085" stroke-width="6"/>
+                        <path d="M545.498 98.0103C555.868 99.0984 543.474 112.309 526.424 127.325" stroke-width="6"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_232_43" x="-25.6607" y="0.477245" width="772.368" height="179.482" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="13.6"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_232_43"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_232_43" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+
+            </div>
+            <div class="title-text">
+                <span>Услуги</span>
+            </div>
+            <div class="title-branch title-branch-right">
+                <svg viewBox="0 0 747 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d_232_27)">
+                        <path d="M138.763 96.14L138.168 99.0804L138.763 96.14ZM509.466 104.16L509.295 101.165L509.466 104.16ZM726.23 71.0175C727.782 70.4372 728.57 68.7087 727.99 67.1568C727.409 65.6049 725.681 64.8173 724.129 65.3976L726.23 71.0175ZM29 123.519L30.5079 126.113C40.8757 120.085 58.8104 111.456 78.7294 105.276C98.7162 99.0758 120.306 95.4682 138.168 99.0804L138.763 96.14L139.357 93.1995C120.022 89.2894 97.2747 93.241 76.9517 99.5456C56.5609 105.871 38.213 114.693 27.4921 120.926L29 123.519ZM138.763 96.14L138.168 99.0804C161.894 103.878 194.805 103.144 226.604 98.1004C258.377 93.0606 289.531 83.6409 309.603 70.7307L307.98 68.2076L306.357 65.6844C287.301 77.9411 257.094 87.1891 225.664 92.1745C194.261 97.1557 162.128 97.8045 139.357 93.1995L138.763 96.14ZM307.98 68.2076L309.603 70.7307C314.164 67.7972 318.346 66.3096 322.433 65.8358C326.536 65.3602 330.717 65.8856 335.303 67.2168C344.705 69.946 355 75.7531 369.236 82.4673C397.441 95.7698 438.529 111.2 509.636 107.155L509.466 104.16L509.295 101.165C439.387 105.141 399.297 90.0111 371.795 77.0405C358.178 70.6182 346.986 64.3604 336.976 61.4547C331.855 59.9685 326.848 59.2839 321.742 59.8757C316.623 60.4692 311.578 62.3262 306.357 65.6844L307.98 68.2076ZM509.466 104.16L509.636 107.155C622.67 100.727 700.983 80.4584 726.23 71.0175L725.18 68.2076L724.129 65.3976C699.577 74.5783 621.884 94.7615 509.295 101.165L509.466 104.16Z" class="big-path"/>
+                        <path d="M318.905 63.5062C318.482 59.8188 332.778 52.997 393.351 55.2094C453.924 57.4219 477.875 45.8065 482.279 39.7222" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M185.513 99.7349C196.615 117.333 219.173 126.903 236.329 134.305C252.845 141.43 260.467 140.259 277.49 145.302" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M451.484 103.784C446.429 120.133 458.912 127.646 465.786 129.359C466.68 121.856 465.26 106.26 452.433 103.894" stroke-width="6"/>
+                        <path d="M639.69 90.6691C644.09 107.069 655.624 107.659 660.841 105.904C657.905 99.0475 649.698 86.3307 640.352 90.3181" stroke-width="6"/>
+                        <path d="M230.524 94.4373C246.216 92.0125 246.777 76.4978 245.097 69.0436C238.537 71.5433 226.371 79.9272 230.188 93.4646" stroke-width="6"/>
+                        <path d="M459.64 103.911C470.013 103.378 472.961 110.625 473.139 114.315C468.554 113.838 459.425 111.188 459.589 104.405"  stroke-width="6"/>
+                        <path d="M274.487 143.203C281.788 150.076 289.143 141.078 291.908 135.719C288.172 133.736 279.206 133.066 274.487 143.203Z" stroke-width="6"/>
+                        <path d="M318.966 59.6343C317.045 50.2351 324.39 46.8681 328.303 46.3595C328.392 50.581 326.756 59.146 319.499 59.6343" stroke-width="6"/>
+                        <path d="M318.089 62.3999C321.526 45.5597 308.382 39.5271 301.38 38.6159C301.221 46.1794 304.149 61.5251 317.134 62.3999" stroke-width="6"/>
+                        <path d="M184.719 100.011C189.571 116.851 171.015 122.884 161.13 123.795C160.905 116.232 165.039 100.886 183.371 100.011" stroke-width="6"/>
+                        <path d="M437.306 52.9966C432.656 34.5899 450.439 27.9961 459.912 27.0001C460.127 35.2672 456.165 52.0404 438.598 52.9966" stroke-width="6"/>
+                        <path d="M721.522 68.9777C740.375 63.1938 743.281 51.123 742.378 45.8106C734.281 49.3714 718.723 58.8571 721.267 68.3136" stroke-width="6"/>
+                        <path d="M336.691 64.888C335.929 62.1225 345.482 55.4297 394.875 55.2085" stroke-width="6"/>
+                        <path d="M201.502 98.0103C191.132 99.0984 203.526 112.309 220.576 127.325" stroke-width="6"/>
+                    </g>
+                    <defs>
+                        <filter id="filter0_d_232_27" x="0.292126" y="0.477245" width="772.369" height="179.482" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dy="4"/>
+                            <feGaussianBlur stdDeviation="13.6"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_232_27"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_232_27" result="shape"/>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-footer">
+                <div class="footer-logo">
+                    <img src="images/icons/logo.svg" alt="Арбория">
+                </div>
+                <div class="footer-number">
+                    Обращайтесь по номеру: <br>
+                    +7 900 195 67 02
+                </div>
+            </div>
+
+            <div class="for-center-footer">
+                <div class="center-footer">
+                    <div class="footer-menu">
+                        <div class="footer-menu-item">
+                            <h3>О клубе</h3>
+                            <ul>
+                                <li><a href="index.html#advantages">Преимущества</a></li>
+                                <li><a href="index.html#map">Карта</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Коттеджи</h3>
+                            <ul>
+                                <li><a href="cottages.html#standard">Стандарт</a></li>
+                                <li><a href="cottages.html#vip">VIP</a></li>
+                                <li><a href="cottages.html#elit>">Элит</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Услуги</h3>
+                            <ul>
+                                <li><a href="services.html?selected=sport">Спортивные игры</a></li>
+                                <li><a href="services.html?selected=active">Активный отдых на природе</a></li>
+                                <li><a href="services.html?selected=indoor">Развлечения в помещении</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Мероприятия</h3>
+                            <ul>
+                                <li><a href="events.html#master">Мастер-классы</a></li>
+                                <li><a href="events.html#show">Концерты и шоу</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-item">
+                            <h3>Контакты</h3>
+                            <ul>
+                                <li><a href="contacts.html#map">Адрес</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social">
+                    <div class="left-social">
+                        <div class="social-icons">
+                            <a href="">
+                                <img src="images/icons/soc/vk.svg" alt="VK">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/telegram.svg" alt="Telegram">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/whatsapp.svg" alt="WhatsApp">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/gmail.svg" alt="Gmail">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/2gis.svg" alt="2gis">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="emails">
+                        <input class="email-input" type="email" placeholder="Введите ваш Email для рассылки">
+                        <button class="email-input-button">
+                            <img src="images/icons/footerBack.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-line"></div>
+            <div class="footer-bottom">
+                <p>© 2025 Арбория. Все права защищены.</p>
+            </div>
+        </div>
+        <div class="footer-branch">
+            <svg viewBox="0 0 598 187" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_364_5)">
+                    <path d="M486.896 95.2724L487.286 96.7207L487.286 96.7207L486.896 95.2724ZM207.058 103.337L207.171 101.841L207.058 103.337ZM43.55 68.5273C42.8085 68.1579 42.5067 67.2574 42.8761 66.5158C43.2455 65.7743 44.146 65.4726 44.8875 65.842L43.55 68.5273ZM569.754 122.804L568.836 123.99C560.965 117.894 547.385 109.193 532.312 102.965C517.191 96.7158 500.84 93.0696 487.286 96.7207L486.896 95.2724L486.506 93.824C501.032 89.911 518.15 93.866 533.458 100.192C548.814 106.538 562.624 115.385 570.673 121.618L569.754 122.804ZM486.896 95.2724L487.286 96.7207C469.425 101.532 444.615 100.8 420.63 95.7319C396.647 90.6643 373.214 81.2043 358.18 68.3237L359.156 67.1847L360.132 66.0456C374.636 78.4718 397.523 87.7833 421.25 92.7967C444.976 97.8098 469.268 98.4677 486.506 93.824L486.896 95.2724ZM359.156 67.1847L358.18 68.3237C354.646 65.2955 351.413 63.7697 348.278 63.2855C345.138 62.8006 341.942 63.3364 338.44 64.6904C334.921 66.0512 331.164 68.2091 326.922 70.8961C324.805 72.2365 322.589 73.6946 320.231 75.2394C317.877 76.7816 315.389 78.4059 312.747 80.0653C291.532 93.3935 260.575 108.896 206.945 104.833L207.058 103.337L207.171 101.841C259.99 105.843 290.314 90.616 311.151 77.525C313.767 75.8821 316.234 74.2714 318.587 72.73C320.935 71.1913 323.175 69.7175 325.316 68.3616C329.589 65.6561 333.551 63.3645 337.358 61.8922C341.184 60.4131 344.925 59.7322 348.735 60.3206C352.55 60.9097 356.283 62.7472 360.132 66.0456L359.156 67.1847ZM207.058 103.337L206.945 104.833C121.633 98.3695 62.5537 77.993 43.55 68.5273L44.2188 67.1846L44.8875 65.842C63.4769 75.1014 122.164 95.4011 207.171 101.841L207.058 103.337Z" class="svg-theme-color-fill"/>
+                    <path d="M348.652 61.7385C348.972 58.0306 338.18 51.1709 292.455 53.3956C246.729 55.6204 228.649 43.9404 225.324 37.8223" class="svg-theme-color-stroke" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M449.347 98.165C440.967 115.861 424.527 128.177 410.987 132.927C399.095 137.099 391.998 137.655 384.902 145.998" class="svg-theme-color-stroke" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M248.57 102.237C252.386 118.677 242.962 126.232 237.773 127.954C237.099 120.41 238.17 104.726 247.853 102.347" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M106.496 89.0493C103.174 105.541 94.4677 106.134 90.5296 104.369C92.7454 97.4743 98.9409 84.6867 105.997 88.6963" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M415.369 92.8379C403.524 90.3997 403.1 74.7987 404.369 67.303C409.321 69.8166 418.505 78.2471 415.623 91.8598" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M242.413 102.365C234.583 101.828 232.357 109.116 232.223 112.827C235.684 112.347 242.575 109.683 242.452 102.861" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M384.613 146.181C377.985 159.443 368.23 151.442 364.181 145.784C367.869 141.056 377.51 135.194 384.613 146.181Z" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M348.607 57.8447C350.057 48.3933 344.512 45.0075 341.558 44.4961C341.491 48.7411 342.726 57.3537 348.204 57.8447" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M349.269 60.626C346.674 43.6921 356.596 37.626 361.882 36.7097C362.002 44.3153 359.792 59.7463 349.99 60.626" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M449.947 98.4438C446.284 115.378 460.292 121.444 467.754 122.36C467.923 114.755 464.803 99.3235 450.964 98.4438" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M259.273 51.1704C262.784 32.6613 249.36 26.0309 242.209 25.0294C242.046 33.3424 245.036 50.2089 258.298 51.1704" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M44.7231 67.2401C30.4916 61.4241 28.2976 49.2862 28.9796 43.9443C35.0917 47.5249 46.836 57.0633 44.916 66.5723" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M335.226 63.1284C335.801 60.3474 328.59 53.6175 291.303 53.395" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M437.264 96.4971C445.502 97.6095 436.615 111.737 423.07 127.088" class="svg-theme-color-stroke" stroke-width="3"/>
+                </g>
+                <defs>
+                    <filter id="filter0_d_364_5" x="0.32246" y="0.109081" width="597.55" height="186.232" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="13.6"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_364_5"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_364_5" result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="footer-branch-left">
+            <svg viewBox="0 0 220 464" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_367_22)">
+                    <path d="M100.502 154.707C116.428 162.251 151.438 156.391 163.802 162.049C177.613 168.369 183.228 164.066 188.32 162.887C185.322 166.301 175.835 169.009 170.303 168.674C163.388 168.254 146.833 181.875 136.984 179.151C127.135 176.427 124.411 162.177 110.79 160.082C99.8932 158.405 81.7744 136.373 74.5797 125.477" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M77.5973 120.013C94.1931 115.748 127.175 117.421 130.873 133.2C137.611 128.731 146.868 131.61 151.443 134.307C146.464 136.128 134.457 137.176 130.057 139.132C94.5165 144.329 74.2784 119.525 68.0616 105.275" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M127.522 243.79C121.305 267.19 87.5236 327.898 59.4494 321.437L71.8128 315.779C73.0701 299.224 109.506 266.475 121.101 261.307" class="svg-theme-color-stroke" stroke-width="2"/>
+                    <path d="M116.684 196.061C106.298 208.169 90.9026 225.311 97.1644 243.909C97.1644 243.909 96.2505 244.41 95.141 244.972C87.5075 248.973 85.9842 261.873 85.9842 261.873L86.3799 261.428C89.9087 256.529 98.133 252.194 102.358 249.883L102.358 249.884C115.737 243.486 121.521 190.405 111.261 177.292" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M134.375 239.783C164.506 243.951 171.943 265.908 172.825 268.951C173.783 272.041 180.657 274.16 183.937 275.059C161.599 281.36 139.422 250.148 131.092 233.849M126.473 216.176C130.05 228.328 126.899 217.149 131.092 233.849M142.758 286.689C147.54 313.044 149.363 334.909 144.282 341.042C132.864 354.823 149.935 351.375 154.219 348.128C148.695 348.444 138.094 351.832 148.034 342.374C160.458 330.552 175.406 322.739 142.758 286.689ZM142.758 286.689C139.715 269.916 135.481 251.332 131.092 233.849" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M95.0053 346.971C117.916 306.946 151.438 215.311 102.989 167.701C54.5406 120.091 61.1486 52.3072 70.5086 24.3668M95.0053 346.971C91.8365 365.207 49.7829 425.414 32.9986 429.852C32.9986 429.852 42.633 420.374 44.9431 416.44C45.8062 414.97 47.8678 404.029 53.2833 392.186C60.7391 375.882 67.0439 353.025 88.2297 349.953C91.4052 349.492 93.9538 347.645 95.0053 346.971Z" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M69.0701 109.226C76.0552 133.604 80.6982 168.548 57.5635 186.485" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M111.639 177.817C123.529 194.475 145.463 210.445 167.925 200.788" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M76.1245 129.073C87.9293 160.366 99.4734 226.049 49.1807 239.292" class="svg-theme-color-stroke" stroke-width="3"/>
+                    <path d="M118.326 292.304C111.288 313.819 89.7473 353.84 58.4012 340.825" class="svg-theme-color-stroke" stroke-width="3"/>
+                </g>
+                <defs>
+                    <filter id="filter0_d_367_22" x="0.716564" y="0.690136" width="219.006" height="463.257" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="13.6"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.47 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_367_22"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_367_22" result="shape"/>
+                    </filter>
+                </defs>
+            </svg>
+
+        </div>
+    </footer>
 </body>
+<!--Скрипты ниже на всех страницах-->
+<script src="js/footer/emailInput.js"></script>
+<script src="js/header/toggleLanguages.js"></script>
+<script src="js/header/translatePage.js" defer></script>
+<script src="js/header/changeTheme.js" type="module"></script>
 </html>

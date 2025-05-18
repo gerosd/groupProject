@@ -105,6 +105,7 @@ header {
 .about-header {
     position: absolute;
     transform: translateY(-99%);
+    filter: none !important;
 }
 
 .about-container {
@@ -366,6 +367,10 @@ header {
     animation: 2s upDown infinite;
 }
 
+.advantage-tail svg {
+    filter: none !important;
+}
+
 #delay150ms {
     animation-delay: 1.5s;
 }
@@ -444,6 +449,7 @@ header {
     position: absolute;
     bottom: 8px;
     right: 55px;
+    filter: none !important;
 }
 
 .view-all:hover {
