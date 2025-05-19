@@ -57,6 +57,50 @@ if (rangeFrom && rangeTo && priceFrom && priceTo && sliderContainer) {
         return Number(val).toLocaleString('ru-RU');
     }
 
+    // Функция для перевода текста цены при изменении фильтра
+    function translatePriceLabels() {
+        // Получаем текущие атрибуты языка страницы (html может содержать lang атрибут, установленный translatePage)
+        const htmlLang = document.documentElement.lang || '';
+        
+        // Если есть глобальная переменная с текущим языком, используем её
+        let currentLang = 'ru';
+        if (typeof window.currentLanguage !== 'undefined') {
+            currentLang = window.currentLanguage;
+        } else if (htmlLang && htmlLang !== 'en') {
+            currentLang = htmlLang;
+        }
+        
+        // Если язык не русский, переводим тексты "от" и "до"
+        if (currentLang !== 'ru') {
+            // Получаем текущие числовые значения
+            const fromVal = parseInt(rangeFrom.value);
+            const toVal = parseInt(rangeTo.value);
+            const formattedFromVal = formatPrice(fromVal);
+            const formattedToVal = formatPrice(toVal);
+            
+            // Переводим фразы "от" и "до"
+            fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=ru&tl=${currentLang}&dt=t&q=от до`)
+                .then(response => response.json())
+                .then(data => {
+                    // Получаем переводы "от" и "до"
+                    const translations = data[0][0][0].split(' ');
+                    if (translations.length >= 2) {
+                        priceFrom.textContent = `${translations[0]} ${formattedFromVal}`;
+                        priceTo.textContent = `${translations[1]} ${formattedToVal}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Translation error:', error);
+                    // При ошибке используем русские тексты с отформатированными числами
+                    priceFrom.textContent = 'от ' + formattedFromVal;
+                    priceTo.textContent = 'до ' + formattedToVal;
+                });
+        }
+    }
+
+    // Делаем функцию доступной глобально
+    window.translatePriceLabels = translatePriceLabels;
+
     // Функция для обновления синей полосы между ползунками
     function updateSliderTrack() {
         const fromVal = parseInt(rangeFrom.value);
@@ -72,6 +116,9 @@ if (rangeFrom && rangeTo && priceFrom && priceTo && sliderContainer) {
         // Обновляем отображаемые значения
         priceFrom.textContent = 'от ' + formatPrice(fromVal);
         priceTo.textContent = 'до ' + formatPrice(toVal);
+        
+        // Переводим надписи при необходимости
+        translatePriceLabels();
     }
 
     // Обработчик для левого ползунка
