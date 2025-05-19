@@ -7,7 +7,7 @@
     --text-light: #3A4D37;
     --form-bg: #FFFFFF;
     --booking-color: #FFFFFF;
-    --footer-text: #E0E0E0;
+    --input-bg: #A5BDAB;
     --accent: #5A7B57;
 }
 
@@ -20,8 +20,8 @@
     --text-light: #8BA1B7;
     --form-bg: #8BA1B7;
     --booking-color: #1D1D2D;
-    --footer-text: #CCCCCC;
-    --accent: #66A0CC;
+    --input-bg: #E1E7EC;
+    --accent: #617f94;
 }
 
 @font-face {
