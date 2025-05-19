@@ -35,6 +35,10 @@ main {
     transition: filter 0.2s ease;
 }
 
+.title-branch-right {
+    transform: scaleX(-1);
+}
+
 .title-branch svg path {
     stroke: var(--lighter);
 }
