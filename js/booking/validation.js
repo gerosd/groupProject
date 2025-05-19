@@ -111,10 +111,9 @@ function formatPhoneNumber(input) {
 
     // Форматирование в зависимости от кода страны
     switch (countryCode) {
-        case '+7': // Россия, Казахстан // +7 + 10 цифр
-            // Make sure we have exactly the expected format for Russian numbers
-            if (formatted.length >= 12) { // +7 plus 10 digits
-                const digits = formatted.substring(2); // Remove +7
+        case '+7':
+            if (formatted.length >= 12) {
+                const digits = formatted.substring(2);
                 return '+7 ' + digits.substring(0, 3) + ' ' + 
                              digits.substring(3, 6) + ' ' + 
                              digits.substring(6, 8) + ' ' + 

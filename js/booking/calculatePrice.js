@@ -5,6 +5,7 @@ const dateEnd = document.getElementById('date-end');
 const totalPriceElement = document.getElementById('totalPrice');
 const prePay = document.getElementById('pre-pay');
 const amountInput = document.getElementById('amount');
+const cottageSelect = document.getElementById('cottage-select');
 
 function getUrlParameter(name) {
     name = name.replace(/\[/, '\\[').replace(/]/, '\\]');
@@ -13,30 +14,28 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
-const cottageId = getUrlParameter('id');
+// Get cottageId from URL if available, used for pre-selecting the cottage
+const cottageIdFromUrl = getUrlParameter('id');
 
-function setupCottageTypeInput() {
-    const typeField = document.querySelector('.type-field p');
-
-    if (!cottageId) {
-        console.error('No cottage ID found in URL parameters');
-        return;
+function setupCottageSelect() {
+    if (cottageIdFromUrl) {
+        const parsedId = parseInt(cottageIdFromUrl);
+        // Pre-select the cottage in the dropdown
+        cottageSelect.value = parsedId;
     }
-
-    const parsedId = parseInt(cottageId);
-    const cottage = cottages.find(c => c.id === parsedId);
-
-    typeField.textContent = cottage.name;
 
     if (typeof calculateTotalPrice === 'function') {
         calculateTotalPrice();
     }
 }
 
-document.addEventListener('DOMContentLoaded', setupCottageTypeInput);
+document.addEventListener('DOMContentLoaded', setupCottageSelect);
 
 function calculateTotalPrice() {
-    const cottage = cottages.find(c => c.id === parseInt(cottageId));
+    // Get the selected cottage
+    const selectedCottageId = cottageSelect.value ? parseInt(cottageSelect.value) : null;
+    const cottage = cottages.find(c => c.id === selectedCottageId);
+    
     if (!cottage) {
         totalPriceElement.textContent = '0₽';
         prePay.textContent = '0₽';
@@ -90,6 +89,7 @@ function getNightsText(nights) {
 
 dateStart.addEventListener('change', calculateTotalPrice);
 dateEnd.addEventListener('change', calculateTotalPrice);
+cottageSelect.addEventListener('change', calculateTotalPrice);
 
 const today = new Date().toISOString().split('T')[0];
 dateStart.min = today;

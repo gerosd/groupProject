@@ -1,0 +1,139 @@
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fullscreen-menu .menu-content {
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+.fullscreen-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullscreen-menu.active .menu-content {
+    transform: translateX(0);
+}
+
+.menu-close-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: rotate(-180deg);
+}
+
+.fullscreen-menu.active .menu-close-button {
+    opacity: 1;
+    transform: rotate(0);
+    transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s;
+}
+
+.menu-close-button:hover {
+    transform: rotate(90deg);
+}
+
+.menu-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 70%;
+    margin: auto;
+}
+
+.img-logo {
+    width: 250px;
+    height: auto;
+}
+
+.social-menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+}
+
+.social-menu-icons a, img {
+    height: 100%;
+    width: 50px;
+    transition: .2s ease;
+}
+
+.social-menu-icons img:hover {
+    transform: scale(1.05);
+}
+
+.menu-content {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu-divider {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 75%;
+    background-color: #ffffff;
+}
+
+.menu-navigation {
+    width: 100%;
+}
+
+.menu-section {
+    margin-top: 20px;
+}
+
+.menu-section h3 {
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.menu-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding-left: 30px;
+    margin: 0;
+}
+
+.menu-section a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.menu-section a:hover {
+    color: #CCCCCC;
+}

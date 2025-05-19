@@ -6,17 +6,18 @@
     <title>Арбория</title>
     <link rel="icon" type="image/svg" href="images/icons/logo.svg">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/fullscreen-menu.css">
 </head>
 <body data-theme="light">
     <header>
         <nav class="header-nav">
-            <ul class="nav-menu">
-                <a href="#about"><li>О клубе</li></a>
-                <a href="cottages.html"><li>Коттеджи</li></a>
-                <a href="services.html"><li>Услуги</li></a>
-                <a href="events.html"><li>Мероприятия</li></a>
-                <a href="contacts.html"><li>Контакты</li></a>
-            </ul>
+            <nav class="nav-menu">
+                <a href="index.html">О клубе</a>
+                <a href="cottages.html">Коттеджи</a>
+                <a href="services.html">Услуги</a>
+                <a href="events.html">Мероприятия</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
             <div class="logo" onClick="window.location = 'index.html'">
                 <img src="images/icons/logo.svg" alt="Арбория" />
             </div>
@@ -50,6 +51,74 @@
             <div class="language" onClick="translatePage('es')">
                 <pre>ESP</pre>
                 <div class="lang-line"></div>
+            </div>
+        </div>
+        <div class="fullscreen-menu">
+            <div class="menu-close-button">
+                <span>&times;</span>
+            </div>
+            <div class="menu-logo">
+                <img src="images/icons/logo.svg" alt="Арбория" class="img-logo">
+                    <div class="left-menu-social">
+                        <div class="social-menu-icons">
+                            <a href="">
+                                <img src="images/icons/soc/vk.svg" alt="VK">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/telegram.svg" alt="Telegram">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/whatsapp.svg" alt="WhatsApp">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/gmail.svg" alt="Gmail">
+                            </a>
+                            <a href="">
+                                <img src="images/icons/soc/2gis.svg" alt="2gis">
+                            </a>
+                        </div>
+                    </div>
+            </div>
+            <div class="menu-divider"></div>
+            <div class="menu-content">
+                <nav class="menu-navigation">
+                    <div class="menu-section">
+                        <h3>О клубе</h3>
+                        <ul>
+                            <li><a href="index.html#advantages">Преимущества</a></li>
+                            <li><a href="index.html#map">Карта</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3>Коттеджи</h3>
+                        <ul>
+                            <li><a href="cottages.html#standard">Стандарт</a></li>
+                            <li><a href="cottages.html#vip">VIP</a></li>
+                            <li><a href="cottages.html#elit">Элит</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3>Услуги</h3>
+                        <ul>
+                            <li><a href="services.html#sports">Спортивные игры</a></li>
+                            <li><a href="services.html#outdoor">Активный отдых на природе</a></li>
+                            <li><a href="services.html#indoor">Развлечения в помещении</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3>Мероприятия</h3>
+                        <ul>
+                            <li><a href="events.html#masterclass">Мастер-классы</a></li>
+                            <li><a href="events.html#concerts">Концерты и шоу</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu-section">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li><a href="contacts.html#address">Адрес</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -510,7 +579,7 @@
                             <ul>
                                 <li><a href="cottages.html#standard">Стандарт</a></li>
                                 <li><a href="cottages.html#vip">VIP</a></li>
-                                <li><a href="cottages.html#elit>">Элит</a></li>
+                                <li><a href="cottages.html#elit">Элит</a></li>
                             </ul>
                         </div>
                         <div class="footer-menu-item">
@@ -640,4 +709,5 @@
 <script src="js/header/toggleLanguages.js"></script>
 <script src="js/header/translatePage.js" defer></script>
 <script src="js/header/changeTheme.js" type="module"></script>
+<script src="js/header/toggleMenu.js"></script>
 </html>
