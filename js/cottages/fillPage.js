@@ -26,6 +26,7 @@ const cottages = [
             4: "images/cottages/standard/1mesto.jpg",
         }
     },
+
 ];
 
 function getUrlParameter(name) {
@@ -76,7 +77,7 @@ function fillCottageInfo() {
     })
 
     document.querySelector('.form-h2').textContent = cottage.name;
-    document.querySelector('.price p').textContent = cottage.priceForParagraph + ' р/сут';
+    document.querySelector('.price p').textContent = cottage.priceForParagraph + ' ₽/сут';
     document.querySelector('.cottage-desc').textContent = cottage.desc;
 
     // Fill amounts
