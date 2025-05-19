@@ -7,7 +7,7 @@
     --text-light: #3A4D37;
     --form-bg: #FFFFFF;
     --booking-color: #FFFFFF;
-    --footer-text: #E0E0E0;
+    --input-bg: #A5BDAB;
     --accent: #5A7B57;
     --event-bg: #3a4d37d0;
     --one-time-bg: #759A7Ed0;
@@ -34,6 +34,8 @@
     --event-icon-bg: #8BA1B7;
     --event-icon: #FFFFFF;
     --event-icon-bg-once: #1D1D2D;
+    --input-bg: #E1E7EC;
+    --accent: #617f94;
 }
 
 @font-face {
