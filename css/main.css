@@ -9,6 +9,12 @@
     --booking-color: #FFFFFF;
     --footer-text: #E0E0E0;
     --accent: #5A7B57;
+    --event-bg: #3a4d37d0;
+    --one-time-bg: #759A7Ed0;
+    --one-time-bg-icon: #759A7E;
+    --event-icon-bg: #ffffff;
+    --event-icon-bg-once: #ffffff;
+    --event-icon: #3A4D37;
 }
 
 [data-theme="dark"] {
@@ -22,6 +28,12 @@
     --booking-color: #1D1D2D;
     --footer-text: #CCCCCC;
     --accent: #66A0CC;
+    --event-bg: #1d1d2dd0;
+    --one-time-bg: #8BA1B7d0;
+    --one-time-bg-icon: #8BA1B7;
+    --event-icon-bg: #8BA1B7;
+    --event-icon: #FFFFFF;
+    --event-icon-bg-once: #1D1D2D;
 }
 
 @font-face {
