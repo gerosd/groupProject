@@ -5,8 +5,8 @@
     --background: #ffffff;
     --text: #3A4D37;
     --text-light: #3A4D37;
-    --border: #DDDDDD;
-    --card-bg: #F5F5F5;
+    --form-bg: #FFFFFF;
+    --booking-color: #FFFFFF;
     --footer-text: #E0E0E0;
     --accent: #5A7B57;
 }
@@ -18,8 +18,8 @@
     --background: #272C36;
     --text: #FFFFFF;
     --text-light: #8BA1B7;
-    --border: #444444;
-    --card-bg: #333340;
+    --form-bg: #8BA1B7;
+    --booking-color: #1D1D2D;
     --footer-text: #CCCCCC;
     --accent: #66A0CC;
 }

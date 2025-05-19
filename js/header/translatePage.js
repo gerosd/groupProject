@@ -6,6 +6,7 @@ function translatePage(targetLang) {
     document.documentElement.lang = targetLang;
     
     const elements = document.querySelectorAll('h1, h2, h3, h4, p, span, a, button, li');
+
     elements.forEach(el => {
         const text = el.textContent;
         if (text.trim()) {
