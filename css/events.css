@@ -180,13 +180,6 @@ main {
     }
 }
 
-/* .always {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-} */
-
-
 
 .event-item {
     display: flex;
@@ -217,4 +210,131 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
+    border-top-left-radius: 0%;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
 }
+
+.time-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.day {
+    padding-right: 10px;
+    height: 100%;
+    background-color: var(--primary);
+    border-bottom-right-radius: 10px;    
+    display: flex;
+    align-items: center;
+    
+}
+
+.day-text {
+    border-radius: 10px;
+    padding:6px 17px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    color: white;
+    background-color: var(--light);
+}
+
+.one-time-day {
+    background-color: var(--light);
+}
+
+.one-time-day-text {
+    background-color: var(--primary);
+}
+
+.time-text {
+    border-radius: 10px;
+    margin-left: 10px;
+    padding:6px 17px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    color: white;
+    background-color: var(--light);
+}
+
+.one-time-time-text {
+    background-color: var(--primary);
+}
+
+.desc-text {
+    width: 260px;
+    height: 235px;
+    display: flex;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    border-top-right-radius: 20px;
+    background-color: var(--event-bg);
+}
+
+.one-time-desc {
+    background-color: var(--one-time-bg);
+}
+
+.desc-text-title {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    color: white;
+}
+
+.desc-text-place {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 120%;
+    color: white;
+}
+
+.for-event-icon {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.for-event-icon-once {
+    background-color: var(--one-time-bg-icon);
+}
+
+.event-icon {
+    width: 74px;
+    height: 74px;
+    background-color: var(--event-icon-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 6.9px 4px rgba(0, 0, 0, 0.25);
+}
+
+.event-icon svg {
+    width: 50px;
+    height: 50px;
+    fill: var(--event-icon);
+}
+
+.event-icon-once {
+    background-color: var(--event-icon-bg-once);
+}
+
+
