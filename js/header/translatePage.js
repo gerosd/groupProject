@@ -5,7 +5,7 @@ function translatePage(targetLang) {
     // Устанавливаем атрибут lang для HTML тега
     document.documentElement.lang = targetLang;
     
-    const elements = document.querySelectorAll('h1, h2, h3, h4, p, span, a, button, li');
+    const elements = document.querySelectorAll('h1, h2, h3, h4, p, span, button, li');
 
     elements.forEach(el => {
         const text = el.textContent;
