@@ -1,7 +1,7 @@
 const cottages = [
     {
         id: 1,
-        type: "standard",
+        type: "Стандарт",
         name: "Одноместный коттедж \"Стандарт\"",
         desc: "Уютный одноместный коттедж с посещением бани и трёхразовым питанием (завтрак, обед, ужин) Проживание с домашними животными разрешено. Отличное место для отдыха и уединения.",
         priceForParagraph: "4.000",
@@ -79,6 +79,9 @@ function fillCottageInfo() {
     document.querySelector('.form-h2').textContent = cottage.name;
     document.querySelector('.price p').textContent = cottage.priceForParagraph + ' ₽/сут';
     document.querySelector('.cottage-desc').textContent = cottage.desc;
+    document.querySelector('.booking').addEventListener('click', () => {
+        window.location = `booking.html?type=${cottage.type}`;
+    })
 
     // Fill amounts
     const amounts = document.querySelectorAll('.amount-item span');
