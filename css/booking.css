@@ -99,9 +99,10 @@ section input::placeholder {
 
 .branch-bottom {
     position: absolute;
-    right: -90px;
-    bottom: 85px;
+    bottom: 115px;
+    right: -115px;
     width: 900px;
     height: 400px;
-    transform: rotate(205deg);
+    z-index: 20;
+    transform: rotate(-150deg);
 }
