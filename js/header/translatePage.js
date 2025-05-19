@@ -1,5 +1,12 @@
 function translatePage(targetLang) {
-    const elements = document.querySelectorAll('h1, h2, h3, h4, p, span, a, button, li, input::placeholder');
+    // Устанавливаем глобальную переменную текущего языка
+    window.currentLanguage = targetLang;
+    
+    // Устанавливаем атрибут lang для HTML тега
+    document.documentElement.lang = targetLang;
+    
+    const elements = document.querySelectorAll('h1, h2, h3, h4, p, span, a, button, li');
+
     elements.forEach(el => {
         const text = el.textContent;
         if (text.trim()) {
@@ -14,6 +21,11 @@ function translatePage(targetLang) {
                 .catch(error => console.error('Translation error:', error));
         }
     });
+    
+    // Переводим тексты цен в фильтре, если функция существует
+    if (typeof window.translatePriceLabels === 'function') {
+        window.translatePriceLabels();
+    }
 }
 
 window.translatePage = translatePage;

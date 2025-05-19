@@ -35,17 +35,18 @@ header {
 
 .title-branch svg path {
     stroke: var(--lighter);
+    transition: stroke 0.3s ease;
 }
 
 .big-path {
     fill: var(--lighter);
+    transition: fill 0.3s ease;
 }
 
 .filter {
     /* width: 43%; */
     width: min-content;
     column-gap: calc(15vw - 150px);
-    height: 105px;
     margin-top: 100px;
     margin-left: 3.5%;
     display: flex;
@@ -60,7 +61,7 @@ header {
 }
 
 .filter-item {
-    height: 100%;
+    height: 105px;
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
@@ -70,8 +71,13 @@ header {
 .filter-item span {
     font-size: 24px;
     font-weight: 600;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
+.filter-item:hover > span {
+    transform: translateY(-2px);
+    color: var(--light);
+}
 
 .custom-dropdown {
     position: relative; 
@@ -89,6 +95,12 @@ header {
     cursor: pointer;
     position: relative;
     max-height: 53px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-selected:hover {
+    background: var(--light);
+    transform: translateY(-2px);
 }
 
 .dropdown-selected::after {
@@ -106,6 +118,7 @@ header {
     padding: 2px;
     background: transparent;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.47));
+    transition: transform 0.3s ease;
 }
 
 .dropdown-list {
@@ -126,10 +139,13 @@ header {
     padding: 8px 15px;
     cursor: pointer;
     color: white;
+    transition: background 0.2s ease, transform 0.2s ease, padding-left 0.2s ease;
 }
 
 .dropdown-list label:hover {
     background: var(--primary);
+    transform: scale(1.02);
+    padding-left: 20px;
 }
 
 .custom-dropdown.open .dropdown-list {
@@ -144,6 +160,15 @@ header {
     flex-wrap: wrap;
 }
 
+.price-filter span {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.filter-item:hover .price-filter > span {
+    transform: translateY(-2px);
+    color: var(--light);
+}
+
 .for-input {
     display: flex;
     align-items: center;
@@ -156,7 +181,12 @@ header {
     border-radius: 15px;
     padding: 0 15px 0 15px;
     color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.filter-item:hover .for-input {
+    background-color: var(--light);
+    transform: translateY(-2px);
 }
 
 .price-filter-from, .price-filter-to {
@@ -207,6 +237,7 @@ header {
     right: var(--right-percent);
     top: 50%;
     transform: translateY(-50%);
+    transition: background 0.3s ease;
 }
 
 /* Стиль для input[type="range"] */
@@ -265,6 +296,7 @@ header {
     margin-top: 4px; /* Смещаем бегунок вниз для выравнивания с полосой */
     cursor: grab;
     pointer-events: auto; /* Включаем события только для бегунка */
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .slider::-moz-range-thumb {
@@ -278,6 +310,7 @@ header {
     z-index: 10;
     cursor: grab;
     pointer-events: auto; /* Включаем события только для бегунка */
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Стили при активном состоянии */
@@ -289,6 +322,18 @@ header {
 .slider:active::-moz-range-thumb {
     cursor: grabbing;
     transform: scale(1.1);
+}
+
+.slider:hover::-webkit-slider-thumb {
+    transform: scale(1.1);
+    border-color: var(--dark);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.slider:hover::-moz-range-thumb {
+    transform: scale(1.1);
+    border-color: var(--dark);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
 /* Стили особо для правого ползунка */
@@ -311,6 +356,13 @@ header {
     color: white;
     font-size: 24px;
     font-weight: 550;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.amount:hover, .amount:focus {
+    background-color: var(--light);
+    transform: translateY(-2px);
+    outline: none;
 }
 
 .amount::placeholder {
@@ -337,6 +389,12 @@ header {
     width: 50%;
     height: 4px;
     background-color: var(--text);
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.cottages-line:hover .cottages-line-item {
+    height: 6px;
+    background-color: var(--lighter);
 }
 
 .cottages-line span {
@@ -344,6 +402,12 @@ header {
     font-weight: 600;
     line-height: 1.1;
     margin-inline: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cottages-line:hover span {
+    transform: scale(1.05);
+    color: var(--light);
 }
 
 .cottages-container {
@@ -363,6 +427,7 @@ header {
     width: 406px;
     height: 967px;
     z-index: 3;
+    transition: transform 0.5s ease;
 }
 
 .first-branch {
@@ -375,6 +440,10 @@ header {
     }
 }
 
+.cottages-container:hover .first-branch {
+    transform: translateY(-50%) rotate(-15deg);
+}
+
 .second-branch {
     top: 40%;
     left: -280px;
@@ -383,6 +452,10 @@ header {
         left: -130px;
         transform: translateY(-50%) rotate(20deg) scaleX(-1);
     }
+}
+
+.cottages-container:hover .second-branch {
+    transform: translateY(-50%) rotate(15deg) scaleX(-1);
 }
 
 .third-branch {
@@ -395,6 +468,10 @@ header {
     }
 }
 
+.cottages-container:hover .third-branch {
+    transform: translateY(-50%) rotate(-10deg);
+}
+
 .container-branch svg {
     width: 100%;
     height: 100%;
@@ -402,6 +479,11 @@ header {
 
 .container-branch svg path {
     stroke: var(--light);
+    transition: stroke 0.3s ease;
+}
+
+.cottages-container:hover .container-branch svg path {
+    stroke: var(--lighter);
 }
 
 .cottages-item {
@@ -412,6 +494,11 @@ header {
     flex-wrap: wrap;
     margin-top: 60px;
     z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.cottages-item:hover {
+    transform: translateY(-10px);
 }
 
 .cottages-item-img {
@@ -419,12 +506,22 @@ header {
     height: 485px;
     border-radius: 25px;
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.cottages-item:hover .cottages-item-img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cottages-item-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.cottages-item:hover .cottages-item-img img {
+    transform: scale(1.03);
 }
 
 .cottages-item-title {
@@ -433,6 +530,11 @@ header {
     align-items: center;
     font-size: 36px;
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.cottages-item:hover .cottages-item-title {
+    color: var(--light);
 }
 
 .cottages-price {
@@ -441,11 +543,21 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid var(--lighter);
+    transition: border-bottom 0.3s ease;
+}
+
+.cottages-item:hover .cottages-price {
+    border-bottom: 2px solid var(--light);
 }
 
 .cottages-price span {
     font-size: 36px;
     font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.cottages-item:hover .cottages-price span {
+    color: var(--light);
 }
 
 .to-cottage {
@@ -454,6 +566,13 @@ header {
     height: 50px;
     border-radius: 15px;
     background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.to-cottage:hover {
+    transform: scale(1.1);
 }
 
 .to-cottage svg {
