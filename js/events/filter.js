@@ -74,8 +74,8 @@ function initializeEvents() {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
     `;
-    document.head.appendChild(styleElement);
-
+    document.head.appendChild(styleElement)
+  
     eventItems.forEach(item => {
         // Извлекаем информацию о месте проведения
         const placeElement = item.querySelector('.desc-text-place');
@@ -159,11 +159,12 @@ function applyFilters() {
         const time = item.getAttribute('data-time');
         const place = item.getAttribute('data-place');
         const status = item.getAttribute('data-status');
-
+        
         // Проверяем соответствие фильтрам
         const matchesDay = selectedFilters.day.length === 0 || selectedFilters.day.includes(day);
         const matchesTime = selectedFilters.time.length === 0 || selectedFilters.time.includes(time);
-        const matchesPlace = selectedFilters.place.length === 0 ||
+        const matchesPlace = selectedFilters.place.length === 0 || 
+
             selectedFilters.place.some(filterPlace => {
                 return place && place.toLowerCase().includes(filterPlace.toLowerCase());
             });
@@ -176,15 +177,15 @@ function applyFilters() {
                 if (item.style.display === 'none') {
                     // Сперва удаляем все анимационные классы для "чистого" старта
                     item.classList.remove('fade-out');
-
+                    
                     // Если элемент был скрыт, показываем его с анимацией
                     item.style.display = '';
-
+                    
                     // Принудительный reflow для гарантии применения изменений
                     forceReflow(item);
-
+                    
                     item.classList.add('fade-in');
-
+                    
                     // Добавляем небольшую задержку для создания эффекта каскада
                     setTimeout(() => {
                         item.classList.add('visible');
