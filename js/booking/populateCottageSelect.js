@@ -9,7 +9,7 @@ function populateCottageSelect() {
     const defaultOption = cottageSelect.options[0];
     cottageSelect.innerHTML = '';
     cottageSelect.appendChild(defaultOption);
-    
+
     // Add an option for each cottage
     cottages.forEach(cottage => {
         const option = document.createElement('option');

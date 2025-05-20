@@ -275,7 +275,7 @@ header {
 .advantages h2 {
     text-align: center;
     font-size: 96px;
-    color: #ffffff;
+    color: var(--text);
     padding-block: 65px;
 }
 
@@ -597,20 +597,30 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 120px;
-    width: 1600px;
-    padding: 60px 0;
+    gap: 50px;
     margin-inline: auto;
+}
+
+.map-container {
+    width: 100vw;
+    height: 95vh;
+}
+
+.map-container svg {
+    width: 100%;
+    height: 100%;
 }
 
 .map-section h2 {
     text-align: center;
     font-size: 96px;
-    color: #FFFFFF;
+    color: var(--text);
 }
 
-.map-container {
-    margin: 0 auto;
-    height: 755px;
-    border-radius: 15px;
+footer {
+    margin-top: 70px;
+}
+
+.footer-container {
+    margin-top: 0;
 }
