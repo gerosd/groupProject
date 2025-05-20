@@ -14,11 +14,11 @@ const selectedFilters = {
 // Словарь для сопоставления полных названий дней недели с сокращениями
 const dayMappings = {
     'Понедельник': 'Пн',
-    'Вторник': 'Вт', 
-    'Среда': 'Ср', 
-    'Четверг': 'Чт', 
-    'Пятница': 'Пт', 
-    'Суббота': 'Сб', 
+    'Вторник': 'Вт',
+    'Среда': 'Ср',
+    'Четверг': 'Чт',
+    'Пятница': 'Пт',
+    'Суббота': 'Сб',
     'Воскресенье': 'Вс'
 };
 
@@ -36,7 +36,7 @@ eventsContainer.appendChild(noResultsElement);
 // Инициализация - привязка фильтров к мероприятиям и добавление CSS для анимаций
 function initializeEvents() {
     console.log("Инициализация событий...");
-    
+
     // Добавляем CSS-стили для анимаций
     const styleElement = document.createElement('style');
     styleElement.textContent = `
@@ -74,8 +74,8 @@ function initializeEvents() {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
     `;
-    document.head.appendChild(styleElement);
-    
+    document.head.appendChild(styleElement)
+  
     eventItems.forEach(item => {
         // Извлекаем информацию о месте проведения
         const placeElement = item.querySelector('.desc-text-place');
@@ -91,7 +91,7 @@ function initializeEvents() {
                 console.warn("Не удалось извлечь место проведения из:", placeText);
             }
         }
-        
+
         // Извлекаем информацию о дне недели
         let dayElement = item.querySelector('.day-text span') || item.querySelector('.one-time-day-text span');
         if (dayElement) {
@@ -99,14 +99,14 @@ function initializeEvents() {
             const shortDay = dayMappings[fullDay] || '';
             item.setAttribute('data-day', shortDay);
         }
-        
+
         // Извлекаем информацию о времени
         let timeElement = item.querySelector('.time-text span') || item.querySelector('.one-time-time-text span');
         if (timeElement) {
             const time = timeElement.textContent.trim();
             item.setAttribute('data-time', time);
         }
-        
+
         // Определяем статус (разовое или еженедельное)
         const status = item.classList.contains('one-time') ? 'Разово' : 'Каждую неделю';
         item.setAttribute('data-status', status);
@@ -125,19 +125,19 @@ function forceReflow(element) {
 // Функция для применения фильтров
 function applyFilters() {
     console.log("Применение фильтров:", selectedFilters);
-    
+
     // Проверяем, есть ли активные фильтры
     const hasActiveFilters = Object.values(selectedFilters).some(filterValues => filterValues.length > 0);
-    
+
     // Добавляем/убираем класс для контейнера в зависимости от состояния фильтров
     if (hasActiveFilters) {
         eventsContainer.classList.add('filter-active');
-        
+
         // Подсветим активные выпадающие списки
         dropdowns.forEach(dropdown => {
             const filterType = dropdown.getAttribute('data-filter-type');
             const dropdownSelected = dropdown.querySelector('.dropdown-selected');
-            
+
             if (selectedFilters[filterType].length > 0) {
                 dropdownSelected.classList.add('active');
             } else {
@@ -150,10 +150,10 @@ function applyFilters() {
             dropdown.querySelector('.dropdown-selected').classList.remove('active');
         });
     }
-    
+
     // Анимация исчезновения перед применением фильтра
     const filterPromises = [];
-    
+
     eventItems.forEach(item => {
         const day = item.getAttribute('data-day');
         const time = item.getAttribute('data-time');
@@ -164,6 +164,7 @@ function applyFilters() {
         const matchesDay = selectedFilters.day.length === 0 || selectedFilters.day.includes(day);
         const matchesTime = selectedFilters.time.length === 0 || selectedFilters.time.includes(time);
         const matchesPlace = selectedFilters.place.length === 0 || 
+
             selectedFilters.place.some(filterPlace => {
                 return place && place.toLowerCase().includes(filterPlace.toLowerCase());
             });
@@ -198,17 +199,17 @@ function applyFilters() {
                 }
             } else {
                 // Элемент не соответствует фильтрам, подготавливаем и скрываем с анимацией
-                
+
                 // Сначала сбрасываем стили элемента в исходное состояние
                 // Удаляем все классы анимации, чтобы начать "с чистого листа"
                 item.classList.remove('visible', 'fade-in');
-                
+
                 // Принудительный reflow для применения изменений стилей
                 forceReflow(item);
-                
+
                 // Затем добавляем класс fade-out для плавного скрытия
                 item.classList.add('fade-out');
-                
+
                 // Увеличиваем время анимации для более плавного исчезновения
                 setTimeout(() => {
                     item.style.display = 'none';
@@ -216,14 +217,14 @@ function applyFilters() {
                 }, 350); // Уменьшено с 450мс до 350мс для более быстрой анимации
             }
         });
-        
+
         filterPromises.push(promise);
     });
-    
+
     // Проверка на отсутствие результатов после завершения всех анимаций
     Promise.all(filterPromises).then(() => {
         const visibleCount = Array.from(eventItems).filter(item => item.style.display !== 'none').length;
-        
+
         if (visibleCount === 0) {
             // Показываем сообщение об отсутствии результатов без задержки
             noResultsElement.style.display = 'block';
@@ -235,7 +236,7 @@ function applyFilters() {
         } else {
             noResultsElement.style.display = 'none';
         }
-        
+
         console.log(`Отображается мероприятий: ${visibleCount} из ${eventItems.length}`);
     });
 }
@@ -257,7 +258,7 @@ dropdowns.forEach(dropdown => {
     const dropdownList = dropdown.querySelector('.dropdown-list');
     const checkboxes = dropdownList.querySelectorAll('input[type="checkbox"]');
     const filterType = dropdown.getAttribute('data-filter-type');
-    
+
     // Обработчик нажатия на заголовок выпадающего списка
     dropdownSelected.addEventListener('click', () => {
         // Визуальная обратная связь при нажатии
@@ -265,14 +266,14 @@ dropdowns.forEach(dropdown => {
         setTimeout(() => {
             dropdownSelected.style.transform = '';
         }, 150);
-        
+
         // Закрываем все остальные выпадающие списки
         dropdowns.forEach(otherDropdown => {
             if (otherDropdown !== dropdown) {
                 otherDropdown.classList.remove('open');
             }
         });
-        
+
         // Переключаем состояние текущего списка
         dropdown.classList.toggle('open');
     });
@@ -285,7 +286,7 @@ dropdowns.forEach(dropdown => {
             setTimeout(() => {
                 checkbox.parentElement.style.transform = '';
             }, 200);
-            
+
             selectedFilters[filterType] = Array.from(checkboxes)
                 .filter(cb => cb.checked)
                 .map(cb => cb.value);
@@ -295,7 +296,7 @@ dropdowns.forEach(dropdown => {
             // Отображение выбранных значений в компактном формате
             const spanElement = dropdownSelected.querySelector('span');
             spanElement.textContent = formatSelectedValues(selectedFilters[filterType]);
-            
+
             // Анимация изменения текста
             spanElement.style.transform = 'translateY(-5px)';
             spanElement.style.opacity = '0.5';

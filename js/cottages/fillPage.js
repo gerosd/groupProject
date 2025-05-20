@@ -1,3 +1,5 @@
+import {cottages} from '../cottagesStorage.js';
+
 function getUrlParameter(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -21,10 +23,10 @@ function getReviewWordForm(count) {
 
 function calculateAverageRating(reviews) {
     if (!reviews || reviews.length === 0) return 0;
-    
+
     const sum = reviews.reduce((acc, review) => acc + (review.rating || 0), 0);
     const average = sum / reviews.length;
-    
+
     // Round to 2 decimal places
     return Math.round(average * 100) / 100;
 }
