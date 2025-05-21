@@ -52,10 +52,14 @@ header {
     margin-top: 250px;
     font-size: 128px;
     color: white;
+    animation: fadeIn 1s ease-out 0.3s forwards;
+    opacity: 0;
 }
 
 .hero p {
     font-size: 40px;
+    animation: fadeIn 1s ease-out 0.6s forwards;
+    opacity: 0;
 }
 
 .book-btn {
@@ -68,6 +72,8 @@ header {
     margin-top: 110px;
     border: 2px solid transparent;
     transition: all 0.3s ease;
+    animation: fadeInScale 0.8s ease-out 0.9s forwards;
+    opacity: 0;
 }
 
 .book-btn:hover {
@@ -80,19 +86,23 @@ header {
     bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
-    animation: bounce 2s infinite;
-    z-index: 1;
+    animation: bounce 2s infinite 1.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0) translateX(-50%);
+        opacity: 1;
     }
     40% {
         transform: translateY(-20px) translateX(-50%);
+        opacity: 1;
     }
     60% {
         transform: translateY(-10px) translateX(-50%);
+        opacity: 1;
     }
 }
 
@@ -110,6 +120,8 @@ header {
     position: absolute;
     transform: translateY(-99%);
     filter: none !important;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 .about-container {
@@ -133,12 +145,16 @@ header {
     font-size: 96px;
     margin-bottom: 20px;
     color: #ffffff;
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 .about-text p {
     font-size: 32px;
     color: #ffffff;
     font-weight: 500;
+    animation: slideInLeft 0.8s ease-out 0.2s forwards;
+    opacity: 0;
 }
 
 .about-image {
@@ -146,6 +162,8 @@ header {
     height: 400px;
     overflow: hidden;
     border-radius: 15px;
+    animation: slideInRight 0.8s ease-out 0.4s forwards;
+    opacity: 0;
 }
 
 .about-image img {
@@ -159,6 +177,8 @@ header {
     right: 0;
     bottom: -25px;
     z-index: 0;
+    animation: fadeIn 1s ease-out 0.6s forwards;
+    opacity: 0;
 }
 
 .about-branch-top svg {
@@ -167,6 +187,8 @@ header {
     top: -100px;
     z-index: 0;
     transform: rotate(180deg);
+    animation: fadeIn 1s ease-out 0.6s forwards;
+    opacity: 0;
 }
 
 /* Slider Styles */
@@ -174,6 +196,8 @@ header {
     width: 575px;
     position: relative;
     margin-left: 40px;
+    animation: fadeInScale 0.8s ease-out 0.4s forwards;
+    opacity: 0;
 }
 
 .main-slider {
@@ -281,6 +305,8 @@ header {
     font-size: 96px;
     color: var(--text);
     padding-block: 65px;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 .advantages-container {
@@ -297,6 +323,8 @@ header {
     z-index: 100;
     cursor: pointer;
     transition: .2s ease;
+    animation: fadeInScale 0.6s ease-out forwards;
+    opacity: 0;
 }
 
 .advantage-item:hover {
@@ -427,6 +455,8 @@ header {
     color: var(--text);
     text-align: center;
     padding-bottom: 35px;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 .cottages-info {
@@ -442,9 +472,30 @@ header {
 }
 
 .cottage-card {
+    width: 575px;
+    height: 655px;
+    border-radius: 35px;
+    transition: transform 0.3s ease;
     position: relative;
-    overflow: hidden;
-} 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInScale 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.cottage-card:nth-child(1) { animation-delay: 0.1s; }
+.cottage-card:nth-child(2) { animation-delay: 0.2s; }
+.cottage-card:nth-child(3) { animation-delay: 0.3s; }
+.cottage-card:nth-child(4) { animation-delay: 0.4s; }
+.cottage-card:nth-child(5) { animation-delay: 0.5s; }
+.cottage-card:nth-child(6) { animation-delay: 0.6s; }
+
+.cottage-card:hover {
+    transform: translateY(-10px);
+}
+
+.cottage-card:hover .cottage-button {
+    right: 20px;
+}
 
 .view-all {
     font-size: 32px;
@@ -454,6 +505,8 @@ header {
     width: 275px;
     transition: 0.3s ease;
     position: relative;
+    animation: fadeIn 0.8s ease-out 0.7s forwards;
+    opacity: 0;
 }
 
 .view-all svg {
@@ -474,23 +527,6 @@ header {
     justify-content: center;
     gap: 30px;
     margin-top: 40px;
-}
-
-.cottage-card {
-    width: 575px;
-    height: 655px;
-    border-radius: 35px;
-    transition: transform 0.3s ease;
-    position: relative;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.cottage-card:hover {
-    transform: translateY(-10px);
-}
-
-.cottage-card:hover .cottage-button {
-    right: 20px;
 }
 
 .cottage-info {
@@ -537,7 +573,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 130px;
+    width: 140px;
     height: 100%;
     border-radius: 25px;
     background: rgba(255, 255, 255, 0.3);
@@ -618,6 +654,8 @@ header {
 .map-container {
     width: 100vw;
     height: 95vh;
+    animation: blurIn 1s ease-out 0.3s forwards;
+    opacity: 0;
 }
 
 .map-container svg {
@@ -629,12 +667,6 @@ header {
     text-align: center;
     font-size: 96px;
     color: var(--text);
-}
-
-footer {
-    margin-top: 70px;
-}
-
-.footer-container {
-    margin-top: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
 }

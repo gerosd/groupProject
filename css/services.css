@@ -26,16 +26,29 @@ main {
 .title-branch {
     width: 100%;
     height: 100%;
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.title-branch-left {
+    animation: slideInLeft 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+}
+
+.title-branch-right {
+    animation: slideInRight 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+}
+
+.title-text {
+    animation: fadeIn 0.8s ease-out 0.3s forwards;
+    opacity: 0;
 }
 
 .title-branch svg {
     width: 100%;
     height: 100%;
     transition: filter 0.2s ease;
-}
-
-.title-branch-right {
-
 }
 
 .title-branch svg path {
@@ -70,7 +83,15 @@ main {
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    animation: slideInLeft 0.6s ease-out forwards;
+    opacity: 0;
 }
+
+.filter-item:nth-child(1) { animation-delay: 0.6s; }
+.filter-item:nth-child(2) { animation-delay: 0.75s; }
+.filter-item:nth-child(3) { animation-delay: 0.9s; }
+.filter-item:nth-child(4) { animation-delay: 1.05s; }
+.filter-item:nth-child(5) { animation-delay: 1.2s; }
 
 .filter-item span {
     font-size: 24px;
@@ -122,6 +143,8 @@ main {
     height: 91.5vw;
     margin-top: 50px;
     margin-bottom: 50px;
+    animation: fadeIn 1s ease-out 1.3s forwards;
+    opacity: 0;
 }
 
 .services-item {
@@ -237,54 +260,73 @@ main {
     grid-area: fish;
     background-image: url("../images/services/fishing.jpg");
     background-position: 40%;
+    animation: fadeInScale 0.5s ease-out 1.5s forwards;
+    opacity: 0;
 }
 
 .quad {
     grid-area: quad;
     background-image: url("../images/services/quad.jpg");
+    animation: fadeInScale 0.5s ease-out 1.6s forwards;
+    opacity: 0;
 }
 
 .basket {
     grid-area: basket;
     background-image: url("../images/services/basket.png");
-    
+    animation: fadeInScale 0.5s ease-out 1.7s forwards;
+    opacity: 0;
 }
 
 .horses {
     grid-area: horses;
     background-image: url("../images/services/horse.jpg");
     background-position: 0% 70%;
+    animation: fadeInScale 0.5s ease-out 1.8s forwards;
+    opacity: 0;
 }
 
 .mini {
     grid-area: mini;
     background-image: url("../images/services/mini.png");
+    animation: fadeInScale 0.5s ease-out 1.9s forwards;
+    opacity: 0;
 }
 
 .golf {
     grid-area: golf;
     background-image: url("../images/services/realGolf.png");
     background-position: 20% 0%;
+    animation: fadeInScale 0.5s ease-out 2.0s forwards;
+    opacity: 0;
 }
 
 .billi {
     grid-area: billi;
     background-image: url("../images/services/biliard.png");
+    animation: fadeInScale 0.5s ease-out 2.1s forwards;
+    opacity: 0;
 }
 
 .volley {
     grid-area: volley;
     background-image: url("../images/services/volleyball.jpg");
     background-position: 30%;
+    animation: fadeInScale 0.5s ease-out 2.2s forwards;
+    opacity: 0;
 }
 
 .tennis {
     grid-area: tennis;
     background-image: url("../images/services/miniTennis.jpg");
+    animation: fadeInScale 0.5s ease-out 2.3s forwards;
+    opacity: 0;
 }
 
 .foot {
     grid-area: foot;
     background-image: url("../images/services/soccer.png");
     background-position: 50%;
+    animation: fadeInScale 0.5s ease-out 2.4s forwards;
+    opacity: 0;
 }
