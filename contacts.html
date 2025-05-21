@@ -218,20 +218,14 @@
             <div class="left-container">
                 <h3>Поделиться</h3>
                 <div class="share-soc">
-                    <a href="">
+                    <a href="https://vk.com/share.php?url=arboria.com&title=Арбория-загородный%20клуб%20отдыха&description=Прекрасное%20место%20для%20отдыха!" target="_blank">
                         <img src="images/icons/soc/vk.svg" alt="vk">
                     </a>
-                    <a href="">
+                    <a href="#" onclick="tgshare('https://arboria.com', 'Прекрасное место для отдыха!')">
                         <img src="images/icons/soc/telegram.svg" alt="tg">
                     </a>
-                    <a href="">
+                    <a href="#" onclick="washare('https://arboria.com', 'Прекрасное место для отдыха!')">
                         <img src="images/icons/soc/whatsapp.svg" alt="whatsapp">
-                    </a>
-                    <a href="">
-                        <img src="images/icons/soc/gmail.svg" alt="gmail">
-                    </a>
-                    <a href="">
-                        <img src="images/icons/soc/2gis.svg" alt="2gis">
                     </a>
                 </div>
             </div>
@@ -392,6 +386,26 @@
     </div>
 </footer>
 </body>
+<script>
+    function tgshare(url, text) {
+        const tgUrl = `tg://msg_url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+        const fallbackUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+
+        window.open(tgUrl, '_blank').onerror = () => window.open(fallbackUrl, '_blank');
+    }
+    function washare(url, text) {
+        const message = `${text} ${url}`;
+        const encodedMessage = encodeURIComponent(message);
+
+        const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            window.open(`whatsapp://send?text=${encodedMessage}`, '_blank');
+        } else {
+            window.open(`https://web.whatsapp.com/send?text=${encodedMessage}`, '_blank');
+        }
+    }
+</script>
 <!--Скрипты ниже на всех страницах-->
 <script src="js/footer/emailInput.js"></script>
 <script src="js/header/toggleLanguages.js"></script>
