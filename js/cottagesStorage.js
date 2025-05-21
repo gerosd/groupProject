@@ -9,6 +9,7 @@ export const cottages = [
         peopleAmount: 1,
         bedAmount: 1,
         bathAmount: 1,
+        benefits: ["WiFi", "Телевизор", "Кондиционер", "Трёхразовое питание", "Баня"],
         reviews: [
             {
                 name: "Анна",
@@ -61,6 +62,7 @@ export const cottages = [
         peopleAmount: 2,
         bedAmount: 2,
         bathAmount: 1,
+        benefits: ["WiFi", "Телевизор", "Кондиционер", "Завтрак и ужин", "Терраса", "Мангальная зона"],
         reviews: [
             {
                 name: "Ольга",
@@ -105,6 +107,7 @@ export const cottages = [
         peopleAmount: 5,
         bedAmount: 3,
         bathAmount: 1,
+        benefits: ["WiFi", "Телевизор", "Кондиционер", "Бесплатная парковка", "Общая гостиная", "Оборудованная кухня"],
         reviews: [
             {
                 name: "Sophie",
@@ -156,6 +159,7 @@ export const cottages = [
         peopleAmount: 10,
         bedAmount: 8,
         bathAmount: 3,
+        benefits: ["WiFi", "Телевизор", "Кондиционер", "Завтрак и обед", "Сауна", "Зона барбекю", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "艺兴",
@@ -208,6 +212,7 @@ export const cottages = [
         peopleAmount: 1,
         bedAmount: 1,
         bathAmount: 1,
+        benefits: ["WiFi", "Smart TV", "Кондиционер", "Ресторанное меню", "Джакузи", "Панорамные окна", "Персональное обслуживание", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Ольга",
@@ -251,6 +256,7 @@ export const cottages = [
         peopleAmount: 2,
         bedAmount: 1,
         bathAmount: 1,
+        benefits: ["WiFi", "Smart TV", "Кондиционер", "Полный пансион", "Крытый бассейн", "Камин", "СПА-процедуры", "Консьерж-сервис", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Андрей",
@@ -286,6 +292,7 @@ export const cottages = [
         peopleAmount: 5,
         bedAmount: 4,
         bathAmount: 2,
+        benefits: ["WiFi", "Домашний кинотеатр", "Кондиционер", "Сауна", "Вид на озеро", "Индивидуальный шеф-повар", "Мини-бар", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Александр",
@@ -321,6 +328,7 @@ export const cottages = [
         peopleAmount: 10,
         bedAmount: 7,
         bathAmount: 2,
+        benefits: ["WiFi", "Smart TV", "Кондиционер", "Все включено", "Частная территория", "Бассейн", "Бильярд", "Организация экскурсий", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Julia",
@@ -348,6 +356,7 @@ export const cottages = [
         peopleAmount: 1,
         bedAmount: 1,
         bathAmount: 1,
+        benefits: ["Высокоскоростной WiFi", "OLED TV", "Умный дом", "Меню от мишленовского шефа", "Хаммам", "Персональный батлер", "Премиальная косметика", "Частный трансфер", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Артём",
@@ -383,6 +392,7 @@ export const cottages = [
         peopleAmount: 2,
         bedAmount: 1,
         bathAmount: 1,
+        benefits: ["Высокоскоростной WiFi", "OLED TV", "Умный дом", "Приватный пляж", "Вертолётная площадка", "Эксклюзивные экскурсии", "Индивидуальный гид", "СПА-зона", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Алина",
@@ -418,6 +428,7 @@ export const cottages = [
         peopleAmount: 5,
         bedAmount: 4,
         bathAmount: 2,
+        benefits: ["Высокоскоростной WiFi", "Домашний кинотеатр", "Умный дом", "ВИП-обслуживание", "Винотека", "Массажный кабинет", "Круглосуточный консьерж", "Персональный шеф-повар", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Виктор",
@@ -445,6 +456,7 @@ export const cottages = [
         peopleAmount: 10,
         bedAmount: 8,
         bathAmount: 4,
+        benefits: ["Высокоскоростной WiFi", "Кинотеатр", "Умный дом", "Боулинг", "Фитнес-зал", "Организация мероприятий", "Персональный шеф-повар", "Бассейн", "Фен", "Проживание с животными разрешено"],
         reviews: [
             {
                 name: "Никита",
@@ -458,7 +470,7 @@ export const cottages = [
                 name: "Richard",
                 date: "Февраль 2025",
                 imgURL: "",
-                text: "Unreal experience! Bowling alley, cinema, personal chef – like a billionaire’s mansion!",
+                text: "Unreal experience! Bowling alley, cinema, personal chef – like a billionaire's mansion!",
                 rating: 5
             }
         ],

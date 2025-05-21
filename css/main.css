@@ -15,6 +15,7 @@
     --event-icon-bg: #ffffff;
     --event-icon-bg-once: #ffffff;
     --event-icon: #3A4D37;
+    --close-btn: #1D1D2D;
 }
 
 [data-theme="dark"] {
@@ -35,6 +36,7 @@
     --event-icon-bg-once: #1D1D2D;
     --input-bg: #E1E7EC;
     --accent: #617f94;
+    --close-btn: #FFFFFF;
 }
 
 @font-face {

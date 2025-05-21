@@ -1,24 +1,8 @@
-import { services } from '../../js/mapStorage.js';
+import { services } from '../mapStorage.js';
 
 (function() {
-    const cursorCircle = document.createElement('div');
-    cursorCircle.className = 'cursor-circle';
-    cursorCircle.style.display = 'none';
-    document.body.appendChild(cursorCircle);
-
-    const sideMenu = document.createElement('div');
-    sideMenu.className = 'side-menu';
-    sideMenu.innerHTML = `
-        <button class="side-menu-close">&times;</button>
-        <img class="side-menu-image" src="" alt="">
-        <h2 class="side-menu-title"></h2>
-        <p class="side-menu-description"></p>
-        <a class="side-menu-link" href="" style="display: none;">Подробнее</a>
-    `;
-    document.body.appendChild(sideMenu);
-
     const interactiveSelectors = [
-        'path',
+        '#svg1 path',
         '#basketball',
         '#concert',
         '#parking',
@@ -29,7 +13,8 @@ import { services } from '../../js/mapStorage.js';
         '#ribalka',
         '#motoRent',
         '#horseClub',
-        '#tennisCourt'
+        '#tennisCourt',
+        '#les'
     ];
     const selector = interactiveSelectors.join(', ');
 
@@ -46,6 +31,7 @@ import { services } from '../../js/mapStorage.js';
         'horseClub': 'Конный клуб',
         'tennisCourt': 'Теннисный корт',
         'golph': 'Поле для гольфа',
+        'les': 'Лесной массив',
         'standard1m': 'Стандартный коттедж для одного',
         'standard2m': 'Стандартный коттедж для двух',
         'standart5m': 'Стандартный коттедж до пяти человек',
@@ -60,22 +46,42 @@ import { services } from '../../js/mapStorage.js';
         'vip10m': 'VIP коттедж до десяти человек',
     };
 
-    function onMouseMove(e) {
-        cursorCircle.style.left = e.clientX + 'px';
-        cursorCircle.style.top = e.clientY + 'px';
+    function createCirclesForElements() {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+            const circle = document.createElement('div');
+            circle.className = 'cursor-circle';
+            document.body.appendChild(circle);
+            
+            function updatePosition() {
+                const rect = element.getBoundingClientRect();
+                circle.style.left = (rect.left + rect.width / 2) + 'px';
+                circle.style.top = (rect.top + rect.height / 2) + 'px';
+                circle.style.display = 'block';
+            }
+            
+            updatePosition();
+            window.addEventListener('scroll', updatePosition);
+            window.addEventListener('resize', updatePosition);
+        });
     }
 
-    function onPointerOver(e) {
-        if (e.target.closest(selector)) {
-            cursorCircle.style.display = 'block';
-        }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', createCirclesForElements);
+    } else {
+        createCirclesForElements();
     }
 
-    function onPointerOut(e) {
-        if (!e.relatedTarget || !e.relatedTarget.closest(selector)) {
-            cursorCircle.style.display = 'none';
-        }
-    }
+    const sideMenu = document.createElement('div');
+    sideMenu.className = 'side-menu';
+    sideMenu.innerHTML = `
+        <button class="side-menu-close">&times;</button>
+        <img class="side-menu-image" src="" alt="">
+        <h2 class="side-menu-title"></h2>
+        <p class="side-menu-description"></p>
+        <a class="side-menu-link" href="" style="display: none;">Подробнее</a>
+    `;
+    document.body.appendChild(sideMenu);
 
     function showSideMenu(serviceName) {
         console.log('Showing side menu for:', serviceName);
@@ -98,11 +104,39 @@ import { services } from '../../js/mapStorage.js';
         if (service.link && service.link !== 'none') {
             link.href = service.link;
             link.style.display = 'inline-block';
+            link.textContent = 'Подробнее';
         } else {
             link.style.display = 'none';
         }
 
+        // Check if we have a saved language in localStorage
+        const savedLanguage = localStorage.getItem('selectedLanguage');
+        if (savedLanguage) {
+            // Translate title, description and link text
+            translateElement(title, savedLanguage);
+            translateElement(description, savedLanguage);
+            if (link.style.display !== 'none') {
+                translateElement(link, savedLanguage);
+            }
+        }
+
         sideMenu.classList.add('active');
+    }
+
+    // Helper function to translate an element's text content
+    function translateElement(element, targetLang) {
+        const text = element.textContent;
+        if (text.trim()) {
+            fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const translation = data[0][0][0];
+                    if (translation) {
+                        element.textContent = translation;
+                    }
+                })
+                .catch(error => console.error('Translation error:', error));
+        }
     }
 
     function closeSideMenu() {
@@ -130,8 +164,4 @@ import { services } from '../../js/mapStorage.js';
             closeSideMenu();
         }
     });
-
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('pointerover', onPointerOver);
-    document.addEventListener('pointerout', onPointerOut);
 })();

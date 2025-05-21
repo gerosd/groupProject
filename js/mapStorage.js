@@ -4,7 +4,7 @@ export const services = [
         name: "Банный комплекс",
         img: "images/services/bannya.jpg",
         desc: "В его состав входит просторная парная, финская сауна и уютная зона отдыха, где можно расслабиться после парилки. Посещение бани входит в стоимость аренды коттеджа. Наслаждайтесь приятной атмосферой, ароматами натуральных веников и теплом деревянных стен — идеальное место для восстановления сил и укрепления здоровья в окружении природы.",
-        link: "services.html#bannya"
+        link: "none"
     },
 
     {
@@ -67,7 +67,7 @@ export const services = [
         id: 9,
         name: "Теннисный корт",
         img: "images/services/tennis.jpg",
-        desc: "Профессиональный теннисный корт с всепогодным покрытием последнего поколения. Корт оборудован современной системой освещения для игры в вечернее время. Предоставляется прокат качественного инвентаря и услуги тренера. Трибуны позволяют проводить турниры с присутствием зрителей.",
+        desc: "Профессиональный теннисный корт с всепогодным покрытием последнего поколения. Корт оборудован современной системой освещения для игры в вечернее время. Предоставляется прокат качественного инвентаря и услуги тренера. Трибуны позволяют проводить турниры с присутствием зрителей. Рядом находятся столы для настольного тенниса.",
         link: "services.html#tennis"
     },
 
@@ -84,31 +84,31 @@ export const services = [
         name: "Стандартный коттедж для одного",
         img: "images/cottages/standard/1mesto.jpg",
         desc: "Стандартный коттедж для одного человека с комфортной спальней и современной ванной комнатой. Удобная кухня и просторная гостиная. Высокие потолки и большие окна с видом на природу. Удобное расположение вблизи всех основных зон комплекса.",
-        link: "cottages.html#standard"
+        link: "cottages.html?id=1"
     },
 
     {
         id: 12,
         name: "Стандартный коттедж для двух",
-        img: "images/cottages/standard/2mesto.jpg",
-        desc: "",
-        link: "cottages.html#standard"
+        img: "images/cottages/standard/2mesto.png",
+        desc: "Стандартный коттедж для двух человек с комфортной спальней и современной ванной комнатой. Расположен в непосредственной близости от всех основных зон комплекса.",
+        link: "cottages.html?id=2"
     },
 
     {
         id: 13,
         name: "Стандартный коттедж до пяти человек",
-        img: "images/cottages/standard/5mesto.jpg",
+        img: "images/cottages/standard/5mesto.jpeg",
         desc: "",
-        link: "cottages.html#standard"
+        link: "cottages.html?id=3"
     },
 
     {
         id: 14,
         name: "Стандартный коттедж до десяти человек",
-        img: "images/cottages/standard/10mesto.jpg",
+        img: "images/cottages/standard/10mesto.png",
         desc: "",
-        link: "cottages.html#standard"
+        link: "cottages.html?id=4"
     },
 
     {
@@ -116,39 +116,39 @@ export const services = [
         name: "Элитный коттедж для одного",
         img: "images/cottages/elite/1mesto.jpg",
         desc: "",
-        link: "cottages.html#elite"
+        link: "cottages.html?id=5"
     },
 
     {
         id: 16,
         name: "Элитный коттедж для двух",
-        img: "images/cottages/elite/2mesto.jpg",
+        img: "images/cottages/elite/2mesto.jpeg",
         desc: "",
-        link: "cottages.html#elite"
+        link: "cottages.html?id=6"
     },
 
     {
         id: 17,
         name: "Элитный коттедж до пяти человек",
-        img: "images/cottages/elite/5mesto.jpg",
+        img: "images/cottages/elite/5mesto.png",
         desc: "",
-        link: "cottages.html#elite"
+        link: "cottages.html?id=7"
     },
 
     {
         id: 18,
         name: "Элитный коттедж до десяти человек",
-        img: "images/cottages/elite/10mesto.jpg",
+        img: "images/cottages/elite/10mesto.png",
         desc: "",
-        link: "cottages.html#elite"
+        link: "cottages.html?id=8"
     },
 
     {
         id: 19,
         name: "VIP коттедж для одного",
-        img: "images/cottages/vip/1mesto.jpg",
+        img: "images/cottages/vip/1mesto.png",
         desc: "",
-        link: "cottages.html#vip"
+        link: "cottages.html?id=9"
     },
 
     {
@@ -156,23 +156,23 @@ export const services = [
         name: "VIP коттедж для двух",
         img: "images/cottages/vip/2mesto.jpg",
         desc: "",
-        link: "cottages.html#vip"
+        link: "cottages.html?id=10"
     },
 
     {
         id: 21,
         name: "VIP коттедж до пяти человек",
-        img: "images/cottages/vip/5mesto.jpg",
+        img: "images/cottages/vip/5mesto.jpeg",
         desc: "",
-        link: "cottages.html#vip"
+        link: "cottages.html?id=11"
     },
 
     {
         id: 22,
         name: "VIP коттедж до десяти человек",
-        img: "images/cottages/vip/10mesto.jpg",
+        img: "images/cottages/vip/10mesto.png",
         desc: "",
-        link: "cottages.html#vip"
+        link: "cottage-page.html?id=12"
     },
 
     {
@@ -180,7 +180,7 @@ export const services = [
         name: "Столовая",
         img: "images/services/stolovaya.jpg",
         desc: "Просторная столовая с современным интерьером и панорамными окнами с видом на природу. Предлагается разнообразное меню домашней кухни, включая диетические и вегетарианские блюда. Работает система заказов с доставкой в коттедж. Все блюда готовятся из свежих местных продуктов профессиональными поварами.",
-        link: "none"
+        link: "stolovaya.html"
     },
 
     {
@@ -189,6 +189,14 @@ export const services = [
         img: "images/services/ribalka.jpg",
         desc: "Просторное место для рыбалки с возможностью ловить рыбу в течение всего года. Оснащено современными лодками и оборудованием для ловли различных видов рыбы. Предоставляется прокат оборудования и инструктаж по безопасности.",
         link: "services.html#ribalka"
+    },
+
+    {
+        id: 25,
+        name: "Лесной массив",
+        img: "images/services/les.jpg",
+        desc: "Наш лесной уголок — это не только природная красота, но и пространство для активного отдыха: уютные беседки, зоны для пикников и оборудованные маршруты для скандинавской ходьбы или велопрогулок. Независимо от времени года, лес дарит ощущение покоя и вдохновения, делая ваш отдых в загородном клубе по-настоящему незабываемым.",
+        link: "none"
     }
 ]
 
