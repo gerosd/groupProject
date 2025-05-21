@@ -14,6 +14,10 @@ header {
     transform: translateX(-50%);
 }
 
+.fullscreen-menu {
+    top: -10px !important;
+}
+
 .hero {
     background-image: url('../images/index/hero.jpg');
     background-size: cover;

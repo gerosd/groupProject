@@ -38,10 +38,6 @@ main {
     stroke: var(--lighter);
 }
 
-.title-branch-right {
-    transform: scaleX(-1);
-}
-
 [data-theme="dark"] .title-branch svg {
     filter: 
         drop-shadow(0 0 2px rgba(176, 223, 255, 0.8))
