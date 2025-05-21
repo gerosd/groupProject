@@ -1,0 +1,6 @@
+@import 'main.css';
+
+header {
+    background-color: var(--primary);
+    padding: 10px 0 10px 0;
+}

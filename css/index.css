@@ -534,6 +534,7 @@ header {
 .people-amount div {
     display: flex;
     align-items: center;
+    font-size: 14px;
 }
 
 .people-amount div img {
