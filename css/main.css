@@ -18,6 +18,7 @@
     --event-icon-bg-once: #ffffff;
     --event-icon: #3A4D37;
     --close-btn: #1D1D2D;
+    --stolovaya-bg: rgba(117, 154, 126 , 0.3);
 }
 
 [data-theme="dark"] {
@@ -39,6 +40,7 @@
     --input-bg: #E1E7EC;
     --accent: #617f94;
     --close-btn: #FFFFFF;
+    --stolovaya-bg: rgba(139, 161, 183, 0.3);
 }
 
 @font-face {
