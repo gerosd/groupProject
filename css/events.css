@@ -165,6 +165,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
     @media (max-width: 1200px) {
         width: 98%;
         margin: 50px auto 50px auto;
@@ -258,7 +259,6 @@ main {
 }
 
 .dropdown-list label {
-    display: block;
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -290,13 +290,13 @@ main {
 .dropdown-list label input[type="checkbox"]:checked::after {
     content: '';
     position: absolute;
-    left: 5px;
-    top: 2px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    top: 0;
     width: 5px;
     height: 10px;
     border: solid white;
     border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
 }
 
 .dropdown-list label:hover {
