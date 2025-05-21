@@ -68,6 +68,12 @@
 .img-logo {
     width: 250px;
     height: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.img-logo:hover {
+    transform: scale(1.1);
 }
 
 .social-menu-icons {
