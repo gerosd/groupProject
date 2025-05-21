@@ -433,6 +433,15 @@ header {
     font-weight: 600;
 }
 
+.cottage-background-img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.cottage-card {
+    position: relative;
+    overflow: hidden;
+} 
+
 .view-all {
     font-size: 32px;
     color: var(--text-light);

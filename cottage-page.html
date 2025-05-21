@@ -9,104 +9,128 @@
     <link rel="stylesheet" href="css/fullscreen-menu.css">
 </head>
 <body data-theme="light">
-    <header>
-        <nav class="header-nav">
-            <ul class="nav-menu">
-                <li><a href="index.html#about">О клубе</a></li>
-                <li><a href="cottages.html">Коттеджи</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="events.html">Мероприятия</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-            <div class="logo" onClick="window.location = 'index.html'">
-                <img src="images/icons/logo.svg" alt="Арбория" />
-            </div>
-            <div class="header-icons">
-                <img src="images/icons/langChange.svg" alt="header-icon" id="changeLanguage">
-                <img src="images/icons/themeChange.svg" alt="header-icon" id="themeToggle">
-                <img src="images/icons/toggleMenu.svg" alt="header-icon" id="toggleMenu">
-            </div>
+<header>
+    <nav class="header-nav">
+        <nav class="nav-menu">
+            <a href="index.html">О клубе</a>
+            <a href="cottages.html">Коттеджи</a>
+            <a href="services.html">Услуги</a>
+            <a href="events.html">Мероприятия</a>
+            <a href="contacts.html">Контакты</a>
         </nav>
-        <div class="languages-container">
-            <div class="language" onClick="location.reload()">
-                <pre>RUS</pre>
-                <div class="lang-line"></div>
-            </div>
-            <div class="language" onClick="translatePage('en')">
-                <pre>ENG</pre>
-                <div class="lang-line"></div>
-            </div>
-            <div class="language" onClick="translatePage('de')">
-                <pre>DEU</pre>
-                <div class="lang-line"></div>
-            </div>
-            <div class="language" onClick="translatePage('zh-CN')">
-                <pre>CHI</pre>
-                <div class="lang-line"></div>
-            </div>
-            <div class="language" onClick="translatePage('fr')">
-                <pre>FRA</pre>
-                <div class="lang-line"></div>
-            </div>
-            <div class="language" onClick="translatePage('es')">
-                <pre>ESP</pre>
-                <div class="lang-line"></div>
-            </div>
+        <div class="logo" onClick="window.location = 'index.html'">
+            <img src="images/icons/logo.svg" alt="Арбория" />
         </div>
-        <div class="fullscreen-menu">
-            <div class="menu-close-button">
-                <span>&times;</span>
-            </div>
-            <div class="menu-content">
-                <div class="menu-logo">
-                    <img src="images/icons/logo.svg" alt="Арбория">
-                    <div class="menu-logo-text">
-                        <h2>АРБОРИЯ</h2>
-                        <p>Клуб Загородного Отдыха</p>
-                    </div>
+        <div class="header-icons">
+            <img src="images/icons/langChange.svg" alt="header-icon" id="changeLanguage">
+            <img src="images/icons/themeChange.svg" alt="header-icon" id="themeToggle">
+            <img src="images/icons/toggleMenu.svg" alt="header-icon" id="toggleMenu">
+        </div>
+    </nav>
+    <div class="languages-container">
+        <div class="language" onClick="translatePage('ru')">
+            <pre>RUS</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('en')">
+            <pre>ENG</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('de')">
+            <pre>DEU</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('zh-CN')">
+            <pre>CHI</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('fr')">
+            <pre>FRA</pre>
+            <div class="lang-line"></div>
+        </div>
+        <div class="language" onClick="translatePage('es')">
+            <pre>ESP</pre>
+            <div class="lang-line"></div>
+        </div>
+    </div>
+    <div class="fullscreen-menu">
+        <div class="menu-close-button">
+            <span>&times;</span>
+        </div>
+        <div class="menu-logo">
+            <img src="images/icons/logo.svg" alt="Арбория" class="img-logo" onclick="window.location = 'index.html'">
+            <div class="left-menu-social">
+                <div class="social-menu-icons">
+                    <a href="https://vk.com/club230570851">
+                        <img src="images/icons/soc/vk.svg" alt="VK">
+                    </a>
+                    <a href="https://t.me/+XThSPUUJqxQzYmEy">
+                        <img src="images/icons/soc/telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="">
+                        <img src="images/icons/soc/whatsapp.svg" alt="WhatsApp">
+                    </a>
+                    <a href="mailto:resort@arboria.com">
+                        <img src="images/icons/soc/gmail.svg" alt="Gmail">
+                    </a>
+                    <a href="https://2gis.ru/barnaul/firm/70000001035173758?m=83.496622%2C53.747446%2F18.05">
+                        <img src="images/icons/soc/2gis.svg" alt="2gis">
+                    </a>
                 </div>
-                <div class="menu-divider"></div>
-                <nav class="menu-navigation">
-                    <div class="menu-section">
-                        <h3>О клубе</h3>
-                        <ul>
-                            <li><a href="index.html#advantages">Преимущества</a></li>
-                            <li><a href="index.html#map">Карта</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-section">
-                        <h3>Коттеджи</h3>
-                        <ul>
-                            <li><a href="cottages.html#standard">Стандарт</a></li>
-                            <li><a href="cottages.html#vip">VIP</a></li>
-                            <li><a href="cottages.html#elit">Элит</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-section">
-                        <h3>Услуги</h3>
-                        <ul>
-                            <li><a href="services.html#sports">Спортивные игры</a></li>
-                            <li><a href="services.html#outdoor">Активный отдых на природе</a></li>
-                            <li><a href="services.html#indoor">Развлечения в помещении</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-section">
-                        <h3>Мероприятия</h3>
-                        <ul>
-                            <li><a href="events.html#masterclass">Мастер-классы</a></li>
-                            <li><a href="events.html#concerts">Концерты и шоу</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-section">
-                        <h3>Контакты</h3>
-                        <ul>
-                            <li><a href="contacts.html#address">Адрес</a></li>
-                        </ul>
-                    </div>
-                </nav>
             </div>
         </div>
-    </header>
+        <div class="menu-divider"></div>
+        <div class="menu-content">
+            <nav class="menu-navigation">
+                <div class="menu-section">
+                    <h3>О клубе</h3>
+                    <ul>
+                        <li><a href="index.html#advantages">Преимущества</a></li>
+                        <li><a href="index.html#map">Карта</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Коттеджи</h3>
+                    <ul>
+                        <li><a href="cottages.html#standard">Стандарт</a></li>
+                        <li><a href="cottages.html#vip">VIP</a></li>
+                        <li><a href="cottages.html#elit">Элит</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="services.html#sport">Спортивные игры</a></li>
+                        <li><a href="services.html#outdoor">Активный отдых на природе</a></li>
+                        <li><a href="services.html#indoor">Развлечения в помещении</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Мероприятия</h3>
+                    <ul>
+                        <li><a href="events.html#masterclass">Мастер-классы</a></li>
+                        <li><a href="events.html#concerts">Концерты и шоу</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><a href="contacts.html#address">Адрес</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Столовая</h3>
+                    <ul>
+                        <li><a href="stolovaya.html">Меню столовой</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="full-menu-term">
+            <p>© 2025 Арбория. Все права защищены</p>
+        </div>
+    </div>
+</header>
 
     <main>
         <div class="cottage-left">
@@ -180,7 +204,7 @@
                 <div class="reviews-scroll">
                     <div class="review-item">
                         <div class="review-item-header">
-                            <img src="images/reviews/anna.jpg" alt="user">
+                            <img src="images/reviews/female.jpg" alt="user">
                             <div class="item-header-info">
                                 <p class="header-name">Анна</p>
                                 <p class="header-date">Май 2025</p>
@@ -191,7 +215,7 @@
 
                     <div class="review-item">
                         <div class="review-item-header">
-                            <img src="images/reviews/anna.jpg" alt="user">
+                            <img src="images/reviews/female.jpg" alt="user">
                             <div class="item-header-info">
                                 <p class="header-name">Анна</p>
                                 <p class="header-date">Май 2025</p>
@@ -202,7 +226,7 @@
 
                     <div class="review-item">
                         <div class="review-item-header">
-                            <img src="images/reviews/anna.jpg" alt="user">
+                            <img src="images/reviews/female.jpg" alt="user">
                             <div class="item-header-info">
                                 <p class="header-name">Анна</p>
                                 <p class="header-date">Май 2025</p>
@@ -212,7 +236,7 @@
                     </div>
                     <div class="review-item">
                         <div class="review-item-header">
-                            <img src="images/reviews/anna.jpg" alt="user">
+                            <img src="images/reviews/female.jpg" alt="user">
                             <div class="item-header-info">
                                 <p class="header-name">Анна</p>
                                 <p class="header-date">Май 2025</p>
@@ -222,7 +246,7 @@
                     </div>
                     <div class="review-item">
                         <div class="review-item-header">
-                            <img src="images/reviews/anna.jpg" alt="user">
+                            <img src="images/reviews/female.jpg" alt="user">
                             <div class="item-header-info">
                                 <p class="header-name">Анна</p>
                                 <p class="header-date">Май 2025</p>
@@ -250,8 +274,8 @@
                     <img src="images/icons/logo.svg" alt="Арбория">
                 </div>
                 <div class="footer-number">
-                    Обращайтесь по номеру: <br>
-                    +7 900 195 67 02
+                    <span>Обращайтесь по номеру: </span><br>
+                    <span>+7 900 195 67 02</span>
                 </div>
             </div>
 
@@ -270,28 +294,28 @@
                             <ul>
                                 <li><a href="cottages.html#standard">Стандарт</a></li>
                                 <li><a href="cottages.html#vip">VIP</a></li>
-                                <li><a href="cottages.html#elit>">Элит</a></li>
+                                <li><a href="cottages.html#elit">Элит</a></li>
                             </ul>
                         </div>
                         <div class="footer-menu-item">
                             <h3>Услуги</h3>
                             <ul>
-                                <li>Спортивные игры</li>
-                                <li>Активный отдых на природе</li>
-                                <li>Развлечения в помещении</li>
+                                <li><a href="services.html#sport">Спортивные игры</a></li>
+                                <li><a href="services.html#outdoor">Активный отдых на природе</a></li>
+                                <li><a href="services.html#indoor">Развлечения в помещении</a></li>
                             </ul>
                         </div>
                         <div class="footer-menu-item">
                             <h3>Мероприятия</h3>
                             <ul>
-                                <li>Мастер-классы</li>
-                                <li>Концерты и шоу</li>
+                                <li><a href="events.html#masterclass">Мастер-классы</a></li>
+                                <li><a href="events.html#concerts">Концерты и шоу</a></li>
                             </ul>
                         </div>
                         <div class="footer-menu-item">
                             <h3>Контакты</h3>
                             <ul>
-                                <li>Адрес</li>
+                                <li><a href="contacts.html#map">Адрес</a></li>
                             </ul>
                         </div>
                     </div>
@@ -300,19 +324,19 @@
                 <div class="social">
                     <div class="left-social">
                         <div class="social-icons">
-                            <a href="">
+                            <a href="https://vk.com/club230570851">
                                 <img src="images/icons/soc/vk.svg" alt="VK">
                             </a>
-                            <a href="">
+                            <a href="https://t.me/+XThSPUUJqxQzYmEy">
                                 <img src="images/icons/soc/telegram.svg" alt="Telegram">
                             </a>
                             <a href="">
                                 <img src="images/icons/soc/whatsapp.svg" alt="WhatsApp">
                             </a>
-                            <a href="">
+                            <a href="mailto:resort@arboria.com">
                                 <img src="images/icons/soc/gmail.svg" alt="Gmail">
                             </a>
-                            <a href="">
+                            <a href="https://2gis.ru/barnaul/firm/70000001035173758?m=83.496622%2C53.747446%2F18.05">
                                 <img src="images/icons/soc/2gis.svg" alt="2gis">
                             </a>
                         </div>
@@ -327,7 +351,7 @@
             </div>
             <div class="footer-line"></div>
             <div class="footer-bottom">
-                <p>© 2025 Arboria. Все права защищены.</p>
+                <p>© 2025 Арбория. Все права защищены.</p>
             </div>
         </div>
         <div class="footer-branch">
@@ -390,7 +414,6 @@
                     </filter>
                 </defs>
             </svg>
-
         </div>
     </footer>
 </body>

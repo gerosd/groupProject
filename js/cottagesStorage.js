@@ -14,7 +14,7 @@ export const cottages = [
             {
                 name: "Анна",
                 date: "Май 2025",
-                imgURL: "images/reviews/anna.jpg",
+                imgURL: "images/reviews/female1.jpg",
                 text: "Мне очень понравилось это место. Я отлично провела время и хорошо отдохнула. Спасибо организаторам!",
                 rating: 5
             },
@@ -22,7 +22,7 @@ export const cottages = [
             {
                 name: "Алексей",
                 date: "Апрель 2025",
-                imgURL: "images/reviews/",
+                imgURL: "images/reviews/male1.jpg",
                 text: "Тихий, чистый домик. Баня – огонь! Еда простая, но вкусная. Вернусь снова!",
                 rating: 5
             },
@@ -30,7 +30,7 @@ export const cottages = [
             {
                 name: "Марина",
                 date: "Февраль 2025",
-                imgURL: "images/reviews/",
+                imgURL: "images/reviews/female2.jpg",
                 text: "Идеально для уединения. Персонал доброжелательный, завтраки сытные. Рекомендую!",
                 rating: 5
             },
@@ -38,7 +38,7 @@ export const cottages = [
             {
                 name: "John",
                 date: "Январь 2025",
-                imgURL: "images/reviews/",
+                imgURL: "images/reviews/male2.jpg",
                 text: "Cozy place, great for digital detox. The banya was a highlight!",
                 rating: 5
             }
@@ -67,7 +67,7 @@ export const cottages = [
             {
                 name: "Ольга",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female3.jpg",
                 text: "Не хватало микроволновки. Место приятное и тихое.",
                 rating: 4
             },
@@ -75,7 +75,7 @@ export const cottages = [
             {
                 name: "Elena",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female4.jpg",
                 text: "¡Muy acogedor! La terraza es perfecta para cenas románticas. Volveremos.",
                 rating: 5
             },
@@ -83,7 +83,7 @@ export const cottages = [
             {
                 name: "Li Wei",
                 date: "Февраль 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male3.jpg",
                 text: "安静舒适的小屋，桑拿很棒！食物简单但美味。",
                 rating: 4
             }
@@ -112,7 +112,7 @@ export const cottages = [
             {
                 name: "Sophie",
                 date: "Май 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female5.jpg",
                 text: "Gemütliches Häuschen, toller Grillplatz. Das Frühstück war lecker!",
                 rating: 5
             },
@@ -120,7 +120,7 @@ export const cottages = [
             {
                 name: "Tom",
                 date: "Апрель 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male4.jpg",
                 text: "Great value for money. Loved the barbecue area!",
                 rating: 5
             },
@@ -128,7 +128,7 @@ export const cottages = [
             {
                 name: "Мария",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female6.jpg",
                 text: "Просторно, чисто, есть всё для семьи. Дети в восторге от природы вокруг!",
                 rating: 5
             },
@@ -136,7 +136,7 @@ export const cottages = [
             {
                 name: "Carlos",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male5.jpg",
                 text: "Ideal para amigos. Buena cocina, wifi estable. ¡Repetiremos!",
                 rating: 5
             }
@@ -164,7 +164,7 @@ export const cottages = [
             {
                 name: "艺兴",
                 date: "Май 2025",
-                imgURL: "images/reviews/xi.jpg",
+                imgURL: "images/reviews/male6.jpg",
                 text: "总的来说，一切都很好，但我心情不好，所以4",
                 rating: 4
             },
@@ -172,7 +172,7 @@ export const cottages = [
             {
                 name: "Zdzisław",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male7.jpg",
                 text: "Dobra lokalizacja, ale brakuje tłumacza na język polski.",
                 rating: 4
             },
@@ -180,7 +180,7 @@ export const cottages = [
             {
                 name: "Олег",
                 date: "Январь 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male8.jpg",
                 text: "Отметили день рождения – всё супер! Сауна, мангал, простор. Персонал помог с организацией.",
                 rating: 5
             },
@@ -188,7 +188,7 @@ export const cottages = [
             {
                 name: "Игорь",
                 date: "Декабрь 2024",
-                imgURL: "",
+                imgURL: "images/reviews/male9.jpg",
                 text: "Отмечали новый год, вышло очень бюджетно для нашей компании. Вернусь.",
                 rating: 5
             }
@@ -217,7 +217,7 @@ export const cottages = [
             {
                 name: "Ольга",
                 date: "Апрель 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female7.jpg",
                 text: "Роскошный отдых! Джакузи с видом на лес – сказка. Обслуживание на высоте.",
                 rating: 5
             },
@@ -225,7 +225,7 @@ export const cottages = [
             {
                 name: "Klaus",
                 date: "Апрель 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male10.jpg",
                 text: "Exklusiv und stilvoll. Der Whirlpool mit Waldblick ist traumhaft!",
                 rating: 5
             },
@@ -233,7 +233,7 @@ export const cottages = [
             {
                 name: "Isabelle",
                 date: "Февраль 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female8.jpg",
                 text: "Un havre de paix. Le service est impeccable!",
                 rating: 5
             },
@@ -261,7 +261,7 @@ export const cottages = [
             {
                 name: "Андрей",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male11.jpg",
                 text: "Романтика на высшем уровне! Камин, бассейн, изысканные ужины. Спасибо!",
                 rating: 5
             },
@@ -269,7 +269,7 @@ export const cottages = [
             {
                 name: "Евгений",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male12.jpg",
                 text: "Лучше места на Алтае вы не найдете, 100%.",
                 rating: 5
             },
@@ -297,7 +297,7 @@ export const cottages = [
             {
                 name: "Александр",
                 date: "Апрель 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male13.jpg",
                 text: "Отдыхали компанией, все было прекрасно. Леха разбил головой лампу))",
                 rating: 5
             },
@@ -305,7 +305,7 @@ export const cottages = [
             {
                 name: "Алексей",
                 date: "Апрель 2025",
-                imgURL: "images/reviews/alexey_lampa.jpg",
+                imgURL: "images/reviews/male14.jpg",
                 text: "Не очень крепкие лампы.",
                 rating: 4
             }
@@ -333,7 +333,7 @@ export const cottages = [
             {
                 name: "Julia",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female9.jpg",
                 text: "Melhor experiência de hospedagem! Piscina, churrasco, serviço impecável.",
                 rating: 5
             }
@@ -361,7 +361,7 @@ export const cottages = [
             {
                 name: "Артём",
                 date: "Апрель 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male15.jpg",
                 text: "Это не отдых – это королевский прием! Батлер, хаммам, изысканная кухня. 10/10.",
                 rating: 5
             },
@@ -369,7 +369,7 @@ export const cottages = [
             {
                 name: "Giovanni",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male16.jpg",
                 text: "Esclusivo e raffinato. Il servizio è impeccabile, il hammam una delizia!",
                 rating: 5
             }
@@ -397,7 +397,7 @@ export const cottages = [
             {
                 name: "Алина",
                 date: "Май 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female10.jpg",
                 text: "Так, как здесь, я не отдыхала нигде.",
                 rating: 4
             },
@@ -405,7 +405,7 @@ export const cottages = [
             {
                 name: "Эвелина",
                 date: "Март 2025",
-                imgURL: "",
+                imgURL: "images/reviews/female11.jpg",
                 text: "Хотелось бы парковку подлиннее, мой Ford F-150 еле влез!",
                 rating: 5
             }
@@ -433,7 +433,7 @@ export const cottages = [
             {
                 name: "Виктор",
                 date: "Апрель 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male17.jpg",
                 text: "Провели переговоры в шикарной обстановке. Винотека, массаж – идеально для делового отдыха.",
                 rating: 5
             }
@@ -461,7 +461,7 @@ export const cottages = [
             {
                 name: "Никита",
                 date: "Апрель 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male18.jpg",
                 text: "Устроили тимбилдинг – все в восторге! После такого отдыха наши сотрудники перевыполнили весь план. Кинотеатр, шеф-повар. Супер!",
                 rating: 5
             },
@@ -469,7 +469,7 @@ export const cottages = [
             {
                 name: "Richard",
                 date: "Февраль 2025",
-                imgURL: "",
+                imgURL: "images/reviews/male19.jpg",
                 text: "Unreal experience! Bowling alley, cinema, personal chef – like a billionaire's mansion!",
                 rating: 5
             }

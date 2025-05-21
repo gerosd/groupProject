@@ -1,3 +1,5 @@
+@import 'fullscreen-menu.css';
+
 [data-theme="light"] {
     --primary: #3A4D37;
     --light: #759A7E;
@@ -163,6 +165,11 @@ header {
 .logo img {
     height: 115px;
     width: 125px;
+    transition: 0.2s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 .header-icons {

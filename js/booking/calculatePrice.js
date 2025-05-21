@@ -7,6 +7,47 @@ const prePay = document.getElementById('pre-pay');
 const amountInput = document.getElementById('amount');
 const cottageSelect = document.getElementById('cottage-select');
 
+// Function to translate price labels
+function translatePriceLabels(price, prePayValue, nights = null) {
+    const currentLang = localStorage.getItem('selectedLanguage');
+    if (!currentLang || currentLang === 'ru') {
+        if (nights) {
+            totalPriceElement.textContent = `${price}₽ (${nights} ${getNightsText(nights)})`;
+        } else {
+            totalPriceElement.textContent = `${price}₽ за ночь`;
+        }
+        prePay.textContent = `${prePayValue}₽`;
+        return;
+    }
+
+    // Translate "за ночь" and "предоплата" if needed
+    const textToTranslate = nights 
+        ? `${price}₽ (${nights} ${getNightsText(nights)})`
+        : `${price}₽ за ночь`;
+
+    // Translate total price text
+    fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=ru&tl=${currentLang}&dt=t&q=${encodeURIComponent(textToTranslate)}`)
+        .then(response => response.json())
+        .then(data => {
+            const translation = data[0][0][0];
+            if (translation) {
+                totalPriceElement.textContent = translation;
+            }
+        })
+        .catch(error => console.error('Translation error:', error));
+
+    // Translate prepayment text
+    fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=ru&tl=${currentLang}&dt=t&q=предоплата`)
+        .then(response => response.json())
+        .then(data => {
+            const translation = data[0][0][0];
+            if (translation) {
+                prePay.textContent = `${translation}: ${prePayValue}₽`;
+            }
+        })
+        .catch(error => console.error('Translation error:', error));
+}
+
 function getUrlParameter(name) {
     name = name.replace(/\[/, '\\[').replace(/]/, '\\]');
     const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -37,8 +78,7 @@ function calculateTotalPrice() {
     const cottage = cottages.find(c => c.id === selectedCottageId);
     
     if (!cottage) {
-        totalPriceElement.textContent = '0₽';
-        prePay.textContent = '0₽';
+        translatePriceLabels(0, 0);
         return;
     }
 
@@ -50,8 +90,7 @@ function calculateTotalPrice() {
     if (!dateStart.value || !dateEnd.value) {
         const pricePerNight = cottage.price * peopleAmount;
         const prePayValue = pricePerNight * 0.1;
-        totalPriceElement.textContent = `${pricePerNight}₽ за ночь`;
-        prePay.textContent = `${prePayValue}₽`;
+        translatePriceLabels(pricePerNight, prePayValue);
         return;
     }
 
@@ -60,8 +99,7 @@ function calculateTotalPrice() {
         dateEnd.value = '';
         const pricePerNight = cottage.price * peopleAmount;
         const prePayValue = pricePerNight * 0.1;
-        totalPriceElement.textContent = `${pricePerNight}₽ за ночь`;
-        prePay.textContent = `${prePayValue}₽`;
+        translatePriceLabels(pricePerNight, prePayValue);
         return;
     }
 
@@ -70,11 +108,10 @@ function calculateTotalPrice() {
     
     // Calculate total price with people amount adjustment
     let totalPrice = nights * cottage.price * peopleAmount;
-    let prePayValue = nights * cottage.price * peopleAmount * 0.1;
+    let prePayValue = totalPrice * 0.1;
     
-    // Update total price display
-    totalPriceElement.textContent = `${totalPrice}₽ (${nights} ${getNightsText(nights)})`;
-    prePay.textContent = `${prePayValue}₽`;
+    // Update total price display with translation
+    translatePriceLabels(totalPrice, prePayValue, nights);
 }
 
 function getNightsText(nights) {
