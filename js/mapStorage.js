@@ -114,7 +114,7 @@ export const services = [
     {
         id: 15,
         name: "Элитный коттедж для одного",
-        img: "images/cottages/elite/1mesto.jpg",
+        img: "images/cottages/elit/1mesto.jpg",
         desc: "Премиальный коттедж для одного гостя с панорамными окнами, джакузи и дизайнерским интерьером. Расположен в тихой части комплекса с видом на лес.",
         link: "cottage-page.html?id=5"
     },
@@ -122,7 +122,7 @@ export const services = [
     {
         id: 16,
         name: "Элитный коттедж для двух",
-        img: "images/cottages/elite/2mesto.jpeg",
+        img: "images/cottages/elit/2mesto.jpeg",
         desc: "Роскошный коттедж для пары с камином, крытым бассейном и просторной ванной комнатой с тропическим душем. Уединённое расположение с выходом к приватному саду.",
         link: "cottage-page.html?id=6"
     },
@@ -130,7 +130,7 @@ export const services = [
     {
         id: 17,
         name: "Элитный коттедж до пяти человек",
-        img: "images/cottages/elite/5mesto.png",
+        img: "images/cottages/elit/5mesto.png",
         desc: "Элитный коттедж для небольшой компании с домашним кинотеатром и террасой. Расположен у озера, включает услуги консьержа и шеф-повара по запросу.",
         link: "cottage-page.html?id=7"
     },
@@ -138,7 +138,7 @@ export const services = [
     {
         id: 18,
         name: "Элитный коттедж до десяти человек",
-        img: "images/cottages/elite/10mesto.png",
+        img: "images/cottages/elit/10mesto.png",
         desc: "Коттедж для большой компании с частным бассейном, бильярдом и зоной отдыха. Находится в самом престижном районе комплекса.",
         link: "cottage-page.html?id=8"
     },
