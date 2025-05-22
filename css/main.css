@@ -293,7 +293,11 @@ footer {
     height: 58px;
     color: white;
     font-size: 20px;
-    
+}
+
+.footer-number a {
+    font-size: inherit;
+    cursor: pointer;
 }
 
 .center-footer {

@@ -69,8 +69,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1650px;
+    width: 100%;
+    max-width: 1650px;
     margin-bottom: 150px;
+    padding: 0 20px;
 }
 
 .contacts-left {
@@ -142,4 +144,198 @@ main {
     border: 8px solid var(--primary);
     border-radius: 25px;
     box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large Desktop Screens */
+@media (max-width: 1700px) {
+    .contacts-info {
+        max-width: 1400px;
+    }
+}
+
+/* Desktop and Small Laptops */
+@media (max-width: 1400px) {
+    .title {
+        font-size: 76px;
+        height: 110px;
+    }
+
+    .left-container h3 {
+        font-size: 54px;
+    }
+
+    .left-container p {
+        font-size: 28px;
+    }
+
+    .contacts-right {
+        height: 500px;
+    }
+}
+
+/* Tablets and Small Laptops */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 64px;
+        height: 90px;
+    }
+
+    .contacts-info {
+        max-width: 90%;
+    }
+
+    .left-container h3 {
+        font-size: 48px;
+    }
+
+    .left-container p {
+        font-size: 24px;
+    }
+
+    .share-soc a {
+        width: 56px;
+        height: 56px;
+    }
+
+    .contacts-right {
+        height: 450px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 980px) {
+    main {
+        gap: 50px;
+    }
+
+    .title {
+        font-size: 52px;
+        height: 80px;
+    }
+
+    .left-container h3 {
+        font-size: 42px;
+    }
+
+    .left-container p {
+        font-size: 22px;
+    }
+
+    .contacts-info {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 70px;
+    }
+
+    .contacts-left, .contacts-right {
+        width: 100%;
+    }
+
+    .contacts-left {
+        align-items: center;
+    }
+
+    .left-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacts-right {
+        height: 400px;
+    }
+}
+
+/* Large Mobile */
+@media (max-width: 768px) {
+    .title {
+        font-size: 42px;
+        height: 70px;
+    }
+
+    .left-container h3 {
+        font-size: 36px;
+    }
+
+    .left-container p {
+        font-size: 20px;
+    }
+
+    .share-soc a {
+        width: 48px;
+        height: 48px;
+    }
+
+    .contacts-right {
+        height: 350px;
+    }
+
+    .contacts-right iframe {
+        border-width: 6px;
+        border-radius: 20px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+    main {
+        gap: 40px;
+    }
+
+    .title {
+        font-size: 36px;
+        height: 60px;
+    }
+
+    .left-container h3 {
+        font-size: 32px;
+    }
+
+    .left-container p {
+        font-size: 18px;
+    }
+
+    .contacts-info {
+        margin-bottom: 50px;
+    }
+
+    .contacts-right {
+        height: 300px;
+    }
+
+    .contacts-right iframe {
+        border-width: 4px;
+        border-radius: 15px;
+    }
+
+    .share-soc a {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 375px) {
+    .title {
+        font-size: 30px;
+        height: 50px;
+    }
+
+    .left-container h3 {
+        font-size: 28px;
+    }
+
+    .left-container p {
+        font-size: 16px;
+    }
+
+    .contacts-right {
+        height: 250px;
+    }
+
+    .share-soc a {
+        width: 36px;
+        height: 36px;
+    }
 }
