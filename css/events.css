@@ -128,6 +128,22 @@ main {
     z-index: 1;
 }
 
+.filter > .filter-item:nth-child(1) {
+    z-index: 3;
+}
+
+.filter > .filter-item:nth-child(2) {
+    z-index: 2;
+}
+
+.filter > .filter-item:nth-child(3) {
+    z-index: 1;
+}
+
+.filter > .filter-item:nth-child(4) {
+    z-index: 0;
+}
+
 .filter-item {
     height: 105px;
     display: flex;
@@ -185,7 +201,6 @@ main {
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%);
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
@@ -195,7 +210,7 @@ main {
 }
 
 .custom-dropdown.open .dropdown-selected::after {
-    transform: translateY(-50%) rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .dropdown-list {
@@ -293,14 +308,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 100px;
-    @media (max-width: 1200px) {
-        width: 98%;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        column-gap: 5px;
-        margin-bottom: 100px;
-    }
 }
 
 .event-item {
@@ -315,9 +322,6 @@ main {
     background-color: var(--primary);
     cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    @media (max-width: 1200px) {
-        margin-top: 0;
-    }
 }
 
 .event-item:hover {
@@ -520,4 +524,246 @@ main {
     color: var(--light);
 }
 
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 4em;
+        margin-top: 2em;
+    }
 
+    .filter {
+        justify-content: center;
+        column-gap: 1em;
+        row-gap: 1.5em;
+        margin-top: 4em;
+    }
+
+    .filter-item span {
+        font-size: 1.25em;
+    }
+
+    .dropdown-selected span {
+        font-size: 1em;
+    }
+
+    .custom-dropdown {
+        width: 240px;
+        font-size: 1.25em;
+    }
+
+    .event-item {
+        width: 30em;
+        margin-top: 4em;
+    }
+
+    .event-img {
+        width: 27em;
+        height: 27em;
+    }
+
+    .desc-text {
+        width: 14em;
+        height: 13em;
+    }
+
+    .desc-text-title {
+        font-size: 1.75em;
+    }
+
+    .desc-text-place {
+        font-size: 1.1em;
+    }
+
+    .for-event-icon {
+        width: 5em;
+        height: 5em;
+    }
+
+    .event-icon {
+        width: 4em;
+        height: 4em;
+    }
+
+    .event-icon svg {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .events-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 3.5em;
+    }
+
+    .events-container {
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .event-item {
+        width: 25em;
+    }
+
+    .event-img {
+        width: 22em;
+        height: 22em;
+    }
+
+    .desc-text {
+        width: 12em;
+        height: 11em;
+    }
+
+    .desc-text-title {
+        font-size: 1.5em;
+    }
+
+    .day-text, .time-text {
+        font-size: 1em;
+        padding: 0.4em 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3em;
+        margin-top: 1.5em;
+    }
+
+    .filter {
+        margin-top: 3em;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .filter-item {
+        height: auto;
+        margin-bottom: 1em;
+    }
+
+    .custom-dropdown {
+        width: 280px;
+    }
+
+    .events-container {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+
+    .event-item {
+        width: 100%;
+        max-width: 25em;
+        margin-top: 3em;
+    }
+
+    .desc-text {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+    }
+
+    .for-event-icon {
+        width: 4em;
+        height: 4em;
+        bottom: -1em;
+        right: -1em;
+    }
+
+    .event-icon {
+        width: 3em;
+        height: 3em;
+    }
+
+    .event-icon svg {
+        width: 2em;
+        height: 2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+
+    .filter {
+        margin-top: 2em;
+    }
+
+    .custom-dropdown {
+        max-width: 280px;
+    }
+
+    .dropdown-selected {
+        padding: 0.8em 1em;
+    }
+
+    .event-item {
+        margin-top: 2em;
+    }
+
+    .desc-text-title {
+        font-size: 1.25em;
+    }
+
+    .desc-text-place {
+        font-size: 1em;
+    }
+
+    .day-text, .time-text {
+        font-size: 0.9em;
+        padding: 0.3em 0.8em;
+    }
+
+    .for-event-icon {
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    .event-icon {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .event-icon svg {
+        width: 1.5em;
+        height: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 2em;
+    }
+
+    .filter-item span {
+        font-size: 1em;
+    }
+
+    .custom-dropdown {
+        font-size: 1em;
+    }
+
+    .event-item {
+        margin-top: 1.5em;
+    }
+
+    .desc-text {
+        padding: 0.8em;
+    }
+
+    .desc-text-title {
+        font-size: 1.1em;
+    }
+
+    .desc-text-place {
+        font-size: 0.9em;
+    }
+}
