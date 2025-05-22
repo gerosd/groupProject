@@ -50,6 +50,7 @@ function fillCottageInfo() {
     document.querySelector('.form-h2').textContent = cottage.name;
     document.querySelector('.price p').textContent = cottage.priceForParagraph + ' ₽/сут';
     document.querySelector('.cottage-desc').textContent = cottage.desc;
+    document.querySelector('.booking').textContent = 'Забронировать';
     document.querySelector('.booking').addEventListener('click', () => {
         window.location = `booking.html?id=${cottage.id}`;
     })
@@ -60,6 +61,18 @@ function fillCottageInfo() {
         amounts[0].textContent = cottage.peopleAmount + ' чел.';
         amounts[1].textContent = cottage.bedAmount + ' спальных мест';
         amounts[2].textContent = cottage.bathAmount + ' санузел';
+    }
+
+    // Fill benefits
+    if (cottage.benefits && cottage.benefits.length > 0) {
+        const benefitsContainer = document.querySelector('.cottage-advantages');
+        benefitsContainer.innerHTML = ''; // Clear existing benefits
+        
+        cottage.benefits.forEach(benefit => {
+            const benefitItem = document.createElement('li');
+            benefitItem.textContent = benefit;
+            benefitsContainer.appendChild(benefitItem);
+        });
     }
 
     // Fill reviews
