@@ -34,8 +34,6 @@ main {
     border-radius: 50px;
     border: 10px solid var(--primary);
     background: var(--stolovaya-bg);
-    -webkit-backdrop-filter: blur(4px);
-    -moz-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     margin-bottom: 50px;
     animation: fadeInScale 0.7s ease-out 0.7s forwards;
@@ -125,4 +123,94 @@ main {
 
 .svg-theme-color-stroke-bob {
     stroke: var(--text-light);
+}
+
+@media (max-width: 1600px) {
+    .schedule-section {
+        width: 1000px;
+    }
+
+    .schedule-section h3 {
+        font-size: 48px;
+    }
+
+    .schedule-section p {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .title {
+        font-size: 50px;
+    }
+
+    .schedule {
+        font-size: 24px;
+    }
+
+    .schedule-container {
+        padding: 40px;
+    }
+
+    .schedule-section {
+        width: 800px;
+    }
+
+    .schedule-section h3 {
+        font-size: 36px;
+    }
+
+    .schedule-section p {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 980px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .schedule {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .schedule-section {
+        width: 450px;
+    }
+
+    .schedule-section h3 {
+        font-size: 24px;
+    }
+
+    .schedule-section p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .schedule {
+        font-size: 20px;
+        padding-block: 20px;
+    }
+
+    .schedule-container {
+        padding: 20px;
+    }
+
+    .schedule-section {
+        width: 300px;
+    }
+
+    .schedule-section h3 {
+        font-size: 20px;
+    }
+
+    .schedule-section p {
+        font-size: 16px;
+    }
 }
