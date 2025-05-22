@@ -40,6 +40,10 @@ main {
     opacity: 0;
 }
 
+.title-branch-right svg {
+    transform: scaleX(-1);
+}
+
 .title-text {
     animation: fadeIn 0.8s ease-out 0.3s forwards;
     opacity: 0;
@@ -100,7 +104,7 @@ main {
     opacity: 0;
 }
 
-.left-container p {
+.left-container a, .left-container p {
     font-size: 32px;
     font-weight: 500;
     color: var(--text);
