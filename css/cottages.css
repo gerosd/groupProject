@@ -679,7 +679,7 @@ footer {
 @media (max-width: 800px) {
 
     .filter {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .container-branch {
@@ -716,7 +716,7 @@ footer {
 
     .for-input span {
         font-size: 12px;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .amount {
@@ -724,7 +724,7 @@ footer {
     }
 
     .title {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .cottages-item {
@@ -769,7 +769,7 @@ footer {
     }
 
     .filter-item {
-        margin: 0px auto;
+        margin: 0 auto;
     }
 
     .amount {
@@ -778,7 +778,7 @@ footer {
 
     .for-input span {
         font-size: 12px;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .title-text span {
