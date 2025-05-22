@@ -74,6 +74,7 @@ main {
     display: flex;
     align-items: center;
     gap: 2vw;
+    flex-wrap: wrap;
 }
 
 .filter-item {
@@ -368,6 +369,8 @@ main {
     position: relative;
 }
 
+
+
 /* Add the fadeInScale animation if it doesn't exist */
 @keyframes fadeInScale {
     0% {
@@ -377,5 +380,196 @@ main {
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@media (max-width: 1700px) {
+    .services-item-title {
+        font-size: 48px;
+    }
+
+    .services-item-price {
+        font-size: 26px;
+    }
+
+    .services-item-price-description  {
+        font-size: 26px;
+    }
+    
+    .services-item-desc {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .services-item-title {
+        font-size: 48px;
+    }
+
+    .services-item-price {
+        font-size: 24px;
+    }
+
+    .services-item-price-description  {
+        font-size: 24px;
+    }
+    
+    .services-item-desc {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .services-item-title {
+        font-size: 38px;
+    }
+
+    .services-item-price {
+        font-size: 20px;
+    }
+
+    .services-item-price-description  {
+        font-size: 18px;
+    }
+    
+    .services-item-desc {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 1300px) {
+
+    .filter-item {
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 1180px) {
+    .services-item-title {
+        font-size: 30px;
+    }
+
+    .services-item-price {
+        font-size: 20px;
+    }
+
+    .services-item-price-description {
+        font-size: 16px;
+    }
+    
+    .services-item-desc {
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 1100px) {
+    .title-text {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    main {
+        gap: 10px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr 1fr 0.7fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 
+            "fish fish fish"
+            "volley billi billi"
+            "horses horses horses"
+            "tennis quad quad"
+            "golf golf golf"
+            "mini basket foot";
+        gap: 2vw;
+        width: 95vw;
+        height: 1400px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        animation: fadeIn 1s ease-out 1.3s forwards;
+        opacity: 0;
+    }
+    
+
+}
+
+@media (max-width: 900px) {
+    .services-item-price {
+        line-height: 90%;
+        margin-top: 2px;
+    }
+
+    .services-item-price-description {
+        margin-top: 5px;
+        line-height: 98%;
+    }
+
+    .services-item-desc {
+        line-height: 95%;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .title-text {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .title-text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+
+
+    .services-item-title {
+        font-size: 24px;
+    }
+
+    .services-item-price {
+        line-height: 80%;
+        font-size: 14px;
+    }
+
+    .services-item-price-description {
+        font-size: 14px;
+        line-height: 95%;
+        margin-top: 5px;
+    }
+    
+    .services-item-desc {
+        font-size: 16px;
+        line-height: 95%;
+    }
+}
+
+@media (max-width: 420px) {
+    .services-item-title {
+        font-size: 24px;
+    }
+
+    .services-item-price {
+        line-height: 80%;
+        font-size: 14px;
+    }
+
+    .services-item-price-description {
+        font-size: 14px;
+        line-height: 95%;
+        margin-top: 5px;
+    }
+    
+    .services-item-desc {
+        font-size: 14px;
+        line-height: 95%;
     }
 }
