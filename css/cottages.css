@@ -29,9 +29,20 @@ header {
 }
 
 .title-branch-right {
-    transform: scaleX(-1);
-    animation: slideInRight 0.8s ease-out 0.1s forwards;
+    animation: slideInLeftMirrored 0.8s ease-out 0.1s forwards;
     opacity: 0;
+}
+
+/* Специальная анимация для зеркальной правой ветки */
+@keyframes slideInLeftMirrored {
+    from {
+        opacity: 0;
+        transform: translateX(50px) scaleX(-1);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scaleX(-1);
+    }
 }
 
 .title-text {
@@ -39,10 +50,9 @@ header {
     opacity: 0;
 }
 
-.title-branch svg {
-    width: 100%;
-    height: 100%;
-    transition: filter 0.2s ease;
+.title-branch-left {
+    animation: slideInLeft 0.8s ease-out 0.1s forwards;
+    opacity: 0;
 }
 
 [data-theme="dark"] .title-branch svg {
