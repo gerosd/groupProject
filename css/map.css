@@ -113,3 +113,13 @@
     font-weight: 500;
     font-family: 'Jost', sans-serif;;
 }
+
+@media (max-width: 1024px) {
+    .side-menu {
+        width: 300px;
+    }
+
+    .side-menu-image {
+        margin-bottom: 0;
+    }
+}

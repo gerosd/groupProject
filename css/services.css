@@ -100,6 +100,12 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.filter-item:nth-child(1) { animation-delay: 0.6s; }
+.filter-item:nth-child(2) { animation-delay: 0.75s; }
+.filter-item:nth-child(3) { animation-delay: 0.9s; }
+.filter-item:nth-child(4) { animation-delay: 1.05s; }
+.filter-item:nth-child(5) { animation-delay: 1.2s; }
+
 .filter-item span {
     font-size: 24px;
     font-weight: 600;

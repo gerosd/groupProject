@@ -50,10 +50,9 @@ header {
     opacity: 0;
 }
 
-.title-branch svg {
-    width: 100%;
-    height: 100%;
-    transition: filter 0.2s ease;
+.title-branch-left {
+    animation: slideInLeft 0.8s ease-out 0.1s forwards;
+    opacity: 0;
 }
 
 [data-theme="dark"] .title-branch svg {
