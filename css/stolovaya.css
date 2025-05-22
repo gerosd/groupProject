@@ -27,6 +27,8 @@ main {
     padding-block: 30px;
     animation: fadeIn 0.8s ease-out 0.5s forwards;
     opacity: 0;
+    position: relative;
+    z-index: 5;
 }
 
 .schedule-container {
@@ -96,7 +98,7 @@ main {
 
 .branch {
     position: absolute;
-    width: 650px;
+    width: 33vw;
     z-index: -1;
 }
 
@@ -146,6 +148,14 @@ main {
 
     .schedule {
         font-size: 24px;
+    }
+
+    .branch-top-left {
+        top: 180px;
+    }
+
+    .branch {
+        width: 50vw;
     }
 
     .schedule-container {

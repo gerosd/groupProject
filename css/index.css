@@ -819,10 +819,6 @@ header {
         height: 48px;
     }
 
-    .about-branch-top svg {
-        top: -40px;
-    }
-
     .about-branch-bottom svg {
         bottom: 10px;
         width: 60%;
