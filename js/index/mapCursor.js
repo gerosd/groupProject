@@ -48,21 +48,38 @@ import { services } from '../mapStorage.js';
 
     function createCirclesForElements() {
         const elements = document.querySelectorAll(selector);
+        const mapContainer = document.querySelector('.map-container');
+        
+        if (!mapContainer) {
+            console.error('Map container not found');
+            return;
+        }
+        
         elements.forEach(element => {
             const circle = document.createElement('div');
             circle.className = 'cursor-circle';
-            document.body.appendChild(circle);
+            mapContainer.appendChild(circle);
             
             function updatePosition() {
-                const rect = element.getBoundingClientRect();
-                circle.style.left = (rect.left + rect.width / 2) + 'px';
-                circle.style.top = (rect.top + rect.height / 2) + 'px';
+                const mapRect = mapContainer.getBoundingClientRect();
+                const elementRect = element.getBoundingClientRect();
+                
+                // Calculate position relative to the map container
+                const relativeLeft = elementRect.left - mapRect.left + (elementRect.width / 2);
+                const relativeTop = elementRect.top - mapRect.top + (elementRect.height / 2);
+                
+                circle.style.left = relativeLeft + 'px';
+                circle.style.top = relativeTop + 'px';
                 circle.style.display = 'block';
             }
             
             updatePosition();
             window.addEventListener('scroll', updatePosition);
             window.addEventListener('resize', updatePosition);
+            
+            // Update on any potential map changes
+            const observer = new MutationObserver(updatePosition);
+            observer.observe(mapContainer, { attributes: true, childList: true, subtree: true });
         });
     }
 

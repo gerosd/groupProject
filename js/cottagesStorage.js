@@ -47,8 +47,8 @@ export const cottages = [
         photosURL: {
             1: "images/cottages/standard/1mesto.jpg",
             2: "images/cottages/standard/1mesto2.jpg",
-            3: "images/cottages/standard/1mesto.jpg",
-            4: "images/cottages/standard/1mesto.jpg",
+            3: "images/cottages/standard/1mesto3.jpg",
+            4: "images/cottages/standard/1mesto4.jpg",
         }
     },
 
@@ -90,10 +90,10 @@ export const cottages = [
 
         ],
         photosURL: {
-            1: "images/cottages/standard/2mesto.jpg",
-            2: "images/cottages/standard/2mesto.jpg",
-            3: "images/cottages/standard/2mesto.jpg",
-            4: "images/cottages/standard/2mesto.jpg",
+            1: "images/cottages/standard/2mesto.png",
+            2: "images/cottages/standard/2mesto2.jpg",
+            3: "images/cottages/standard/2mesto3.jpg",
+            4: "images/cottages/standard/2mesto4.jpg",
         }
     },
 
@@ -142,10 +142,10 @@ export const cottages = [
             }
         ],
         photosURL: {
-            1: "images/cottages/standard/5mesto.jpg",
-            2: "images/cottages/standard/5mesto.jpg",
-            3: "images/cottages/standard/5mesto.jpg",
-            4: "images/cottages/standard/5mesto.jpg",
+            1: "images/cottages/standard/5mesto.jpeg",
+            2: "images/cottages/standard/5mesto2.jpg",
+            3: "images/cottages/standard/5mesto3.jpg",
+            4: "images/cottages/standard/5mesto4.jpg",
         }
     },
 
@@ -195,10 +195,10 @@ export const cottages = [
 
         ],
         photosURL: {
-            1: "images/cottages/standard/10mesto.jpg",
-            2: "images/cottages/standard/10mesto.jpg",
-            3: "images/cottages/standard/10mesto.jpg",
-            4: "images/cottages/standard/10mesto.jpg",
+            1: "images/cottages/standard/10mesto.png",
+            2: "images/cottages/standard/10mesto2.jpg",
+            3: "images/cottages/standard/10mesto3.jpg",
+            4: "images/cottages/standard/10mesto4.jpg",
         }
     },
 
@@ -240,9 +240,9 @@ export const cottages = [
         ],
         photosURL: {
             1: "images/cottages/elit/1mesto.jpg",
-            2: "images/cottages/elit/1mesto.jpg",
-            3: "images/cottages/elit/1mesto.jpg",
-            4: "images/cottages/elit/1mesto.jpg",
+            2: "images/cottages/elit/1mesto2.jpg",
+            3: "images/cottages/elit/1mesto3.jpg",
+            4: "images/cottages/elit/1mesto4.jpg",
         },
     },
 
@@ -275,10 +275,10 @@ export const cottages = [
             },
         ],
         photosURL: {
-            1: "images/cottages/elit/2mesto.jpg",
-            2: "images/cottages/elit/2mesto.jpg",
-            3: "images/cottages/elit/2mesto.jpg",
-            4: "images/cottages/elit/2mesto.jpg",
+            1: "images/cottages/elit/2mesto.jpeg",
+            2: "images/cottages/elit/2mesto2.jpg",
+            3: "images/cottages/elit/2mesto3.jpg",
+            4: "images/cottages/elit/2mesto4.jpg",
         }
     },
 
@@ -311,10 +311,10 @@ export const cottages = [
             }
         ],
         photosURL: {
-            1: "images/cottages/elit/5mesto.jpg",
-            2: "images/cottages/elit/5mesto.jpg",
-            3: "images/cottages/elit/5mesto.jpg",
-            4: "images/cottages/elit/5mesto.jpg",
+            1: "images/cottages/elit/5mesto.png",
+            2: "images/cottages/elit/5mesto2.jpg",
+            3: "images/cottages/elit/5mesto3.jpg",
+            4: "images/cottages/elit/5mesto4.jpg",
         }
     },
 
@@ -339,10 +339,10 @@ export const cottages = [
             }
         ],
         photosURL: {
-            1: "images/cottages/elit/10mesto.jpg",
-            2: "images/cottages/elit/10mesto.jpg",
-            3: "images/cottages/elit/10mesto.jpg",
-            4: "images/cottages/elit/10mesto.jpg",
+            1: "images/cottages/elit/10mesto.png",
+            2: "images/cottages/elit/10mesto2.jpg",
+            3: "images/cottages/elit/10mesto3.jpg",
+            4: "images/cottages/elit/10mesto4.jpg",
         }
     },
 
@@ -375,10 +375,10 @@ export const cottages = [
             }
         ],
         photosURL: {
-            1: "images/cottages/vip/1mesto.jpg",
-            2: "images/cottages/vip/1mesto.jpg",
-            3: "images/cottages/vip/1mesto.jpg",
-            4: "images/cottages/vip/1mesto.jpg",
+            1: "images/cottages/vip/1mesto.png",
+            2: "images/cottages/vip/1mesto2.jpg",
+            3: "images/cottages/vip/1mesto3.jpg",
+            4: "images/cottages/vip/1mesto4.jpg",
         }
     },
 
@@ -412,9 +412,9 @@ export const cottages = [
         ],
         photosURL: {
             1: "images/cottages/vip/2mesto.jpg",
-            2: "images/cottages/vip/2mesto.jpg",
-            3: "images/cottages/vip/2mesto.jpg",
-            4: "images/cottages/vip/2mesto.jpg",
+            2: "images/cottages/vip/2mesto2.jpg",
+            3: "images/cottages/vip/2mesto3.jpg",
+            4: "images/cottages/vip/2mesto4.jpg",
         }
     },
 
@@ -439,10 +439,10 @@ export const cottages = [
             }
         ],
         photosURL: {
-            1: "images/cottages/vip/5mesto.jpg",
-            2: "images/cottages/vip/5mesto.jpg",
-            3: "images/cottages/vip/5mesto.jpg",
-            4: "images/cottages/vip/5mesto.jpg",
+            1: "images/cottages/vip/5mesto.jpeg",
+            2: "images/cottages/vip/5mesto2.jpg",
+            3: "images/cottages/vip/5mesto3.jpg",
+            4: "images/cottages/vip/5mesto4.jpg",
         }
     },
 
@@ -475,10 +475,10 @@ export const cottages = [
             }
         ],
         photosURL: {
-            1: "images/cottages/vip/10mesto.jpg",
-            2: "images/cottages/vip/10mesto.jpg",
-            3: "images/cottages/vip/10mesto.jpg",
-            4: "images/cottages/vip/10mesto.jpg",
+            1: "images/cottages/vip/10mesto.png",
+            2: "images/cottages/vip/10mesto2.jpg",
+            3: "images/cottages/vip/10mesto3.jpg",
+            4: "images/cottages/vip/10mesto4.jpg",
         }
     }
 ];
