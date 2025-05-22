@@ -322,6 +322,10 @@ footer {
     margin-top: 5px;
 }
 
+.footer-menu-item ul{
+    padding-left: 20px;
+}
+
 .footer-menu-item li {
     opacity: 0.5;
     width: 100%;
@@ -526,11 +530,70 @@ footer {
     .language {
         font-size: 30px;
     }
+
+    .left-footer {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 200px;
+        height: auto;
+    }
+
+    .footer-number {
+        font-size: 18px;
+        width: 200px;
+    }
+
+    .footer-menu-item h3 {
+        font-size: 20px;
+    }
+
+    .footer-menu-item li {
+        font-size: 18px;
+    }
+
 }
 
 @media (max-width: 1024px) {
     .nav-menu {
         gap: 10px;
+    }
+
+    .footer-container {
+        padding: 20px 15px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 100px;
+        height: 120px;
+    }
+
+    .social {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .emails {
+        width: 380px;
+    }
+
+    .left-social {
+        justify-content: center;
+    }
+
+    .left-footer {
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    .footer-number {
+        width: auto;
+        text-align: center;
     }
 }
 
@@ -571,18 +634,6 @@ footer {
 
     .language {
         font-size: 18px;
-    }
-
-    .footer-container {
-        padding: 20px 15px 0;
-        flex-direction: column;
-    }
-
-    .left-footer {
-        width: 100%;
-        height: auto;
-        justify-content: flex-end;
-        gap: 40px;
     }
 
     .footer-logo {

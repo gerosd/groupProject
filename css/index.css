@@ -2,9 +2,8 @@
 
 .about-branch-bottom svg,
 .about-branch-top svg {
-    width: 100%;
     height: auto;
-    max-width: 1435px;
+    width: 74vw;
 }
 
 header {
@@ -186,7 +185,7 @@ header {
 .about-branch-top svg {
     position: absolute;
     left: 0;
-    top: -100px;
+    top: -70px;
     z-index: 0;
     transform: rotate(180deg);
     animation: fadeIn 1s ease-out 0.6s forwards;
@@ -313,9 +312,11 @@ header {
 
 .advantages-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-inline: auto;
     gap: 40px;
+    row-gap: 300px;
 }
 
 .advantage-item {
@@ -503,7 +504,6 @@ header {
     font-size: 32px;
     color: var(--text-light);
     font-weight: 600;
-    opacity: 0.75;
     width: 275px;
     transition: 0.3s ease;
     position: relative;
@@ -526,6 +526,7 @@ header {
 
 .cottages-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin-top: 40px;
@@ -654,7 +655,6 @@ header {
 }
 
 .map-container {
-    overflow: auto;
     width: 100vw;
     height: 50vh;
 }
@@ -677,10 +677,6 @@ header {
     color: var(--text);
     animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
-}
-
-@media (max-width: 1400px) {
-
 }
 
 @media (max-width: 1024px) {
@@ -786,8 +782,12 @@ header {
         height: 48px;
     }
 
+    .about-branch-top svg {
+        top: -40px;
+    }
+
     .about-branch-bottom svg {
-        bottom: 20px;
+        bottom: 10px;
         width: 60%;
     }
 
@@ -796,35 +796,28 @@ header {
         font-size: 36px;
     }
 
-    .advantages-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 250px;
-    }
-
     .advantage-item {
-        width: 185px;
-        height: 185px;
-    }
-
-    .advantage-content h3 {
-        font-size: 14px;
-        bottom: -20px;
+        width: 270px;
+        height: 270px;
     }
 
     .advantage-back {
-        padding: 10px;
+        padding: 15px;
     }
 
-    .advantage-back p {
-        font-size: 11px;
-        margin-top: 60px;
+    .advantage-content h3 {
+        font-size: 20px;
+        bottom: -35px;
+    }
+
+    .advantage-content p {
+        font-size: 16px;
+        margin-top: 95px;
     }
 
     .advantage-tail {
-        width: 25px;
-        height: 50px;
-        bottom: auto;
+        width: 30px;
+        height: 75px;
     }
 
     /*Cottages-section*/
@@ -840,27 +833,15 @@ header {
     }
 
     .cottages-header {
-        justify-content: flex-start;
+        width: 80%;
     }
 
     .cottages-info {
-        font-size: 13px;
-        width: 250px;
+        font-size: 24px;
     }
 
     .view-all {
-        position: absolute;
-        bottom: 0;
-        right: 20px;
-        width: 120px;
-        font-size: 13px;
-    }
-
-    .view-all svg {
-        width: 20px;
-        height: 15px;
-        bottom: 2px;
-        right: 20px;
+        font-size: 24px;
     }
 
     .cottages-container {
@@ -930,8 +911,71 @@ header {
         font-size: 36px;
     }
 
+    .map-container {
+        overflow: auto;
+    }
+
     .map-container svg {
         width: 1440px;
         height: 770px;
+    }
+}
+
+@media (max-width: 650px) {
+    .advantages-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 250px;
+    }
+
+    .advantage-item {
+        width: 185px;
+        height: 185px;
+    }
+
+    .advantage-content h3 {
+        font-size: 14px;
+        bottom: -20px;
+    }
+
+    .advantage-back {
+        padding: 10px;
+    }
+
+    .advantage-back p {
+        font-size: 11px;
+        margin-top: 60px;
+    }
+
+    .advantage-tail {
+        width: 25px;
+        height: 50px;
+        bottom: auto;
+    }
+
+    /*cottages-section*/
+
+    .cottages-header {
+        justify-content: flex-start;
+    }
+
+    .cottages-info {
+        font-size: 13px;
+        width: 250px;
+    }
+
+    .view-all {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        width: 120px;
+        font-size: 13px;
+    }
+
+    .view-all svg {
+        width: 20px;
+        height: 15px;
+        bottom: 2px;
+        right: 20px;
     }
 }
