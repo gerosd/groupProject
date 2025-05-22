@@ -212,7 +212,7 @@ header {
     transition: 0.2s ease;
 }
 
-.active {
+.languages-container .active {
     right: 20px;
 }
 
