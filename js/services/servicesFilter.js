@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Текущий активный фильтр
     let activeFilter = null;
     
+    // Получаем параметр filter из URL
+    function getFilterFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('filter');
+    }
+    
     // Добавляем обработчик клика для каждого элемента фильтра
     filterItems.forEach((item, index) => {
         item.addEventListener('click', function() {
@@ -23,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // Если фильтр уже активен, снимаем его
             if (activeFilter === category) {
                 resetFilter();
+                // Обновляем URL, удаляя параметр filter
+                const newUrl = window.location.pathname;
+                window.history.pushState({}, '', newUrl);
                 return;
             }
             
@@ -42,6 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Фильтруем услуги
             filterServices(category);
+            
+            // Обновляем URL с параметром filter
+            const newUrl = `${window.location.pathname}?filter=${category}`;
+            window.history.pushState({}, '', newUrl);
         });
     });
     
@@ -62,6 +75,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideServiceContent(item);
             }
         });
+    }
+    
+    // Функция для установки активного фильтра в интерфейсе
+    function setActiveFilterUI(category) {
+        let filterIndex;
+        
+        switch(category) {
+            case 'sport':
+                filterIndex = 0;
+                break;
+            case 'outdoor':
+                filterIndex = 1;
+                break;
+            case 'indoor':
+                filterIndex = 2;
+                break;
+            default:
+                return; // Неизвестная категория, не делаем ничего
+        }
+        
+        const filterItem = filterItems[filterIndex];
+        if (filterItem) {
+            const checkBox = filterItem.querySelector('.check');
+            activeFilter = category;
+            checkBox.style.backgroundColor = 'var(--primary)';
+            checkBox.classList.add('active');
+        }
     }
     
     // Функция для скрытия содержимого неподходящих услуг
@@ -152,5 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (line) line.style.opacity = '';
             }
         });
+    }
+    
+    // Проверяем, есть ли в URL параметр filter при загрузке страницы
+    const initialFilter = getFilterFromURL();
+    if (initialFilter && categories[initialFilter]) {
+        // Если есть валидный параметр filter, применяем фильтр
+        setActiveFilterUI(initialFilter);
+        filterServices(initialFilter);
     }
 });
