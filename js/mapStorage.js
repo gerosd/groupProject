@@ -84,7 +84,7 @@ export const services = [
         name: "Стандартный коттедж для одного",
         img: "images/cottages/standard/1mesto.jpg",
         desc: "Стандартный коттедж для одного человека с комфортной спальней и современной ванной комнатой. Удобная кухня и просторная гостиная. Высокие потолки и большие окна с видом на природу. Удобное расположение вблизи всех основных зон комплекса.",
-        link: "cottages.html?id=1"
+        link: "cottage-page.html?id=1"
     },
 
     {
@@ -92,7 +92,7 @@ export const services = [
         name: "Стандартный коттедж для двух",
         img: "images/cottages/standard/2mesto.png",
         desc: "Стандартный коттедж для двух человек с комфортной спальней и современной ванной комнатой. Расположен в непосредственной близости от всех основных зон комплекса.",
-        link: "cottages.html?id=2"
+        link: "cottage-page.html?id=2"
     },
 
     {
@@ -100,7 +100,7 @@ export const services = [
         name: "Стандартный коттедж до пяти человек",
         img: "images/cottages/standard/5mesto.jpeg",
         desc: "Просторный коттедж для семьи или компании друзей с двумя спальнями, гостиной и полноценной кухней. Удобное расположение рядом с зоной барбекю.",
-        link: "cottages.html?id=3"
+        link: "cottage-page.html?id=3"
     },
 
     {
@@ -108,7 +108,7 @@ export const services = [
         name: "Стандартный коттедж до десяти человек",
         img: "images/cottages/standard/10mesto.png",
         desc: "Большой коттедж для групп с несколькими спальнями, общей гостиной и террасой. Находится недалеко от сауны и мангальной зоны. Отличный вариант для праздников и корпоративов.",
-        link: "cottages.html?id=4"
+        link: "cottage-page.html?id=4"
     },
 
     {
@@ -116,7 +116,7 @@ export const services = [
         name: "Элитный коттедж для одного",
         img: "images/cottages/elite/1mesto.jpg",
         desc: "Премиальный коттедж для одного гостя с панорамными окнами, джакузи и дизайнерским интерьером. Расположен в тихой части комплекса с видом на лес.",
-        link: "cottages.html?id=5"
+        link: "cottage-page.html?id=5"
     },
 
     {
@@ -124,7 +124,7 @@ export const services = [
         name: "Элитный коттедж для двух",
         img: "images/cottages/elite/2mesto.jpeg",
         desc: "Роскошный коттедж для пары с камином, крытым бассейном и просторной ванной комнатой с тропическим душем. Уединённое расположение с выходом к приватному саду.",
-        link: "cottages.html?id=6"
+        link: "cottage-page.html?id=6"
     },
 
     {
@@ -132,7 +132,7 @@ export const services = [
         name: "Элитный коттедж до пяти человек",
         img: "images/cottages/elite/5mesto.png",
         desc: "Элитный коттедж для небольшой компании с домашним кинотеатром и террасой. Расположен у озера, включает услуги консьержа и шеф-повара по запросу.",
-        link: "cottages.html?id=7"
+        link: "cottage-page.html?id=7"
     },
 
     {
@@ -140,7 +140,7 @@ export const services = [
         name: "Элитный коттедж до десяти человек",
         img: "images/cottages/elite/10mesto.png",
         desc: "Коттедж для большой компании с частным бассейном, бильярдом и зоной отдыха. Находится в самом престижном районе комплекса.",
-        link: "cottages.html?id=8"
+        link: "cottage-page.html?id=8"
     },
 
     {
@@ -148,7 +148,7 @@ export const services = [
         name: "VIP коттедж для одного",
         img: "images/cottages/vip/1mesto.png",
         desc: "Эксклюзивный коттедж с персональным батлером, хаммамом и видом на горы. Расположен в полностью закрытой зоне для максимальной приватности.",
-        link: "cottages.html?id=9"
+        link: "cottage-page.html?id=9"
     },
 
     {
@@ -156,7 +156,7 @@ export const services = [
         name: "VIP коттедж для двух",
         img: "images/cottages/vip/2mesto.jpg",
         desc: "Люксовый коттедж для пары с приватным пляжем и круглосуточным обслуживанием. Уникальное расположение на берегу озера.",
-        link: "cottages.html?id=10"
+        link: "cottage-page.html?id=10"
     },
 
     {
@@ -164,7 +164,7 @@ export const services = [
         name: "VIP коттедж до пяти человек",
         img: "images/cottages/vip/5mesto.jpeg",
         desc: "VIP-резиденция с вип-террасой, винотекой и массажным кабинетом. Расположена в охраняемой зоне комплекса.",
-        link: "cottages.html?id=11"
+        link: "cottage-page.html?id=11"
     },
 
     {
