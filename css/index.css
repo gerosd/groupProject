@@ -679,8 +679,45 @@ header {
     opacity: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1500px) {
+    .about {
+        height: 950px;
+    }
 
+    .about-container {
+        width: 1024px;
+    }
+
+    .about-text {
+        width: 650px;
+    }
+
+    .about-text h2 {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    .about-text p {
+        font-size: 26px;
+    }
+
+    .main-slider {
+        height: 475px;
+    }
+
+    .thumbnail-slider img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .slider-btn img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-branch-bottom svg {
+        bottom: 0;
+    }
 }
 
 @media (max-width: 980px) {
