@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@translate-tools/core": "^2.0.1"
+    "@translate-tools/core": "^2.0.1",
+    "node-telegram-bot-api": "^0.66.0"
   }
 }
