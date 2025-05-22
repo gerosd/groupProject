@@ -62,7 +62,7 @@ header {
 }
 
 [data-theme="dark"] .title-branch svg {
-    filter: 
+    filter:
         drop-shadow(0 0 2px rgba(176, 223, 255, 0.8))
         drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
 }
@@ -128,7 +128,7 @@ header {
 }
 
 .custom-dropdown {
-    position: relative; 
+    position: relative;
     width:280px;
     user-select: none;
     font-size: 24px;
@@ -198,7 +198,7 @@ header {
 
 .custom-dropdown.open .dropdown-list {
     display: block;
-}   
+}
 
 .price-filter {
     height: 100%;
@@ -537,7 +537,7 @@ header {
     align-content: space-between;
     flex-wrap: wrap;
     margin-top: 60px;
-    z-index: 2;
+    z-index: 9;
     transition: transform 0.3s ease;
     animation: fadeInScale 0.5s ease-out forwards;
     opacity: 0;
@@ -665,20 +665,20 @@ footer {
         width: 40px;
         height: 40px;
     }
-    
+
     .container-branch {
         width: 367.5px ;
         height: 882px ;
     }
-    
+
     .first-branch {
         right: -70px;
     }
-    
+
     .second-branch {
         left: -70px;
     }
-    
+
     .third-branch {
         right: -70px;
     }
@@ -688,10 +688,10 @@ footer {
         height: auto;
         aspect-ratio: 1/1.4;
     }
-    
+
     .cottages-item-img {
         height: auto;
-        aspect-ratio: 1/1; 
+        aspect-ratio: 1/1;
     }
 
     .cottages-item-title {
@@ -706,28 +706,28 @@ footer {
     .cottages-line span {
         font-size: 42px;
     }
-    
+
 }
 
 @media (max-width: 800px) {
 
     .filter {
-        margin-top: 0px;
+        margin-top: 0;
     }
-    
+
     .container-branch {
         width: 294px ;
         height: 704px;
     }
-    
+
     .first-branch {
         right: -50px;
     }
-    
+
     .second-branch {
         left: -50px;
     }
-    
+
     .third-branch {
         right: -50px;
     }
@@ -742,14 +742,14 @@ footer {
         margin-bottom: 5px;
     }
 
-    .filter-item span { 
+    .filter-item span {
         font-size: 20px;
         margin-top: 20px;
     }
 
     .for-input span {
         font-size: 12px;
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .amount {
@@ -757,7 +757,7 @@ footer {
     }
 
     .title {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .cottages-item {
@@ -775,7 +775,7 @@ footer {
     .cottages-line span {
         font-size: 32px;
     }
-    
+
 }
 
 @media (max-width: 650px) {
@@ -788,26 +788,26 @@ footer {
         font-size: 16px;
         margin-top: 30px;
     }
-    
+
     .container-branch {
         width: 165px; 
         height: 390px; 
     }
-    
+
     .first-branch {
         right: -15px;
     }
-    
+
     .second-branch {
         left: -15px;
     }
-    
+
     .third-branch {
         right: -15px;
     }
 
     .filter-item {
-        margin: 0px auto;
+        margin: 0 auto;
     }
 
     .amount {
@@ -816,13 +816,13 @@ footer {
 
     .for-input span {
         font-size: 12px;
-        margin-top: 0px;
+        margin-top: 0;
     }
-    
+
     .title-text span {
         font-size: 24px;
     }
-    
+
     .cottages-item span {
         font-size: 20px;
     }
@@ -836,24 +836,24 @@ footer {
     .title-text {
         font-size: 20px;
     }
-    
+
     .container-branch {
         width: 225px;
         height: 540px;
     }
-    
+
     .first-branch {
         right: -68px;
     }
-    
+
     .second-branch {
         left: -68px;
     }
-    
+
     .third-branch {
         right: -68px;
     }
-    
+
     .cottages-item span {
         font-size: 16px;
     }

@@ -122,6 +122,13 @@
     color: white;
     font-size: 36px;
     font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: 0.2s ease;
+}
+
+.menu-section h3:hover {
+    transform: scale(1.05);
 }
 
 .menu-section ul {

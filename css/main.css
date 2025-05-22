@@ -58,6 +58,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -69,6 +70,8 @@ body {
     font-family: 'Jost', sans-serif;
     color: var(--text);
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -200,18 +203,17 @@ header {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     top: 100px;
-    transform: translateX(120%);
-    right: 20px;
+    right: -185px;
     width: 185px;
     z-index: 1000;
     background: var(--lighter);
     transition: 0.2s ease;
 }
 
-.active {
-    transform: translateX(0%) !important;
+.languages-container .active {
+    right: 20px;
 }
 
 .language {
