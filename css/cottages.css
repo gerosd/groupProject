@@ -47,6 +47,7 @@ header {
     animation: slideInRight 0.8s ease-out 0.1s forwards;
     opacity: 0;
 }
+
 .title-branch-right svg {
     transform: scaleX(-1);
 }
