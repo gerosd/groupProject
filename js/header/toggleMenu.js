@@ -11,8 +11,20 @@ function toggleMenu() {
     // Prevent body scrolling when menu is open
     if (menu.classList.contains('active')) {
         body.style.overflow = 'hidden';
+        
+        // Ensure other fixed elements don't overlap the menu
+        document.querySelectorAll('.side-menu, .cursor-circle, .scroll-to-top')
+            .forEach(el => {
+                el.style.zIndex = menu.classList.contains('active') ? '10' : '';
+            });
     } else {
         body.style.overflow = '';
+        
+        // Restore original z-index values
+        document.querySelectorAll('.side-menu, .cursor-circle, .scroll-to-top')
+            .forEach(el => {
+                el.style.zIndex = '';
+            });
     }
 }
 

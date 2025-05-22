@@ -19,6 +19,10 @@
     opacity: 0;
 }
 
+.title-branch-right svg {
+    transform: scaleX(-1);
+}
+
 /* Анимации для фильтров */
 .filter-item:nth-child(1) {
     animation: slideInLeft 0.6s ease-out 0.6s forwards;
@@ -71,9 +75,6 @@ header {
 main {
     display: flex;
     flex-wrap: wrap;
-    /* @media (max-width: 1200px) {
-        justify-content: center;
-    } */
 }
 
 .title {
@@ -117,7 +118,6 @@ main {
 }
 
 .filter {
-    /* width: 43%; */
     width: min-content;
     column-gap: calc(13vw - 150px);
     margin-top: 100px;
@@ -125,13 +125,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    @media (max-width: 1200px) {
-        width: 98%;
-        margin: 50px auto 50px auto;
-        flex-wrap: wrap;
-        column-gap: 5px;
-    }
+    z-index: 1;
 }
 
 .filter-item {

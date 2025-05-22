@@ -17,7 +17,7 @@ header {
 }
 
 .title-branch {
-    width: 40%;
+    width: 100%;
     height: 100%;
     animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
@@ -29,29 +29,22 @@ header {
 }
 
 .title-branch-right {
-    animation: slideInLeftMirrored 0.8s ease-out 0.1s forwards;
+    animation: slideInRight 0.8s ease-out 0.1s forwards;
     opacity: 0;
 }
 
-/* Специальная анимация для зеркальной правой ветки */
-@keyframes slideInLeftMirrored {
-    from {
-        opacity: 0;
-        transform: translateX(50px) scaleX(-1);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) scaleX(-1);
-    }
+.title-branch-right svg {
+    transform: scaleX(-1);
+}
+
+.title-branch svg {
+    width: 100%;
+    height: 100%;
+    transition: filter 0.2s ease;
 }
 
 .title-text {
     animation: fadeIn 0.8s ease-out 0.3s forwards;
-    opacity: 0;
-}
-
-.title-branch-left {
-    animation: slideInLeft 0.8s ease-out 0.1s forwards;
     opacity: 0;
 }
 
@@ -72,7 +65,6 @@ header {
 }
 
 .filter {
-    /* width: 43%; */
     width: min-content;
     column-gap: calc(15vw - 150px);
     margin-top: 100px;
@@ -80,12 +72,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (max-width: 1000px) {
-        width: 98%;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        column-gap: 5px;
-    }
 }
 
 .filter-item {
@@ -100,6 +86,7 @@ header {
 
 .filter-item:nth-child(1) {
     animation-delay: 0.6s;
+    z-index: 1;
 }
 
 .filter-item:nth-child(2) {
@@ -468,10 +455,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-evenly;
     position: relative;
-    @media (max-width: 1480px) {
-        width: 100%;
-        justify-content: space-around;
-    }
 }
 
 .container-branch {
@@ -488,10 +471,6 @@ header {
     top: 50%;
     right: -280px;
     transform: translateY(-50%) rotate(-17deg);
-    @media (max-width: 1480px) {
-        right: -130px;
-        transform: translateY(-50%) rotate(-20deg);
-    }
 }
 
 .cottages-container:hover .first-branch {
@@ -502,10 +481,6 @@ header {
     top: 40%;
     left: -280px;
     transform: translateY(-50%) rotate(17deg) scaleX(-1);
-    @media (max-width: 1480px) {
-        left: -130px;
-        transform: translateY(-50%) rotate(20deg) scaleX(-1);
-    }
 }
 
 .cottages-container:hover .second-branch {
@@ -516,10 +491,6 @@ header {
     top: 65%;
     right: -280px;
     transform: translateY(-50%) rotate(-12deg);
-    @media (max-width: 1480px) {
-        right: -130px;
-        transform: translateY(-50%) rotate(-15deg);
-    }
 }
 
 .cottages-container:hover .third-branch {
@@ -547,7 +518,7 @@ header {
     align-content: space-between;
     flex-wrap: wrap;
     margin-top: 60px;
-    z-index: 10;
+    z-index: 2;
     transition: transform 0.3s ease;
     animation: fadeInScale 0.5s ease-out forwards;
     opacity: 0;
