@@ -47,7 +47,7 @@ header {
 }
 
 [data-theme="dark"] .title-branch svg {
-    filter: 
+    filter:
         drop-shadow(0 0 2px rgba(176, 223, 255, 0.8))
         drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
 }
@@ -111,7 +111,7 @@ header {
 }
 
 .custom-dropdown {
-    position: relative; 
+    position: relative;
     width:280px;
     user-select: none;
     font-size: 24px;
@@ -181,7 +181,7 @@ header {
 
 .custom-dropdown.open .dropdown-list {
     display: block;
-}   
+}
 
 .price-filter {
     height: 100%;
@@ -516,7 +516,7 @@ header {
     align-content: space-between;
     flex-wrap: wrap;
     margin-top: 60px;
-    z-index: 2;
+    z-index: 9;
     transition: transform 0.3s ease;
     animation: fadeInScale 0.5s ease-out forwards;
     opacity: 0;
@@ -632,20 +632,20 @@ footer {
         width: 40px;
         height: 40px;
     }
-    
+
     .container-branch {
         width: 525px;
         height: 1260px;
     }
-    
+
     .first-branch {
         right: -270px;
     }
-    
+
     .second-branch {
         left: -270px;
     }
-    
+
     .third-branch {
         right: -270px;
     }
@@ -655,10 +655,10 @@ footer {
         height: auto;
         aspect-ratio: 1/1.4;
     }
-    
+
     .cottages-item-img {
         height: auto;
-        aspect-ratio: 1/1; 
+        aspect-ratio: 1/1;
     }
 
     .cottages-item-title {
@@ -673,7 +673,7 @@ footer {
     .cottages-line span {
         font-size: 42px;
     }
-    
+
 }
 
 @media (max-width: 800px) {
@@ -681,20 +681,20 @@ footer {
     .filter {
         margin-top: 0px;
     }
-    
+
     .container-branch {
         width: 420px;
         height: 1005px;
     }
-    
+
     .first-branch {
         right: -150px;
     }
-    
+
     .second-branch {
         left: -150px;
     }
-    
+
     .third-branch {
         right: -150px;
     }
@@ -709,7 +709,7 @@ footer {
         margin-bottom: 5px;
     }
 
-    .filter-item span { 
+    .filter-item span {
         font-size: 20px;
         margin-top: 20px;
     }
@@ -742,28 +742,28 @@ footer {
     .cottages-line span {
         font-size: 32px;
     }
-    
+
 }
 
 @media (max-width: 650px) {
-    .filter-item span { 
+    .filter-item span {
         font-size: 16px;
         margin-top: 30px;
     }
-    
+
     .container-branch {
         width: 330px;
         height: 780px;
     }
-    
+
     .first-branch {
         right: -105px;
     }
-    
+
     .second-branch {
         left: -105px;
     }
-    
+
     .third-branch {
         right: -105px;
     }
@@ -780,11 +780,11 @@ footer {
         font-size: 12px;
         margin-top: 0px;
     }
-    
+
     .title-text span {
         font-size: 24px;
     }
-    
+
     .cottages-item span {
         font-size: 20px;
     }
@@ -798,24 +798,24 @@ footer {
     .title-text {
         font-size: 20px;
     }
-    
+
     .container-branch {
         width: 225px;
         height: 540px;
     }
-    
+
     .first-branch {
         right: -68px;
     }
-    
+
     .second-branch {
         left: -68px;
     }
-    
+
     .third-branch {
         right: -68px;
     }
-    
+
     .cottages-item span {
         font-size: 16px;
     }
