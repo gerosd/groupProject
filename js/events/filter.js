@@ -162,9 +162,32 @@ function applyFilters() {
         
         // Проверяем соответствие фильтрам
         const matchesDay = selectedFilters.day.length === 0 || selectedFilters.day.includes(day);
-        const matchesTime = selectedFilters.time.length === 0 || selectedFilters.time.includes(time);
+        
+        // Проверка на соответствие категории времени
+        let matchesTime = false;
+        if (selectedFilters.time.length === 0) {
+            matchesTime = true;
+        } else {
+            // Получаем час начала мероприятия
+            const timeMatch = time ? time.match(/(\d+):/) : null;
+            const startHour = timeMatch ? parseInt(timeMatch[1], 10) : null;
+            
+            if (startHour !== null) {
+                // Проверяем каждую выбранную категорию времени
+                matchesTime = selectedFilters.time.some(category => {
+                    if (category === 'Утро') {
+                        return startHour < 12;
+                    } else if (category === 'День') {
+                        return startHour >= 12 && startHour < 18;
+                    } else if (category === 'Вечер') {
+                        return startHour >= 18;
+                    }
+                    return false;
+                });
+            }
+        }
+        
         const matchesPlace = selectedFilters.place.length === 0 || 
-
             selectedFilters.place.some(filterPlace => {
                 return place && place.toLowerCase().includes(filterPlace.toLowerCase());
             });
