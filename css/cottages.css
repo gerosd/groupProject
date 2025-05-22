@@ -29,30 +29,22 @@ header {
 }
 
 .title-branch-right {
-    animation: slideInLeftMirrored 0.8s ease-out 0.1s forwards;
+    transform: scaleX(-1);
+    animation: slideInRight 0.8s ease-out 0.1s forwards;
     opacity: 0;
 }
 
-/* Специальная анимация для зеркальной правой ветки */
-@keyframes slideInLeftMirrored {
-    from {
-        opacity: 0;
-        transform: translateX(50px) scaleX(-1);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) scaleX(-1);
-    }
-}
+.title-branch-right svg {transform: scaleX(-1);}
 
 .title-text {
     animation: fadeIn 0.8s ease-out 0.3s forwards;
     opacity: 0;
 }
 
-.title-branch-left {
-    animation: slideInLeft 0.8s ease-out 0.1s forwards;
-    opacity: 0;
+.title-branch svg {
+    width: 100%;
+    height: 100%;
+    transition: filter 0.2s ease;
 }
 
 [data-theme="dark"] .title-branch svg {
@@ -652,4 +644,202 @@ header {
 
 footer {
     margin-top: 100px;
+}
+
+@media (max-width: 1100px) {
+    .title-text {
+        font-size: 70px;
+    }
+
+    .to-cottage {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .container-branch {
+        width: 525px;
+        height: 1260px;
+    }
+    
+    .first-branch {
+        right: -270px;
+    }
+    
+    .second-branch {
+        left: -270px;
+    }
+    
+    .third-branch {
+        right: -270px;
+    }
+
+    .cottages-item {
+        width: 45%;
+        height: auto;
+        aspect-ratio: 1/1.4;
+    }
+    
+    .cottages-item-img {
+        height: auto;
+        aspect-ratio: 1/1; 
+    }
+
+    .cottages-item-title {
+        width: 100%;
+        font-size: 36px;
+    }
+
+    .cottages-item span {
+        font-size: 32px;
+    }
+
+    .cottages-line span {
+        font-size: 42px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+
+    .filter {
+        margin-top: 0px;
+    }
+    
+    .container-branch {
+        width: 420px;
+        height: 1005px;
+    }
+    
+    .first-branch {
+        right: -150px;
+    }
+    
+    .second-branch {
+        left: -150px;
+    }
+    
+    .third-branch {
+        right: -150px;
+    }
+
+    .filter-item:nth-child(1) {
+        order: 3;
+    }
+
+    .to-cottage {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .filter-item span { 
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .for-input span {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+
+    .amount {
+        font-size: 20px;
+    }
+
+    .title {
+        margin-top: 0px;
+    }
+
+    .cottages-item {
+        width: 48%;
+    }
+
+    .cottages-item span {
+        font-size: 28px;
+    }
+
+    .title-text {
+        font-size: 40px;
+    }
+
+    .cottages-line span {
+        font-size: 32px;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .filter-item span { 
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    
+    .container-branch {
+        width: 330px;
+        height: 780px;
+    }
+    
+    .first-branch {
+        right: -105px;
+    }
+    
+    .second-branch {
+        left: -105px;
+    }
+    
+    .third-branch {
+        right: -105px;
+    }
+
+    .filter-item {
+        margin: 0px auto;
+    }
+
+    .amount {
+        font-size: 16px;
+    }
+
+    .for-input span {
+        font-size: 12px;
+        margin-top: 0px;
+    }
+    
+    .title-text span {
+        font-size: 24px;
+    }
+    
+    .cottages-item span {
+        font-size: 20px;
+    }
+
+    .cottages-line span {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .title-text {
+        font-size: 20px;
+    }
+    
+    .container-branch {
+        width: 225px;
+        height: 540px;
+    }
+    
+    .first-branch {
+        right: -68px;
+    }
+    
+    .second-branch {
+        left: -68px;
+    }
+    
+    .third-branch {
+        right: -68px;
+    }
+    
+    .cottages-item span {
+        font-size: 16px;
+    }
 }
