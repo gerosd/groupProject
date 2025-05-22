@@ -1,4 +1,4 @@
-import { cottages } from '../cottagesStorage.js';
+import {cottages} from '../cottagesStorage.js';
 
 const dateStart = document.getElementById('date-start');
 const dateEnd = document.getElementById('date-end');
@@ -60,9 +60,8 @@ const cottageIdFromUrl = getUrlParameter('id');
 
 function setupCottageSelect() {
     if (cottageIdFromUrl) {
-        const parsedId = parseInt(cottageIdFromUrl);
         // Pre-select the cottage in the dropdown
-        cottageSelect.value = parsedId;
+        cottageSelect.value = parseInt(cottageIdFromUrl);
     }
 
     if (typeof calculateTotalPrice === 'function') {

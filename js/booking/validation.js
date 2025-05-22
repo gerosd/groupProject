@@ -1,4 +1,5 @@
 import { cottages } from '../cottagesStorage.js';
+import { saveBooking } from './saveBooking.js';
 
 const usernameInput = document.getElementById('username');
 const phoneInput = document.getElementById('phone');
@@ -172,8 +173,9 @@ confirmButton.addEventListener('click', async () => {
         return;
     }
 
-    // Show success message
-    alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
+    // Save booking details
+    const booking = saveBooking();
+    console.log('Booking saved:', booking);
 
     // Clear form
     usernameInput.value = '';
